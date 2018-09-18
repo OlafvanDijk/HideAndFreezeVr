@@ -9,6 +9,7 @@ public class PlayerNetwork : MonoBehaviour {
 
     private void Awake()
     {
+        DontDestroyOnLoad(this);
         Instance = this;
         PlayerName = "User#" + Random.Range(1000, 9999);
     }

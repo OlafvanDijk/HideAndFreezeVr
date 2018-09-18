@@ -9,6 +9,6 @@ public class LobbyCanvas : MonoBehaviour {
 
 	public void OnClickJoinRoom(string roomName)
     {
-
+        Debug.Log("lobbyclick");
     }
 }
