@@ -2516,7 +2516,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15a9f87a0af5d4d448e2ab9dbc34f827, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3319,10 +3319,9 @@ MonoBehaviour:
   autoManageVRSettings: 1
   autoLoadSetup: 1
   setups:
+  - {fileID: 114901919427573616}
   - {fileID: 114763172765024816}
   - {fileID: 114993056799928798}
-  - {fileID: 114577270477535596}
-  - {fileID: 114901919427573616}
 --- !u!114 &114344975862578446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3994,22 +3993,22 @@ MonoBehaviour:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
     typeName: VRTK.SDK_OculusSystem
-    descriptionIndex: 0
+    descriptionIndex: 1
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
     typeName: VRTK.SDK_OculusBoundaries
-    descriptionIndex: 0
+    descriptionIndex: 1
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
     typeName: VRTK.SDK_OculusHeadset
-    descriptionIndex: 0
+    descriptionIndex: 1
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
     typeName: VRTK.SDK_OculusController
-    descriptionIndex: 0
+    descriptionIndex: 1
 --- !u!114 &114777097407514070
 MonoBehaviour:
   m_ObjectHideFlags: 1
