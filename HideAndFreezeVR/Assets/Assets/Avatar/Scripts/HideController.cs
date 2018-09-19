@@ -13,7 +13,7 @@ public class HideController : MonoBehaviour {
 
     private void Start()
     {
-        StartCoroutine(HideWithDelay(1f));
+        StartCoroutine(HideWithDelay(4f));
     }
 
     /// <summary>
@@ -29,6 +29,8 @@ public class HideController : MonoBehaviour {
             case PlayAreaType.SIMULATED:
                 break;
             case PlayAreaType.STEAM:
+                Debug.Log("ik ben hier");
+                Debug.Log(value);
                 GameObject parent = this.transform.parent.gameObject;
                 SteamVR_RenderModel renderModel = parent.GetComponentInChildren<SteamVR_RenderModel>();
                 renderModel.gameObject.SetActive(value);
