@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class LobbyNetwork : Photon.PunBehaviour {
 
-	// Use this for initialization
 	private void Start () {
         print("Connecting to server..");
         PhotonNetwork.ConnectUsingSettings("0.0.0");
 	}
 
+    /// <summary>
+    /// Called by photon when the user gets connected to the master.
+    /// </summary>
     public override void OnConnectedToMaster()
     {
         print("Connected to master.");
@@ -18,6 +20,9 @@ public class LobbyNetwork : Photon.PunBehaviour {
         PhotonNetwork.JoinLobby(TypedLobby.Default);
     }
 
+    /// <summary>
+    /// Called by photon when the lobby has been joined.
+    /// </summary>
     public override void OnJoinedLobby()
     {
         print("Joined Lobby");

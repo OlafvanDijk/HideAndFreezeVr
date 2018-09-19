@@ -15,8 +15,10 @@ public class RoomListing : MonoBehaviour {
 	private void Start () {
         Setup();    
 	}
-
-    //<Summary> Sets up the required data at the start of the object's existence. </Summary>
+    
+    /// <summary>
+    /// Sets up the required data at the start of the object's existence.
+    /// </summary>
     private void Setup()
     {
         GameObject lobbyCanvasObj = MainCanvasManager.Instance.getLobbyCanvas().gameObject;
@@ -28,14 +30,19 @@ public class RoomListing : MonoBehaviour {
 
         GetComponent<Button>().onClick.AddListener(() => lobbyCanvas.OnClickJoinRoom(RoomNameText.text));
     }
-
-    //<Summary> IMPORTANT; if this object is destroyed, all of it's listeners must be removed aswell. </Summary>
+    
+    /// <summary>
+    /// IMPORTANT; if this object is destroyed, all of it's listeners must be removed aswell.
+    /// </summary>
     private void OnDestroy()
     {
         GetComponent<Button>().onClick.RemoveAllListeners();
     }
 
-    //<Summary> Sets the roomname both in data and on the UI. </Summary>
+    /// <summary>
+    /// Sets the room name on the UI and saves it.
+    /// </summary>
+    /// <param name="text"> The given room name. </param>
     public void SetRoomNameText(string text)
     {
         RoomName = text;

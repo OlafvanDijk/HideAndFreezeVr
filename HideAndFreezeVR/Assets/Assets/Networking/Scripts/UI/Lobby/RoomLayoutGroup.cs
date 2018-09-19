@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomLayoutGroup : MonoBehaviour {
+public class RoomLayoutGroup : Photon.PunBehaviour {
 
     [SerializeField]
     private RoomListing RoomListingPrefab;
 
     private List<RoomListing> roomlistingButtons = new List<RoomListing>();
 
-    private void OnReceivedRoomListUpdate()
+
+    /// <summary>
+    /// Called by photo when the room list was updated.
+    /// </summary>
+    public override void OnReceivedRoomListUpdate()
     {
         RoomInfo[] rooms = PhotonNetwork.GetRoomList();
         foreach (RoomInfo room in rooms)
@@ -20,6 +24,10 @@ public class RoomLayoutGroup : MonoBehaviour {
         RemoveOldRooms();
     }
 
+    /// <summary>
+    /// Place the new room in the list of rooms.
+    /// </summary>
+    /// <param name="room"> The room to be added. </param>
     private void RoomReceived(RoomInfo room)
     {
         int index = roomlistingButtons.FindIndex(x => x.RoomName == room.Name);
@@ -44,6 +52,9 @@ public class RoomLayoutGroup : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Removes all old rooms that are not accessible any more.
+    /// </summary>
     private void RemoveOldRooms()
     {
         List<RoomListing> removeRooms = new List<RoomListing>();

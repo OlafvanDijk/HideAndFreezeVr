@@ -7,7 +7,11 @@ public class LobbyCanvas : MonoBehaviour {
     [SerializeField]
     private RoomLayoutGroup roomLayoutGroup;
 
-    // <Summary>Called when a player joins a room </Summary>
+    /// <summary>
+    /// Should be called from a button.
+    /// Connects the user to the given room name and loads the room UI.
+    /// </summary>
+    /// <param name="roomName">The name of the room the user should join.</param>
 	public void OnClickJoinRoom(string roomName)
     {
         if (PhotonNetwork.JoinRoom(roomName))

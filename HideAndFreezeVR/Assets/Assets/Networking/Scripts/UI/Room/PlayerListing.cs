@@ -16,6 +16,10 @@ public class PlayerListing : MonoBehaviour {
         return playerName;
     }
 
+    /// <summary>
+    /// Sets the photonPlayer object and changes the text of the object to the player's name.
+    /// </summary>
+    /// <param name="photonPlayer"></param>
     public void ApplyPhotonPlayer(PhotonPlayer photonPlayer)
     {
         this.photonPlayer = photonPlayer;

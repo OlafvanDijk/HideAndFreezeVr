@@ -6,14 +6,12 @@ public class PlayerLayoutGroup : Photon.PunBehaviour {
 
     [SerializeField]
     private GameObject playerListingPrefab;
-
-    private List<PlayerListing> playerListings = new List<PlayerListing>();
-
     public GameObject getPlayerListingPrefab()
     {
         return playerListingPrefab;
     }
 
+    private List<PlayerListing> playerListings = new List<PlayerListing>();
     public List<PlayerListing> getPlayerListings()
     {
         return playerListings;
@@ -88,6 +86,10 @@ public class PlayerLayoutGroup : Photon.PunBehaviour {
         playerListings.Add(playerListing);
     }
 
+    /// <summary>
+    /// Handles what should happen when an other player leaves the room.
+    /// </summary>
+    /// <param name="photonPlayer"> The player that left the room. </param>
     private void PlayerLeftRoom(PhotonPlayer photonPlayer)
     {
         int index = playerListings.FindIndex(x => x.photonPlayer == photonPlayer);
@@ -98,6 +100,10 @@ public class PlayerLayoutGroup : Photon.PunBehaviour {
         }
     }
 
+    /// <summary>
+    /// Should be called from a button.
+    /// Changes the roomstate to open or close, visible and not visible.
+    /// </summary>
     public void OnClickRoomState()
     {
         if (!PhotonNetwork.isMasterClient)
@@ -109,6 +115,10 @@ public class PlayerLayoutGroup : Photon.PunBehaviour {
         PhotonNetwork.room.IsVisible = !PhotonNetwork.room.IsVisible;
     }
 
+    /// <summary>
+    /// Should be called from a button.
+    /// Leave the room.
+    /// </summary>
     public void OnClickLeaveRoom()
     {
         PhotonNetwork.LeaveRoom();

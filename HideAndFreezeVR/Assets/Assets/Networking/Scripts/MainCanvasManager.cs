@@ -12,6 +12,7 @@ public class MainCanvasManager : MonoBehaviour {
     {
         return lobbyCanvas;
     }
+
     [SerializeField]
     private CurrentRoomCanvas currentRoomCanvas;
     public CurrentRoomCanvas getCurrentRoomCanvas()
@@ -24,12 +25,18 @@ public class MainCanvasManager : MonoBehaviour {
         Instance = this;
     }
 
+    /// <summary>
+    /// Loads the lobby UI.
+    /// </summary>
     public void ShowLobby()
     {
         lobbyCanvas.gameObject.SetActive(true);
         currentRoomCanvas.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// Loads the Room UI.
+    /// </summary>
     public void ShowRoom()
     {
         lobbyCanvas.gameObject.SetActive(false);
