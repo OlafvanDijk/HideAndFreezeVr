@@ -29,19 +29,22 @@ public class HideController : MonoBehaviour {
             case PlayAreaType.SIMULATED:
                 break;
             case PlayAreaType.STEAM:
-                foreach (Transform child in steamVRController.transform)
-                {
-                    Renderer renderer = child.GetComponent<MeshRenderer>();
+                GameObject parent = this.transform.parent.gameObject;
+                SteamVR_RenderModel renderModel = parent.GetComponentInChildren<SteamVR_RenderModel>();
+                renderModel.gameObject.SetActive(value);
 
-                    if (renderer != null)
-                    {
-                        renderer.enabled = value;
-                    }
-                }
+                //foreach (Transform child in steamVRController.transform)
+                //{
+                //    Renderer renderer = child.GetComponent<MeshRenderer>();
+
+                //    if (renderer != null)
+                //    {
+                //        renderer.enabled = value;
+                //    }
+                //}
                 break;
             case PlayAreaType.OCULUS:
                 OvrAvatar avatar = multiVRSetup.playAreaAlias.GetComponentInChildren<OvrAvatar>(true);
-                //OvrAvatar avatar = GetComponentInChildren<OvrAvatar>(true);
                 avatar.ShowFirstPerson = value;
                 avatar.ShowControllers(value);
                 break;

@@ -2663,7 +2663,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
@@ -3035,9 +3035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093246d8cee60824baa210157e5edcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handAlias: {fileID: 114173612159422732}
   multiVRSetup: {fileID: 114900388216023226}
   steamVRController: {fileID: 1828564796553174}
+  showControllers: 0
 --- !u!114 &114138402767233828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3072,9 +3072,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093246d8cee60824baa210157e5edcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handAlias: {fileID: 114229792949675864}
   multiVRSetup: {fileID: 114900388216023226}
   steamVRController: {fileID: 1604777102760958}
+  showControllers: 0
 --- !u!114 &114160001278000522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3242,7 +3242,9 @@ MonoBehaviour:
   side: 0
   rayDistance: 2000
   delayActive: 0
-  selectionColors: []
+  selectionColors:
+  - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
+  - {fileID: 2100000, guid: fd49692859fbfc74e81171826b1d1239, type: 2}
 --- !u!114 &114277169176745418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3973,7 +3975,9 @@ MonoBehaviour:
   side: 1
   rayDistance: 2000
   delayActive: 0
-  selectionColors: []
+  selectionColors:
+  - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
+  - {fileID: 2100000, guid: fd49692859fbfc74e81171826b1d1239, type: 2}
 --- !u!114 &114718860693137942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4115,8 +4119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c4fba01bc189d43abb3386578a2f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 0
-  _setup: {fileID: 0}
+  _type: 1
+  _setup: {fileID: 114993056799928798}
 --- !u!114 &114830254104237086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4369,9 +4373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2330f3371086be841a742ee5c597b98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
+  _target: {fileID: 4538818359008412}
   _oneWay: 0
-  _rotations: 0
+  _rotations: 1
 --- !u!114 &114974852477296734
 MonoBehaviour:
   m_ObjectHideFlags: 1
