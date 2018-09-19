@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Networking/Scenes/TestSceneUI.unity
     guid: 46dd829446419e5489115e9761f0e368
+  - enabled: 1
+    path: Assets/Assets/Networking/Scenes/TestGameScene.unity
+    guid: 592e8eb96cbdbe24ab1d077bc10f985c
