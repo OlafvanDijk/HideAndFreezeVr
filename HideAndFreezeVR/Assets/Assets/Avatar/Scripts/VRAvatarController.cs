@@ -12,10 +12,9 @@ public class VRAvatarController : MonoBehaviour
     [SerializeField]
     private GameObject _VRControllerPrefab;
     [SerializeField]
-    private GameObject _containerObject;
-    [SerializeField]
     private GameObject _VRRigPrefab;
 
+    private GameObject _containerObject;
     public VRIK _actualAvatar;
     private Collider[] _ownColliders;
     private GameObject _VRRigObject;
@@ -27,7 +26,11 @@ public class VRAvatarController : MonoBehaviour
     private Quaternion _lastRotation;
     private bool _haveIStarted = false;
 
-
+    private void Start()
+    {
+        VRSetup(this.transform.position, this.transform.rotation);
+        _updatePlayAreaTransform();
+    }
 
     private void Initialize()
     {
@@ -118,7 +121,9 @@ public class VRAvatarController : MonoBehaviour
         _multiVR = _VRRigObject.GetComponentInChildren<MultiVRSetup>();
 
         GameObject leftController = Instantiate(_VRControllerPrefab, _containerObject.transform);
+        _actualAvatar.solver.leftArm.target = leftController.transform;
         GameObject rightController = Instantiate(_VRControllerPrefab, _containerObject.transform);
+        _actualAvatar.solver.rightArm.target = rightController.transform;
         leftController.name = "LeftController (Clone)";
         rightController.name = "RightController (Clone)";
 
@@ -132,20 +137,6 @@ public class VRAvatarController : MonoBehaviour
 
         _sdkManager.scriptAliasLeftController = leftController;
         _sdkManager.scriptAliasRightController = rightController;
-
-        //// Create a dummy that inverts the rotation from the spawn position
-        //GameObject leftInversion = new GameObject("Rotation Inversion (Left)");
-        //leftInversion.transform.localRotation = Quaternion.Inverse(rotation);
-
-        //leftInversion.transform.SetParent(_multiVR.leftHandAlias.avatarOffset.parent, false);
-        //_multiVR.leftHandAlias.avatarOffset.SetParent(leftInversion.transform, false);
-
-        //// Create a dummy that inverts the rotation from the spawn position.
-        //GameObject rightInversion = new GameObject("Rotation Inversion (Right)");
-        //rightInversion.transform.localRotation = Quaternion.Inverse(rotation);
-
-        //rightInversion.transform.SetParent(_multiVR.rightHandAlias.avatarOffset.parent, false);
-        //_multiVR.rightHandAlias.avatarOffset.SetParent(rightInversion.transform, false);
 
         // Set actual avatar transforms.
         _actualAvatar.solver.spine.headTarget = _multiVR.headAlias.avatarOffset.transform;

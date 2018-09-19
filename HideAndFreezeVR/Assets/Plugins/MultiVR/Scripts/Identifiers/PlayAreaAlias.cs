@@ -19,6 +19,7 @@ public class PlayAreaAlias : MultiVRAlias
             if (_playArea == null)
                 _playArea = GetComponentInChildren<PlayArea>();
 
+            Debug.Log(_playArea);
             return _playArea;
         }
     }

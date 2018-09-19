@@ -5,11 +5,16 @@ using UnityEngine;
 public class HideController : MonoBehaviour {
 
     [SerializeField]
-    private HandAlias handAlias;
-    [SerializeField]
     private MultiVRSetup multiVRSetup;
     [SerializeField]
     private GameObject steamVRController;
+    [SerializeField]
+    private bool showControllers;
+
+    private void Start()
+    {
+        StartCoroutine(HideWithDelay(1f));
+    }
 
     /// <summary>
     /// Turns the controllers (in)visible based on the SDK used.
@@ -36,7 +41,7 @@ public class HideController : MonoBehaviour {
                 break;
             case PlayAreaType.OCULUS:
                 OvrAvatar avatar = multiVRSetup.playAreaAlias.GetComponentInChildren<OvrAvatar>(true);
-
+                //OvrAvatar avatar = GetComponentInChildren<OvrAvatar>(true);
                 avatar.ShowFirstPerson = value;
                 avatar.ShowControllers(value);
                 break;
@@ -45,5 +50,11 @@ public class HideController : MonoBehaviour {
             default:
                 break;
         }
+    }
+
+    private IEnumerator HideWithDelay(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        HideVRController(showControllers);
     }
 }
