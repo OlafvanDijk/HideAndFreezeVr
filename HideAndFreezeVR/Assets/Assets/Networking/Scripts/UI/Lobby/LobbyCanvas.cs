@@ -7,8 +7,16 @@ public class LobbyCanvas : MonoBehaviour {
     [SerializeField]
     private RoomLayoutGroup roomLayoutGroup;
 
+    // <Summary>Called when a player joins a room </Summary>
 	public void OnClickJoinRoom(string roomName)
     {
-        Debug.Log("lobbyclick");
+        if (PhotonNetwork.JoinRoom(roomName))
+        {
+            MainCanvasManager.Instance.ShowRoom();
+        }
+        else
+        {
+            print("Join room failed");
+        }
     }
 }

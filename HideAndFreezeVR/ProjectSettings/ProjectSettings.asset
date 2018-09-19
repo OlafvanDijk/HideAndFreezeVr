@@ -738,9 +738,9 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: da17b852-1346-4129-b31c-89891f05b218
-  projectName: Avatar Component
-  organizationId: improvive
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

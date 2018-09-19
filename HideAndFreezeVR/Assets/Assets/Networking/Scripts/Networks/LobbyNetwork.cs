@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LobbyNetwork : MonoBehaviour {
+public class LobbyNetwork : Photon.PunBehaviour {
 
 	// Use this for initialization
 	private void Start () {
@@ -10,7 +10,7 @@ public class LobbyNetwork : MonoBehaviour {
         PhotonNetwork.ConnectUsingSettings("0.0.0");
 	}
 
-    private void OnConnectedToMaster()
+    public override void OnConnectedToMaster()
     {
         print("Connected to master.");
         PhotonNetwork.playerName = PlayerNetwork.Instance.PlayerName;
@@ -18,8 +18,13 @@ public class LobbyNetwork : MonoBehaviour {
         PhotonNetwork.JoinLobby(TypedLobby.Default);
     }
 
-    private void OnJoinedLobby()
+    public override void OnJoinedLobby()
     {
         print("Joined Lobby");
+
+        if (!PhotonNetwork.inRoom)
+        {
+            MainCanvasManager.Instance.ShowLobby();
+        }
     }
 }

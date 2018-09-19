@@ -93,7 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoomNameText: {fileID: 114101695064916208}
-  RoomName: 
 --- !u!114 &114573905930961082
 MonoBehaviour:
   m_ObjectHideFlags: 1
