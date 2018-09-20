@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Assets/Scenes/Level1.unity
-    guid: 3e0d8fea0acf53a4d900a587b7e6d31b
+    path: Assets/Assets/Avatar/Scenes/Avatar Spawn Test Scene.unity
+    guid: 43339993f8fea1a479e0fc2942fa2ed4
