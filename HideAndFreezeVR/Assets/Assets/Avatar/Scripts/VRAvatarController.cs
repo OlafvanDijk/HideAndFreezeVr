@@ -8,49 +8,47 @@ using UnityEngine.Networking;
 public class VRAvatarController : MonoBehaviour
 {
     public bool showControllers;
-    public VRIK _avatarPrefab;
+    public VRIK avatarPrefab;
     [SerializeField]
-    private GameObject _VRControllerPrefab;
+    private GameObject VRControllerPrefab;
     [SerializeField]
-    private GameObject _VRRigPrefab;
+    private GameObject VRRigPrefab;
 
-    private GameObject _containerObject;
-    public VRIK _actualAvatar;
-    private Collider[] _ownColliders;
-    private GameObject _VRRigObject;
-    private MultiVRSetup _multiVR;
-    private VRTK.VRTK_SDKManager _sdkManager;
-    private VRTK.VRTK_BezierPointerRenderer _rightControllerTeleport;
-    private VRTK.VRTK_BezierPointerRenderer _leftControllerTeleport;
-    private Vector3 _lastPosition;
-    private Quaternion _lastRotation;
-    private bool _haveIStarted = false;
+    private GameObject containerObject;
+    public VRIK actualAvatar;
+    private Collider[] ownColliders;
+    private GameObject VRRigObject;
+    private MultiVRSetup multiVR;
+    private VRTK.VRTK_SDKManager sdkManager;
+    private VRTK.VRTK_BezierPointerRenderer rightControllerTeleport;
+    private VRTK.VRTK_BezierPointerRenderer leftControllerTeleport;
+    private Vector3 lastPosition;
+    private Quaternion lastRotation;
+    private bool haveIStarted = false;
 
     private void Start()
     {
         VRSetup(this.transform.position, this.transform.rotation);
-        _updatePlayAreaTransform();
+        UpdatePlayAreaTransform();
+        haveIStarted = true;
     }
 
-    private void Initialize()
-    {
-        // We should let the server know we this avatar controller exist on this client side so we can receive the root transform.
-        // This also lets the server know that we know this player exists, so that we can receive updates for it in the future.
-        Debug.Log(transform.position + " . " + transform.rotation);
-
-        _haveIStarted = true;
-    }
-
+    /// <summary>
+    /// After every teleport call the ResetIKSolver method.
+    /// </summary>
     private void OnEnable()
     {
-        VRTK.VRTK_DashTeleport.hasFinishedMoving += test;
+        VRTK.VRTK_DashTeleport.hasFinishedMoving += ResetIKSolver;
     }
 
-    private void test()
+    /// <summary>
+    /// Resets the solver.
+    /// </summary>
+    private void ResetIKSolver()
     {
-        if (_avatarPrefab != null)
+        if (avatarPrefab != null)
         {
-            IKSolver solver = _avatarPrefab.GetIKSolver();
+            IKSolver solver = avatarPrefab.GetIKSolver();
             IKSolverVR solverVR = solver as IKSolverVR;
             solverVR.Reset();
         }
@@ -63,17 +61,17 @@ public class VRAvatarController : MonoBehaviour
     /// <param name="rotation"></param>
     public void ProcessServerUpdate(Vector3 position, Quaternion rotation)
     {
-        if (!_haveIStarted) return;
+        if (!haveIStarted) return;
 
         // If we already exist, we need to update our values.
-        if (_containerObject != null)
+        if (containerObject != null)
         {
-            _updateRootTransform(position, rotation);
+            UpdateRootTransform(position, rotation);
             return;
         }
 
         // Otherwise we initialize our play area.
-        VRSetup(position, rotation);
+        //VRSetup(position, rotation);
     }
 
     /// <summary>
@@ -81,126 +79,134 @@ public class VRAvatarController : MonoBehaviour
     /// </summary>
     /// <param name="position"></param>
     /// <param name="rotation"></param>
-    protected void _updateRootTransform(Vector3 position, Quaternion rotation)
+    protected void UpdateRootTransform(Vector3 position, Quaternion rotation)
     {
-        Transform container = _containerObject.transform;
-
+        Transform container = containerObject.transform;
         container.position = position;
         container.rotation = rotation;
 
         // If we are the local player, we must sync the container to our play area.
-        Transform playArea = _multiVR.playAreaAlias.transform;
+        Transform playArea = multiVR.playAreaAlias.transform;
 
         playArea.position = container.position;
         playArea.rotation = container.rotation;
 
-        _capturePlayAreaTransform();
+        CapturePlayAreaTransform();
     }
 
     /// <summary>
     /// Initialize the VR rig for this avatar.
+    /// If there is no avatar then just setup the basic structure.
     /// </summary>
     /// <param name="position"></param>
     /// <param name="rotation"></param>
     private void VRSetup(Vector3 position, Quaternion rotation)
     {
-        _containerObject = new GameObject("VRContainer");
-        _containerObject.transform.position = position;
-        _containerObject.transform.rotation = rotation;
+        containerObject = new GameObject("VRContainer");
+        containerObject.transform.position = position;
+        containerObject.transform.rotation = rotation;
 
-        transform.SetParent(_containerObject.transform, true);
+        transform.SetParent(containerObject.transform, true);
         
         //Current client owns this player
         //create camera rig and attach player model to it
 
-        _VRRigObject = Instantiate(_VRRigPrefab, transform.position, transform.rotation);
-        _VRRigObject.transform.SetParent(_containerObject.transform, false);
-        _VRRigObject.transform.localPosition = Vector3.zero;
+        VRRigObject = Instantiate(VRRigPrefab, transform.position, transform.rotation);
+        VRRigObject.transform.SetParent(containerObject.transform, false);
+        VRRigObject.transform.localPosition = Vector3.zero;
 
-        _sdkManager = _VRRigObject.GetComponentInChildren<VRTK.VRTK_SDKManager>();
-        _multiVR = _VRRigObject.GetComponentInChildren<MultiVRSetup>();
+        sdkManager = VRRigObject.GetComponentInChildren<VRTK.VRTK_SDKManager>();
+        multiVR = VRRigObject.GetComponentInChildren<MultiVRSetup>();
 
-        GameObject leftController = Instantiate(_VRControllerPrefab, _containerObject.transform);
+        GameObject leftController = Instantiate(VRControllerPrefab, containerObject.transform);
         
-        GameObject rightController = Instantiate(_VRControllerPrefab, _containerObject.transform);
+        GameObject rightController = Instantiate(VRControllerPrefab, containerObject.transform);
         
         leftController.name = "LeftController (Clone)";
         rightController.name = "RightController (Clone)";
 
         // Attach left hand
-        MultiVRUtil.MakeReferral(_multiVR.leftHandAlias.gameObject);
-        _multiVR.leftHandAlias.transform.SetParent(leftController.transform);
+        MultiVRUtil.MakeReferral(multiVR.leftHandAlias.gameObject);
+        multiVR.leftHandAlias.transform.SetParent(leftController.transform);
 
         // Attach right hand
-        MultiVRUtil.MakeReferral(_multiVR.rightHandAlias.gameObject);
-        _multiVR.rightHandAlias.transform.SetParent(rightController.transform);
+        MultiVRUtil.MakeReferral(multiVR.rightHandAlias.gameObject);
+        multiVR.rightHandAlias.transform.SetParent(rightController.transform);
 
-        ToggleController(_multiVR.leftHandAlias.gameObject);
-        ToggleController(_multiVR.rightHandAlias.gameObject);
+        ToggleController(multiVR.leftHandAlias.gameObject);
+        ToggleController(multiVR.rightHandAlias.gameObject);
 
-        _sdkManager.scriptAliasLeftController = leftController;
-        _sdkManager.scriptAliasRightController = rightController;
+        sdkManager.scriptAliasLeftController = leftController;
+        sdkManager.scriptAliasRightController = rightController;
 
         //Get Teleport
-        _rightControllerTeleport = rightController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
-        _leftControllerTeleport = leftController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
+        rightControllerTeleport = rightController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
+        leftControllerTeleport = leftController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
 
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         transform.localScale = Vector3.one;
 
-        _ownColliders = transform.root.GetComponentsInChildren<Collider>();
+        ownColliders = transform.root.GetComponentsInChildren<Collider>();
 
         #region Avatar Setup
-        if (_avatarPrefab != null)
+        if (avatarPrefab != null)
         {
-            _actualAvatar = Instantiate(_avatarPrefab, Vector3.zero, Quaternion.identity);
-            _actualAvatar.solver.spine.headTarget = transform;
-            _actualAvatar.transform.SetParent(_containerObject.transform, false);
-            _actualAvatar.transform.rotation = _actualAvatar.transform.rotation * Quaternion.Inverse(rotation);
-            _actualAvatar.solver.leftArm.target = leftController.transform;
-            _actualAvatar.solver.rightArm.target = rightController.transform;
+            actualAvatar = Instantiate(avatarPrefab, Vector3.zero, Quaternion.identity);
+            actualAvatar.solver.spine.headTarget = transform;
+            actualAvatar.transform.SetParent(containerObject.transform, false);
+            actualAvatar.transform.rotation = actualAvatar.transform.rotation * Quaternion.Inverse(rotation);
+            actualAvatar.solver.leftArm.target = leftController.transform;
+            actualAvatar.solver.rightArm.target = rightController.transform;
             // Set actual avatar transforms.
-            _actualAvatar.solver.spine.headTarget = _multiVR.headAlias.avatarOffset.transform;
-            _actualAvatar.solver.leftArm.target = _multiVR.leftHandAlias.avatarOffset.transform;
-            _actualAvatar.solver.rightArm.target = _multiVR.rightHandAlias.avatarOffset.transform;
-            this.transform.SetParent(_actualAvatar.solver.spine.headTarget, false);
+            actualAvatar.solver.spine.headTarget = multiVR.headAlias.avatarOffset.transform;
+            actualAvatar.solver.leftArm.target = multiVR.leftHandAlias.avatarOffset.transform;
+            actualAvatar.solver.rightArm.target = multiVR.rightHandAlias.avatarOffset.transform;
+            this.transform.SetParent(actualAvatar.solver.spine.headTarget, false);
         }
         #endregion
 
-        _capturePlayAreaTransform();
+        CapturePlayAreaTransform();
 
-        Debug.Log("Avatar: " + _actualAvatar);
+        Debug.Log("Avatar: " + actualAvatar);
     }
 
     protected virtual void LateUpdate()
     {
-        _updatePlayAreaTransform();
+        UpdatePlayAreaTransform();
     }
 
-    private void _capturePlayAreaTransform()
+    /// <summary>
+    /// Get's the current transform of the PlayerArea
+    /// </summary>
+    private void CapturePlayAreaTransform()
     {
-        Transform target = _multiVR.playAreaAlias.transform;
-        _lastPosition = target.position;
-        _lastRotation = target.rotation;
+        Transform target = multiVR.playAreaAlias.transform;
+        lastPosition = target.position;
+        lastRotation = target.rotation;
     }
 
-    private void _updatePlayAreaTransform()
+    /// <summary>
+    /// Updates the PlayArea transform if you have moved.
+    /// </summary>
+    private void UpdatePlayAreaTransform()
     {
-        if (_multiVR == null)
+        if (multiVR == null)
             return;
 
-        Transform target = _multiVR.playAreaAlias.transform;
+        Transform target = multiVR.playAreaAlias.transform;
 
-        if (!_lastPosition.Equals(target.position) || !_lastRotation.Equals(target.rotation))
+        if (!lastPosition.Equals(target.position) || !lastRotation.Equals(target.rotation))
         {
-            // Capture new values.
-            _capturePlayAreaTransform();
-
+            CapturePlayAreaTransform();
             ProcessServerUpdate(target.position, target.rotation);
         }
     }
 
+    /// <summary>
+    /// Toggles the visibility of the given controller alias.
+    /// </summary>
+    /// <param name="alias"></param>
     private void ToggleController(GameObject alias)
     {
         HideController hideController = alias.GetComponentInChildren<HideController>();
