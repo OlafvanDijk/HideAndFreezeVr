@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:HideAndFreezeVR/Assets/Assets/Networking/Prefabs.meta
 guid: b4989237d2ff62e48b1801cabd27a310
+=======
+guid: 27421197bf38d0149bc9e79c7f9267ef
+>>>>>>> Development:HideAndFreezeVR/Assets/Assets/Avatar/Models.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
