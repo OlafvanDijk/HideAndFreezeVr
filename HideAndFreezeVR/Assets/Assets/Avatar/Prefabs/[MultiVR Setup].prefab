@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 4790955586865372}
   - component: {fileID: 114900388216023226}
   m_Layer: 0
-  m_Name: '[MultiVR Setup] without Avatar'
+  m_Name: '[MultiVR Setup]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

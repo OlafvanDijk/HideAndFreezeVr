@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4822656860157202}
   - component: {fileID: 114933712617912126}
   m_Layer: 0
-  m_Name: VRSetup With Avatar
+  m_Name: VRSetup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,4 +57,5 @@ MonoBehaviour:
     type: 2}
   _VRRigPrefab: {fileID: 1316140427364740, guid: 407513443d6472a45bd9b822e6e4826d,
     type: 2}
+  showControllers: 0
   _actualAvatar: {fileID: 0}
