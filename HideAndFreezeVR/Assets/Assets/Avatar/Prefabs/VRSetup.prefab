@@ -51,11 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae0070eff71d5049a65e0512af097aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _avatarPrefab: {fileID: 114465513934663966, guid: 060bfce570bfcb146abd6baefb53f464,
-    type: 2}
-  _VRControllerPrefab: {fileID: 1153520610727894, guid: c4d3a85c5a80fb64aaed02db8d5b4e3f,
-    type: 2}
-  _VRRigPrefab: {fileID: 1316140427364740, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
   showControllers: 0
-  _actualAvatar: {fileID: 0}
+  avatarPrefab: {fileID: 0}
+  VRControllerPrefab: {fileID: 1153520610727894, guid: c4d3a85c5a80fb64aaed02db8d5b4e3f,
+    type: 2}
+  VRRigPrefab: {fileID: 1316140427364740, guid: 407513443d6472a45bd9b822e6e4826d,
+    type: 2}
+  actualAvatar: {fileID: 0}
