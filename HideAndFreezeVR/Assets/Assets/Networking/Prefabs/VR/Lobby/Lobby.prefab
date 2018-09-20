@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222212430694553138}
   - component: {fileID: 114094006810765582}
   - component: {fileID: 114039510352850856}
-  - component: {fileID: 114883329751424738}
+  - component: {fileID: 114159714062040562}
   - component: {fileID: 65081325699166928}
   m_Layer: 5
   m_Name: CreateRoom
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224750616279273712}
-  - component: {fileID: 114175192819119064}
+  - component: {fileID: 114136048264226666}
   m_Layer: 5
   m_Name: Lobby
   m_TagString: Untagged
@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 114017952899292396}
   - component: {fileID: 222311587830279518}
   - component: {fileID: 114917135916555280}
+  - component: {fileID: 65272708301686840}
   m_Layer: 5
   m_Name: CreateRoomInput
   m_TagString: Untagged
@@ -162,7 +163,7 @@ GameObject:
   - component: {fileID: 224544839566647250}
   - component: {fileID: 114640114243989400}
   - component: {fileID: 114223744677344474}
-  - component: {fileID: 114156332252117860}
+  - component: {fileID: 114610196158325466}
   m_Layer: 5
   m_Name: RoomLayoutGroup
   m_TagString: Untagged
@@ -182,6 +183,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1350, y: 930, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65272708301686840
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682176960971220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1346.5413, y: 72.9842, z: 2}
+  m_Center: {x: -1.4338446, y: 0.91328126, z: 0}
 --- !u!114 &114010939663289992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,7 +324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114883329751424738}
+      - m_Target: {fileID: 114159714062040562}
         m_MethodName: OnClick_CreateRoom
         m_Mode: 1
         m_Arguments:
@@ -405,20 +418,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114156332252117860
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1906094836136678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 971de6b342b176b4ea5a3accc218bc96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RoomListingPrefab: {fileID: 114432462558138654, guid: d387b0ee523872443ad8a646dbfbb893,
-    type: 2}
---- !u!114 &114175192819119064
+--- !u!114 &114136048264226666
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -426,10 +426,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1462012710688980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5906678bac5643a4ba1463134267901c, type: 3}
+  m_Script: {fileID: 11500000, guid: 70efa95d4af40214392a1033c4723fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomLayoutGroup: {fileID: 114156332252117860}
+  roomLayoutGroup: {fileID: 114610196158325466}
+--- !u!114 &114159714062040562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278856334955460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8b683348dbedf49b31dc14424ef387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: {fileID: 114895683934967630}
 --- !u!114 &114223744677344474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,6 +500,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Create room
+--- !u!114 &114610196158325466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906094836136678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14df1f7c9b399544584f4cc1faacf45b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomListingPrefab: {fileID: 114231860198623500, guid: d387b0ee523872443ad8a646dbfbb893,
+    type: 2}
 --- !u!114 &114640114243989400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -541,18 +566,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114883329751424738
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1278856334955460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ae15d8304a3bd49a94600c7138818a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomName: {fileID: 114895683934967630}
 --- !u!114 &114895683934967630
 MonoBehaviour:
   m_ObjectHideFlags: 1

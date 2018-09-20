@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 224867310040844378}
   - component: {fileID: 114322006372806858}
   - component: {fileID: 114616181604902098}
-  - component: {fileID: 114741086381004982}
+  - component: {fileID: 114838767585916572}
   m_Layer: 5
   m_Name: PlayerLayoutGroup
   m_TagString: Untagged
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224146389979193164}
-  - component: {fileID: 114218456873143628}
+  - component: {fileID: 114741423599827976}
   m_Layer: 5
   m_Name: CurrentRoom
   m_TagString: Untagged
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114741086381004982}
+      - m_Target: {fileID: 114838767585916572}
         m_MethodName: OnClickLeaveRoom
         m_Mode: 1
         m_Arguments:
@@ -325,17 +325,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114218456873143628
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1599417833803518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0136bea37ead66a45a0ec02ccbad842e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114322006372806858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,7 +398,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114218456873143628}
+      - m_Target: {fileID: 114741423599827976}
         m_MethodName: OnClickStart
         m_Mode: 1
         m_Arguments:
@@ -582,19 +571,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114741086381004982
+--- !u!114 &114741423599827976
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1074182002882970}
+  m_GameObject: {fileID: 1599417833803518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392cb44dd7e8a6d4ebf0e3bd1b281358, type: 3}
+  m_Script: {fileID: 11500000, guid: a5175f0a0e513bf408a74dadcec71b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerListingPrefab: {fileID: 1093438568006122, guid: 8b5419e549e600f4d92b9276326106e0,
-    type: 2}
 --- !u!114 &114800276234034590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -661,7 +648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114741086381004982}
+      - m_Target: {fileID: 114838767585916572}
         m_MethodName: OnClickRoomState
         m_Mode: 2
         m_Arguments:
@@ -674,6 +661,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114838767585916572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074182002882970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e4e1eeebac68542859ef8b89f2cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerListingPrefab: {fileID: 1093438568006122, guid: 8b5419e549e600f4d92b9276326106e0,
+    type: 2}
 --- !u!114 &114852002209939670
 MonoBehaviour:
   m_ObjectHideFlags: 1

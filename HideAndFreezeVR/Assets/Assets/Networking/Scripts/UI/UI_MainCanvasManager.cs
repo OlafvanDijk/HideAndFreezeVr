@@ -2,28 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_MainCanvasManager : MainCanvasManager {
+public class UI_MainCanvasManager : MonoBehaviour {
 
-
-
-    
+    public static UI_MainCanvasManager Instance;
 
     [SerializeField]
-    private CurrentRoomCanvas currentRoomCanvas;
-    public CurrentRoomCanvas getCurrentRoomCanvas()
+    private UI_LobbyCanvas lobbyCanvas;
+    public UI_LobbyCanvas getLobbyCanvas()
+    {
+        return lobbyCanvas;
+    }
+
+    [SerializeField]
+    private UI_CurrentRoomCanvas currentRoomCanvas;
+    public UI_CurrentRoomCanvas getCurrentRoomCanvas()
     {
         return currentRoomCanvas;
     }
 
     private void Awake()
     {
-        //Instance = this;
+        Instance = this;
     }
 
     /// <summary>
     /// Loads the lobby UI.
     /// </summary>
-    public override void ShowLobby()
+    public void ShowLobby()
     {
         getLobbyCanvas().gameObject.SetActive(true);
         currentRoomCanvas.gameObject.SetActive(false);
@@ -32,7 +37,7 @@ public class UI_MainCanvasManager : MainCanvasManager {
     /// <summary>
     /// Loads the Room UI.
     /// </summary>
-    public override void ShowRoom()
+    public void ShowRoom()
     {
         getLobbyCanvas().gameObject.SetActive(false);
         currentRoomCanvas.gameObject.SetActive(true);

@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114641185522097762}
   - component: {fileID: 114454616556601378}
   - component: {fileID: 114733388747426228}
-  - component: {fileID: 114432462558138654}
+  - component: {fileID: 114231860198623500}
   - component: {fileID: 65294153852342390}
   m_Layer: 5
   m_Name: RoomListing
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Default text
---- !u!114 &114432462558138654
+--- !u!114 &114231860198623500
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1829079338930020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684ab51d9997589438785ac075f2b45f, type: 3}
+  m_Script: {fileID: 11500000, guid: 64b696eb96c85ad4191f1701db3429c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RoomNameText: {fileID: 114120115869304458}
