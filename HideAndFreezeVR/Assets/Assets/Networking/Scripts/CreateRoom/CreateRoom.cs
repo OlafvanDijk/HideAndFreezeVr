@@ -15,8 +15,14 @@ public class CreateRoom : Photon.PunBehaviour{
     public void OnClick_CreateRoom()
     {
         RoomOptions roomOptions = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = 6 };
+        string RoomName = roomName.text;
 
-        if (PhotonNetwork.CreateRoom(roomName.text, roomOptions, TypedLobby.Default))
+        if(RoomName == "" || RoomName == null || RoomName == " " )
+        {
+            RoomName = "Room of " + PlayerNetwork.Instance.PlayerName;
+        }
+
+        if (PhotonNetwork.CreateRoom(RoomName, roomOptions, TypedLobby.Default))
         {
             print("Create room succesfully sent");
         }

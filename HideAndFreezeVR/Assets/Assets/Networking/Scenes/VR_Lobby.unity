@@ -494,6 +494,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114075401913150830, guid: 598adb145681eb54f97b5a5967e9ace7,
+        type: 2}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114075401913150830, guid: 598adb145681eb54f97b5a5967e9ace7,
+        type: 2}
+      propertyPath: instantiationId
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 598adb145681eb54f97b5a5967e9ace7, type: 2}
   m_IsPrefabParent: 0
@@ -721,6 +731,23 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224750616279273712, guid: 237ea9ce451107d48839315935a6792f,
     type: 2}
   m_PrefabInternal: {fileID: 1801866021}
+--- !u!1 &1817327290 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1682176960971220, guid: 237ea9ce451107d48839315935a6792f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1801866021}
+--- !u!65 &1817327295
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817327290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1346.5413, y: 72.9842, z: 2}
+  m_Center: {x: -1.4338446, y: 0.91328126, z: 0}
 --- !u!1 &1928861077
 GameObject:
   m_ObjectHideFlags: 0
