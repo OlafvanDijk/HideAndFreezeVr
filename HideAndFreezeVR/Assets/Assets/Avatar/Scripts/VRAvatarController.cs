@@ -13,6 +13,8 @@ public class VRAvatarController : MonoBehaviour
     private GameObject _VRControllerPrefab;
     [SerializeField]
     private GameObject _VRRigPrefab;
+    [SerializeField]
+    private bool showControllers;
 
     private GameObject _containerObject;
     public VRIK _actualAvatar;
@@ -48,9 +50,12 @@ public class VRAvatarController : MonoBehaviour
 
     private void test()
     {
-        IKSolver solver = _avatarPrefab.GetIKSolver();
-        IKSolverVR solverVR = solver as IKSolverVR;
-        solverVR.Reset();
+        if (_avatarPrefab != null)
+        {
+            IKSolver solver = _avatarPrefab.GetIKSolver();
+            IKSolverVR solverVR = solver as IKSolverVR;
+            solverVR.Reset();
+        }
     }
 
     /// <summary>
@@ -106,10 +111,7 @@ public class VRAvatarController : MonoBehaviour
         _containerObject.transform.rotation = rotation;
 
         transform.SetParent(_containerObject.transform, true);
-        _actualAvatar = Instantiate(_avatarPrefab, Vector3.zero, Quaternion.identity);
-        _actualAvatar.solver.spine.headTarget = transform;
-        _actualAvatar.transform.SetParent(_containerObject.transform, false);
-        _actualAvatar.transform.rotation = _actualAvatar.transform.rotation * Quaternion.Inverse(rotation);
+        
         //Current client owns this player
         //create camera rig and attach player model to it
 
@@ -121,9 +123,9 @@ public class VRAvatarController : MonoBehaviour
         _multiVR = _VRRigObject.GetComponentInChildren<MultiVRSetup>();
 
         GameObject leftController = Instantiate(_VRControllerPrefab, _containerObject.transform);
-        _actualAvatar.solver.leftArm.target = leftController.transform;
+        
         GameObject rightController = Instantiate(_VRControllerPrefab, _containerObject.transform);
-        _actualAvatar.solver.rightArm.target = rightController.transform;
+        
         leftController.name = "LeftController (Clone)";
         rightController.name = "RightController (Clone)";
 
@@ -135,24 +137,38 @@ public class VRAvatarController : MonoBehaviour
         MultiVRUtil.MakeReferral(_multiVR.rightHandAlias.gameObject);
         _multiVR.rightHandAlias.transform.SetParent(rightController.transform);
 
+        ToggleController(_multiVR.leftHandAlias.gameObject);
+        ToggleController(_multiVR.rightHandAlias.gameObject);
+
         _sdkManager.scriptAliasLeftController = leftController;
         _sdkManager.scriptAliasRightController = rightController;
-
-        // Set actual avatar transforms.
-        _actualAvatar.solver.spine.headTarget = _multiVR.headAlias.avatarOffset.transform;
-        _actualAvatar.solver.leftArm.target = _multiVR.leftHandAlias.avatarOffset.transform;
-        _actualAvatar.solver.rightArm.target = _multiVR.rightHandAlias.avatarOffset.transform;
 
         //Get Teleport
         _rightControllerTeleport = rightController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
         _leftControllerTeleport = leftController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
 
-        this.transform.SetParent(_actualAvatar.solver.spine.headTarget, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         transform.localScale = Vector3.one;
 
         _ownColliders = transform.root.GetComponentsInChildren<Collider>();
+
+        #region Avatar Setup
+        if (_avatarPrefab != null)
+        {
+            _actualAvatar = Instantiate(_avatarPrefab, Vector3.zero, Quaternion.identity);
+            _actualAvatar.solver.spine.headTarget = transform;
+            _actualAvatar.transform.SetParent(_containerObject.transform, false);
+            _actualAvatar.transform.rotation = _actualAvatar.transform.rotation * Quaternion.Inverse(rotation);
+            _actualAvatar.solver.leftArm.target = leftController.transform;
+            _actualAvatar.solver.rightArm.target = rightController.transform;
+            // Set actual avatar transforms.
+            _actualAvatar.solver.spine.headTarget = _multiVR.headAlias.avatarOffset.transform;
+            _actualAvatar.solver.leftArm.target = _multiVR.leftHandAlias.avatarOffset.transform;
+            _actualAvatar.solver.rightArm.target = _multiVR.rightHandAlias.avatarOffset.transform;
+            this.transform.SetParent(_actualAvatar.solver.spine.headTarget, false);
+        }
+        #endregion
 
         _capturePlayAreaTransform();
 
@@ -184,6 +200,15 @@ public class VRAvatarController : MonoBehaviour
             _capturePlayAreaTransform();
 
             ProcessServerUpdate(target.position, target.rotation);
+        }
+    }
+
+    private void ToggleController(GameObject alias)
+    {
+        HideController hideController = alias.GetComponentInChildren<HideController>();
+        if (hideController != null)
+        {
+            hideController.ToggleShowControllers(showControllers);
         }
     }
 }
