@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LobbyNetwork : Photon.PunBehaviour {
+    
 
 	private void Start () {
         print("Connecting to server..");

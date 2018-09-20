@@ -21,7 +21,7 @@ public class RoomListing : MonoBehaviour {
     /// </summary>
     private void Setup()
     {
-        GameObject lobbyCanvasObj = MainCanvasManager.Instance.getLobbyCanvas().gameObject;
+        GameObject lobbyCanvasObj = UI_MainCanvasManager.Instance.getLobbyCanvas().gameObject;
         if (lobbyCanvasObj == null)
         {
             return;

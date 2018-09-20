@@ -38,7 +38,7 @@ public class PlayerLayoutGroup : Photon.PunBehaviour {
         }
         playerListings.Clear();
 
-        MainCanvasManager.Instance.ShowRoom();
+        UI_MainCanvasManager.Instance.ShowRoom();
 
         PhotonPlayer[] photonPlayers = PhotonNetwork.playerList;
         for(int i = 0; i < photonPlayers.Length; i++)

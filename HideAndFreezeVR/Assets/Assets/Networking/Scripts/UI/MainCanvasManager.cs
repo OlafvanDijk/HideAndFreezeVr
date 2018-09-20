@@ -13,13 +13,6 @@ public class MainCanvasManager : MonoBehaviour {
         return lobbyCanvas;
     }
 
-    [SerializeField]
-    private CurrentRoomCanvas currentRoomCanvas;
-    public CurrentRoomCanvas getCurrentRoomCanvas()
-    {
-        return currentRoomCanvas;
-    }
-
     private void Awake()
     {
         Instance = this;
@@ -28,20 +21,14 @@ public class MainCanvasManager : MonoBehaviour {
     /// <summary>
     /// Loads the lobby UI.
     /// </summary>
-    public void ShowLobby()
+    public virtual void ShowLobby()
     {
-        lobbyCanvas.gameObject.SetActive(true);
-        currentRoomCanvas.gameObject.SetActive(false);
     }
 
     /// <summary>
     /// Loads the Room UI.
     /// </summary>
-    public void ShowRoom()
+    public virtual void ShowRoom()
     {
-        lobbyCanvas.gameObject.SetActive(false);
-        currentRoomCanvas.gameObject.SetActive(true);
     }
-
-   
 }

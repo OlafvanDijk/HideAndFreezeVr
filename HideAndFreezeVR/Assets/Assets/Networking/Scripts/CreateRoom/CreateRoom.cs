@@ -41,6 +41,6 @@ public class CreateRoom : Photon.PunBehaviour{
     public override void OnCreatedRoom()
     {
         print("Room created succesfully");
-        MainCanvasManager.Instance.ShowRoom();
+        UI_MainCanvasManager.Instance.ShowRoom();
     }
 }
