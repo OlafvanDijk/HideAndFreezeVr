@@ -344,7 +344,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4725630648606190}
-  - component: {fileID: 114137319208322926}
+  - component: {fileID: 114573049582663546}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -361,6 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4454204047638394}
   - component: {fileID: 114054731294135336}
+  - component: {fileID: 114961543819318380}
   m_Layer: 0
   m_Name: '[Head]'
   m_TagString: Untagged
@@ -950,7 +951,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4937135741947330}
-  - component: {fileID: 114147121517495446}
+  - component: {fileID: 114437265161118848}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -2409,7 +2410,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1738393049006616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2962,20 +2963,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 4538818359008412}
---- !u!114 &114137319208322926
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1332080686148988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093246d8cee60824baa210157e5edcb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiVRSetup: {fileID: 114900388216023226}
-  steamVRController: {fileID: 1828564796553174}
-  showControllers: 0
 --- !u!114 &114138402767233828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2999,20 +2986,6 @@ MonoBehaviour:
   smoothsScale: 0
   maxAllowedPerFrameSizeDifference: 0.003
   _moment: 2
---- !u!114 &114147121517495446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1865046942541170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093246d8cee60824baa210157e5edcb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiVRSetup: {fileID: 114900388216023226}
-  steamVRController: {fileID: 1604777102760958}
-  showControllers: 0
 --- !u!114 &114173612159422732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3439,6 +3412,19 @@ MonoBehaviour:
   laserAlwaysOn: 0
   color: {r: 0, g: 0, b: 0, a: 0}
   button: 33
+--- !u!114 &114437265161118848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1865046942541170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093246d8cee60824baa210157e5edcb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiVRSetup: {fileID: 114900388216023226}
+  showControllers: 1
 --- !u!114 &114456442234391126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3671,6 +3657,19 @@ MonoBehaviour:
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
   - {fileID: 2100000, guid: fd49692859fbfc74e81171826b1d1239, type: 2}
+--- !u!114 &114573049582663546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332080686148988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093246d8cee60824baa210157e5edcb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiVRSetup: {fileID: 114900388216023226}
+  showControllers: 1
 --- !u!114 &114577270477535596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4274,6 +4273,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usePerEyeCameras: 0
   useFixedUpdateForTracking: 0
+--- !u!114 &114961543819318380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351113723895116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf967ed14a353848b738f96a274c65c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timesToLookIntoParent: 2
 --- !u!114 &114962161524684620
 MonoBehaviour:
   m_ObjectHideFlags: 1

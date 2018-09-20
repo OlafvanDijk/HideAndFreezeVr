@@ -28,7 +28,6 @@ GameObject:
   - component: {fileID: 114219598322638390}
   - component: {fileID: 114197774996090628}
   - component: {fileID: 114995783714218726}
-  - component: {fileID: 114593754939019512}
   m_Layer: 0
   m_Name: HandController
   m_TagString: HandController
@@ -210,21 +209,6 @@ MonoBehaviour:
   invalidLocationObject: {fileID: 0}
   cursorScale: {x: 0.4, y: 0.02, z: 0.4}
   tracerScale: {x: 1, y: 1, z: 1}
---- !u!114 &114593754939019512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153520610727894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093246d8cee60824baa210157e5edcb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiVRSetup: {fileID: 114900388216023226, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  steamVRController: {fileID: 0}
-  showControllers: 0
 --- !u!114 &114940414422295850
 MonoBehaviour:
   m_ObjectHideFlags: 1
