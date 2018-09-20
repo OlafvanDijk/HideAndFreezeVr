@@ -7,14 +7,12 @@ using UnityEngine.Networking;
 
 public class VRAvatarController : MonoBehaviour
 {
-    [SerializeField]
-    private VRIK _avatarPrefab;
+    public bool showControllers;
+    public VRIK _avatarPrefab;
     [SerializeField]
     private GameObject _VRControllerPrefab;
     [SerializeField]
     private GameObject _VRRigPrefab;
-    [SerializeField]
-    private bool showControllers;
 
     private GameObject _containerObject;
     public VRIK _actualAvatar;
