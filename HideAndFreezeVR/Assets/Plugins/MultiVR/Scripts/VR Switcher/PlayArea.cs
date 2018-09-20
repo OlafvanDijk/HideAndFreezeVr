@@ -55,7 +55,7 @@ public class PlayArea : MonoBehaviour
         _instance = this;
 
         SDK_Setup setup = GetComponentInParent<SDK_Setup>();
-
+        Debug.Log(setup + " LL");
         MultiVRUtil.MakeReferral(setup.playAreaAttacher.gameObject);
 
         // Make the play area attacher our parent.
