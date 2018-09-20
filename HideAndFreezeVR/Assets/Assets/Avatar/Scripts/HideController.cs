@@ -48,7 +48,7 @@ public class HideController : MonoBehaviour {
                 break;
             case PlayAreaType.OCULUS:
                 OvrAvatar avatar = multiVRSetup.playAreaAlias.GetComponentInChildren<OvrAvatar>(true);
-                avatar.ShowFirstPerson = true;
+                avatar.ShowFirstPerson = value;
                 Debug.Log(value);
                 avatar.ShowControllers(value);
                 EnableButtonSelecting(controllerCloneParent, value);
@@ -77,5 +77,11 @@ public class HideController : MonoBehaviour {
     private void Delay()
     {
         ShowVRController(showControllers);
+    }
+
+    public void ToggleShowControllers(bool toggle)
+    {
+        showControllers = toggle;
+        Invoke("Delay", 2.0f);
     }
 }
