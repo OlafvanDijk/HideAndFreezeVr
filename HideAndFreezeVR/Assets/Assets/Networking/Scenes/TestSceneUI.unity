@@ -241,6 +241,30 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 224901666172499268, guid: 2c87438d2e90fc64dbf83548ed60b855,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 521.99945
+      objectReference: {fileID: 0}
+    - target: {fileID: 224566544614578178, guid: 2c87438d2e90fc64dbf83548ed60b855,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -44.774994
+      objectReference: {fileID: 0}
+    - target: {fileID: 224566544614578178, guid: 2c87438d2e90fc64dbf83548ed60b855,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 940.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 224811011389393872, guid: 2c87438d2e90fc64dbf83548ed60b855,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805740499029050, guid: 2c87438d2e90fc64dbf83548ed60b855, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c87438d2e90fc64dbf83548ed60b855, type: 2}
   m_IsPrefabParent: 0
@@ -360,6 +384,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &816013003 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114957338616763626, guid: 0d8b5557e17a88647a71a4852724bb27,
+    type: 2}
+  m_PrefabInternal: {fileID: 1622915375}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1104662789
 Prefab:
   m_ObjectHideFlags: 0
@@ -629,6 +659,38 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1387591862662584, guid: 0d8b5557e17a88647a71a4852724bb27, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309599656011436, guid: 0d8b5557e17a88647a71a4852724bb27,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957338616763626, guid: 0d8b5557e17a88647a71a4852724bb27,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Room State
+
+
+        Room is open.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114157816736183098, guid: 0d8b5557e17a88647a71a4852724bb27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114157816736183098, guid: 0d8b5557e17a88647a71a4852724bb27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.UI.Text, UnityEngine.UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 114157816736183098, guid: 0d8b5557e17a88647a71a4852724bb27,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 816013003}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d8b5557e17a88647a71a4852724bb27, type: 2}
   m_IsPrefabParent: 0

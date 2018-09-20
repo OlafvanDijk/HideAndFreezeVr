@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLayoutGroup : Photon.PunBehaviour {
 
@@ -104,7 +105,7 @@ public class PlayerLayoutGroup : Photon.PunBehaviour {
     /// Should be called from a button.
     /// Changes the roomstate to open or close, visible and not visible.
     /// </summary>
-    public void OnClickRoomState()
+    public void OnClickRoomState(Text StateText)
     {
         if (!PhotonNetwork.isMasterClient)
         {
@@ -113,6 +114,18 @@ public class PlayerLayoutGroup : Photon.PunBehaviour {
 
         PhotonNetwork.room.IsOpen = !PhotonNetwork.room.IsOpen;
         PhotonNetwork.room.IsVisible = !PhotonNetwork.room.IsVisible;
+
+        switch (PhotonNetwork.room.IsOpen)
+        {
+            case true:
+                StateText.text = "Room State \n \n Room is open.";
+                break;
+
+            case false:
+                StateText.text = "Room State \n \n Room is closed.";
+                break;
+        }
+
     }
 
     /// <summary>

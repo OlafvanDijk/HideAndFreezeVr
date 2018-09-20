@@ -14,6 +14,8 @@ public class PlayerNetwork : MonoBehaviour {
 
     private int PlayersInGame = 0;
 
+    private PlayerMovement CurrentPlayer;
+
 
     private void Awake()
     {
@@ -60,8 +62,9 @@ public class PlayerNetwork : MonoBehaviour {
     [PunRPC]
     private void RPC_LoadedGameScene(PhotonPlayer photonPlayer)
     {
+        PlayerManagement.Instance.AddPlayerStats(photonPlayer);
+
         PlayersInGame++;
-        Debug.Log(PlayersInGame);
         if (PlayersInGame == PhotonNetwork.playerList.Length)
         {
             print("All players are in the game scene.");
@@ -74,6 +77,31 @@ public class PlayerNetwork : MonoBehaviour {
     private void RPC_CreatePlayer()
     {
         float randomValue = Random.Range(0f, 5f);
-        PhotonNetwork.Instantiate(Path.Combine("Prefabs", "TestPlayer"), Vector3.up * randomValue, Quaternion.identity, 0);
+        GameObject obj = PhotonNetwork.Instantiate(Path.Combine("Prefabs", "TestPlayer"), Vector3.up * randomValue, Quaternion.identity, 0);
+        CurrentPlayer = obj.GetComponent<PlayerMovement>();
+    }
+
+
+
+
+
+    public void NewHealth(PhotonPlayer photonPlayer, int health)
+    {
+        photonView.RPC("RPC_NewHealth", photonPlayer, health);
+    }
+
+    [PunRPC]
+    private void RPC_NewHealth(PhotonPlayer photonPlayer, int health)
+    {
+        if(CurrentPlayer == null)
+        {
+            return;
+        }
+
+        if(health <= 0)
+        {
+            PhotonNetwork.Destroy(CurrentPlayer.gameObject);
+        }
+
     }
 }
