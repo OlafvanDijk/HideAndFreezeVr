@@ -36,42 +36,14 @@ public class VR_PlayerNetwork : MonoBehaviour {
     {
         if (scene.buildIndex == 1)
         {
-            if (PhotonNetwork.isMasterClient)
-                MasterLoadedGame();
-            else
-                NonMasterLoadedGame();
+            photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
         }
-    }
-
-    private void MasterLoadedGame()
-    {
-        photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
-        //photonView.RPC("RPC_LoadGameOthers", PhotonTargets.Others);
-    }
-
-    private void NonMasterLoadedGame()
-    {
-        photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
-    }
-
-    [PunRPC]
-    private void RPC_LoadGameOthers()
-    {
-        PhotonNetwork.LoadLevel(1);
     }
 
     [PunRPC]
     private void RPC_LoadedGameScene(PhotonPlayer photonPlayer)
     {
-        //PlayerManagement.Instance.AddPlayerStats(photonPlayer);
-
         photonView.RPC("RPC_CreatePlayer", PhotonTargets.All);
-        /*PlayersInGame++;
-        if (PlayersInGame == PhotonNetwork.playerList.Length)
-        {
-            print("All players are in the game scene.");
-            photonView.RPC("RPC_CreatePlayer", PhotonTargets.All);
-        }*/
     }
 
 
