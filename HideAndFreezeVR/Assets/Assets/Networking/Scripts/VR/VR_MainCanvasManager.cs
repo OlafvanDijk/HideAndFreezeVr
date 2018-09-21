@@ -7,6 +7,8 @@ public class VR_MainCanvasManager : MonoBehaviour{
 
     public static VR_MainCanvasManager Instance;
 
+    public int test = 4;
+
     [SerializeField]
     private VR_PlayerNetwork playerNetworkPrefab;
 
@@ -20,6 +22,7 @@ public class VR_MainCanvasManager : MonoBehaviour{
     private void Awake()
     {
         Instance = this;
+        test = 4;
     }
 
     private void Start()

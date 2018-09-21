@@ -53,11 +53,7 @@ public class VR_PlayerNetwork : MonoBehaviour {
     [PunRPC]
     private void RPC_CreatePlayer()
     {
-        PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0,0,0), Quaternion.identity, 0);
-    }
-
-    private void OnDestroy()
-    {
-
+        Debug.Log("Create Player");
+        PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0, 0, 0), Quaternion.identity, 0);
     }
 }
