@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VR_PlayerLayoutGroup : Photon.PunBehaviour {
@@ -16,6 +17,15 @@ public class VR_PlayerLayoutGroup : Photon.PunBehaviour {
     public List<VR_PlayerListing> getPlayerListings()
     {
         return playerListings;
+    }
+    
+
+    public void Start()
+    {
+        foreach(PhotonPlayer player in PhotonNetwork.playerList)
+        {
+            PlayerJoinedRoom(player);
+        }
     }
 
     /// <summary>
@@ -83,8 +93,12 @@ public class VR_PlayerLayoutGroup : Photon.PunBehaviour {
 
         VR_PlayerListing playerListing = playerListingObj.GetComponent<VR_PlayerListing>();
         playerListing.ApplyPhotonPlayer(photonPlayer);
-
         playerListings.Add(playerListing);
+    }
+
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene(0);
     }
 
     /// <summary>

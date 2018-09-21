@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class VR_PlayerNetwork : MonoBehaviour {
-
+    
     public static VR_PlayerNetwork Instance;
 
     private PhotonView photonView;
@@ -16,20 +16,23 @@ public class VR_PlayerNetwork : MonoBehaviour {
 
     [SerializeField]
     private string PlayerPrefabString;
-
-
+    
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-        Instance = this;
+            Instance = this;
+
+        DontDestroyOnLoad(this.gameObject);
+
         photonView = GetComponent<PhotonView>();
+        photonView.viewID = 999;
 
-        PlayerName = "User#" + Random.Range(1000, 9999);
+            PlayerName = "User#" + Random.Range(1000, 9999);
 
-        PhotonNetwork.sendRate = 60;
-        PhotonNetwork.sendRateOnSerialize = 30;
+            PhotonNetwork.sendRate = 60;
+            PhotonNetwork.sendRateOnSerialize = 30;
 
-        SceneManager.sceneLoaded += OnSceneFinishedLoading;
+            SceneManager.sceneLoaded += OnSceneFinishedLoading;
+
     }
 
     private void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
@@ -51,5 +54,10 @@ public class VR_PlayerNetwork : MonoBehaviour {
     private void RPC_CreatePlayer()
     {
         PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0,0,0), Quaternion.identity, 0);
+    }
+
+    private void OnDestroy()
+    {
+
     }
 }

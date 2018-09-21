@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4886175572375774}
   - component: {fileID: 114751873380985904}
-  - component: {fileID: 114336721147446522}
+  - component: {fileID: 114567301354434060}
   m_Layer: 0
   m_Name: VR_PlayerNetwork
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114336721147446522
+--- !u!114 &114567301354434060
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
