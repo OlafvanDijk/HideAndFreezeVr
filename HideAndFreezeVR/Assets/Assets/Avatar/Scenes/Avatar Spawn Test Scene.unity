@@ -120,11 +120,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114059293475697030, guid: ffff1a07bf900424099325b82ae3a075,
-        type: 2}
-      propertyPath: avatarPrefab.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 224683438517442724, guid: ffff1a07bf900424099325b82ae3a075,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -220,18 +215,6 @@ Prefab:
       propertyPath: VRSetup
       value: 
       objectReference: {fileID: 1664930165}
-    - target: {fileID: 114059293475697030, guid: ffff1a07bf900424099325b82ae3a075,
-        type: 2}
-      propertyPath: avatarPrefab.Array.data[0]
-      value: 
-      objectReference: {fileID: 114465513934663966, guid: 060bfce570bfcb146abd6baefb53f464,
-        type: 2}
-    - target: {fileID: 114059293475697030, guid: ffff1a07bf900424099325b82ae3a075,
-        type: 2}
-      propertyPath: avatarPrefab.Array.data[1]
-      value: 
-      objectReference: {fileID: 114773731561506124, guid: 79eedc82417b6804687f6a7e3a077732,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffff1a07bf900424099325b82ae3a075, type: 2}
   m_IsPrefabParent: 0
@@ -455,6 +438,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114933712617912126, guid: a43a9fed19d6f8b4c89555f983c5801e,
+        type: 2}
+      propertyPath: avatarPrefab.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4822656860157202, guid: a43a9fed19d6f8b4c89555f983c5801e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0

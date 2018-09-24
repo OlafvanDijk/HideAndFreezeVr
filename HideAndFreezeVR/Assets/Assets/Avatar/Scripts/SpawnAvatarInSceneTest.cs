@@ -16,6 +16,8 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
     [SerializeField]
     Toggle controllerToggle;
     [SerializeField]
+    Toggle selectToggle;
+    [SerializeField]
     Camera canvasCamera;
 
     private void Start()
@@ -46,6 +48,11 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
     private void ToggleControllers()
     {
         VRSetup.showControllers = controllerToggle.isOn;
+    }
+
+    private void ToggleButtonSelection()
+    {
+        VRSetup.enableButtonSelecting = selectToggle.isOn;
     }
 
     public void SpawnPlayer()
