@@ -9,7 +9,7 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
     [SerializeField]
     VRAvatarController VRSetup;
     [SerializeField]
-    VRIK avatarPrefab;
+    List<VRIK> avatarPrefab;
 
     [SerializeField]
     Toggle avatarToggle;
