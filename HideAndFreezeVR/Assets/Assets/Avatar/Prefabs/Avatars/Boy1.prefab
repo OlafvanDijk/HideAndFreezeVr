@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4087873545663368}
   - component: {fileID: 136951760289381960}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,23 +42,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1017918185298074
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224084014493104456}
-  - component: {fileID: 222562358087351200}
-  - component: {fileID: 114579007716732892}
-  m_Layer: 5
-  m_Name: TimeText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1041235613334146
 GameObject:
   m_ObjectHideFlags: 1
@@ -68,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4592299793442358}
   - component: {fileID: 136786359959572362}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +66,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4576358434158942}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002858114899086}
   - component: {fileID: 136671653361058972}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4895305631672044}
   - component: {fileID: 136139284569255582}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +113,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4452815417909480}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +128,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4267281365778206}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4266256628332504}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +163,7 @@ GameObject:
   - component: {fileID: 82382711599313428}
   - component: {fileID: 114759221536194488}
   - component: {fileID: 114904360915942828}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +178,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4280932305111728}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +193,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4150917374471664}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4027803571099838}
   - component: {fileID: 136750097381560586}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810925554614432}
   - component: {fileID: 136724398137210054}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,26 +240,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4736417648424542}
-  m_Layer: 15
-  m_Name: TKids R UpperArm
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1245435411555014
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4616024065938696}
-  - component: {fileID: 33414375625813598}
-  - component: {fileID: 23736372912422776}
-  - component: {fileID: 95365350303420882}
   m_Layer: 0
-  m_Name: Watch
+  m_Name: TKids R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +255,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4679351423973568}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4990528365891130}
   - component: {fileID: 136671683038021334}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +286,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4787695423532134}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +301,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4639569461132810}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4282372282525998}
   - component: {fileID: 136995983525113540}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +332,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4714891980267482}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4679867744615546}
   - component: {fileID: 136024418646690852}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +363,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4537959383258832}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKidseyeR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +378,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4619658506809996}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,24 +416,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1399847517589734
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224450522428681968}
-  - component: {fileID: 223274358372988848}
-  - component: {fileID: 114940116283593586}
-  - component: {fileID: 114059744691195730}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1412381568595260
 GameObject:
   m_ObjectHideFlags: 1
@@ -477,7 +424,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4593455569078498}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +439,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4111163477527796}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids LidR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +456,7 @@ GameObject:
   - component: {fileID: 4772236668576694}
   - component: {fileID: 33653084132106738}
   - component: {fileID: 23346053076540846}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: hat01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +471,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4299933684863574}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +486,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4663248611550982}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,25 +502,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4511959654665176}
   - component: {fileID: 137523338907700234}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Boy1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1465069047406410
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224135969834063010}
-  - component: {fileID: 222603398630430344}
-  - component: {fileID: 114828311924539612}
-  m_Layer: 5
-  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,7 +517,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4618040731433418}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +532,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4610651433451998}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +547,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4800062609121482}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +562,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4823654490988198}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +577,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4667715627732420}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +592,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4265614567854566}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: mixamorig:LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +607,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4567344032842804}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +622,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4711223119249862}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ROOT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +637,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4520024301563424}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4331064359058794}
   - component: {fileID: 136169974515761050}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +673,7 @@ GameObject:
   - component: {fileID: 54776464683370196}
   - component: {fileID: 82459317716651280}
   - component: {fileID: 114193131651948092}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +688,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4835417321582116}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +703,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4912836616571480}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +723,7 @@ GameObject:
   - component: {fileID: 82335697184938514}
   - component: {fileID: 114090975301700716}
   - component: {fileID: 114122481450303852}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,7 +738,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4465999079093034}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +758,7 @@ GameObject:
   - component: {fileID: 54064692774041904}
   - component: {fileID: 82045230225909012}
   - component: {fileID: 114449403461906082}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4192195926656166}
   - component: {fileID: 137419364641710012}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Boy1_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -859,7 +789,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4600690387897828}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +804,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4901188490044786}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +819,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4472468783829574}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -921,7 +851,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4110241629292586}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +866,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4645640148396088}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids LidL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,7 +881,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4556650014849288}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +896,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4943922234805220}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +911,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4484135382456638}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +926,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4850688726229436}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +941,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4550151284289198}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Eyebrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +956,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007953180125478}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1041,7 +971,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4171748401393922}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,26 +986,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4285591345413198}
-  m_Layer: 15
-  m_Name: TKids R Finger32
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1889695642132148
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4874883827061274}
-  - component: {fileID: 33678081718052138}
-  - component: {fileID: 23515378605839554}
-  - component: {fileID: 114431433241014498}
   m_Layer: 0
-  m_Name: polySurface3
+  m_Name: TKids R Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1093,7 +1005,7 @@ GameObject:
   - component: {fileID: 114268852235443758}
   - component: {fileID: 114465513934663966}
   - component: {fileID: 114849799962586824}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Boy1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1108,7 +1020,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4145805943756544}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1035,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4937366742131500}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1050,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4485501628784354}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1065,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4310780343108178}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids Smile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1168,7 +1080,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4387095307733006}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: TKids R Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1677,7 +1589,6 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_Children:
   - {fileID: 4967961407776544}
-  - {fileID: 4616024065938696}
   m_Father: {fileID: 4485501628784354}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1737,20 +1648,6 @@ Transform:
   m_Father: {fileID: 4903916714840052}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4616024065938696
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1245435411555014}
-  m_LocalRotation: {x: 0.51507884, y: -0.48445126, z: -0.48445132, w: 0.5150803}
-  m_LocalPosition: {x: -16.406364, y: 0.26643586, z: 0.5589775}
-  m_LocalScale: {x: 207.24722, y: 207.2471, z: 207.24712}
-  m_Children:
-  - {fileID: 4874883827061274}
-  m_Father: {fileID: 4592299793442358}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &4618040731433418
 Transform:
   m_ObjectHideFlags: 1
@@ -2011,20 +1908,6 @@ Transform:
   m_Father: {fileID: 4119229302939226}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4874883827061274
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889695642132148}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000000011920929, y: 0.015527093, z: -0.00042319915}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 224450522428681968}
-  m_Father: {fileID: 4616024065938696}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4895305631672044
 Transform:
   m_ObjectHideFlags: 1
@@ -2245,81 +2128,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23515378605839554
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889695642132148}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100002, guid: 854f9937858d4b748a987b226e5b456a, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!23 &23736372912422776
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1245435411555014}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &33414375625813598
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1245435411555014}
-  m_Mesh: {fileID: 4300000, guid: 854f9937858d4b748a987b226e5b456a, type: 3}
 --- !u!33 &33433458203598546
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2334,13 +2142,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1434483213822358}
   m_Mesh: {fileID: 4300004, guid: 3474613f95db4f04fa04b779e1587a6f, type: 3}
---- !u!33 &33678081718052138
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889695642132148}
-  m_Mesh: {fileID: 4300002, guid: 854f9937858d4b748a987b226e5b456a, type: 3}
 --- !u!54 &54064692774041904
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2771,23 +2572,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95365350303420882
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1245435411555014}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: bbe84df118a943146be790c74315e0b9, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95601461961142946
 Animator:
   serializedVersion: 3
@@ -2805,22 +2589,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114059744691195730
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399847517589734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &114090975301700716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2889,17 +2657,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexMaterial: 1
   body: {fileID: 1456435278134098}
---- !u!114 &114431433241014498
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889695642132148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114449403461906082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3115,39 +2872,6 @@ MonoBehaviour:
           m_Calls: []
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
---- !u!114 &114579007716732892
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1017918185298074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 7
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 10:00
 --- !u!114 &114592713787988238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3181,39 +2905,6 @@ MonoBehaviour:
   occlusionEnabled: 0
   occlusionIntensity: 1
   quality: 2
---- !u!114 &114828311924539612
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465069047406410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1000
 --- !u!114 &114849799962586824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3237,27 +2928,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114940116283593586
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399847517589734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!114 &114962928951574798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3610,91 +3280,3 @@ SkinnedMeshRenderer:
     m_Center: {x: -29.855162, y: 4.732184, z: -0.00045204163}
     m_Extent: {x: 20.783247, y: 17.880512, z: 18.722422}
   m_DirtyAABB: 0
---- !u!222 &222562358087351200
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1017918185298074}
---- !u!222 &222603398630430344
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465069047406410}
---- !u!223 &223274358372988848
-Canvas:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399847517589734}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &224084014493104456
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1017918185298074}
-  m_LocalRotation: {x: -0.020378139, y: 0.7061966, z: -0.7074301, w: -0.020342605}
-  m_LocalPosition: {x: 0, y: 0, z: 102.3689}
-  m_LocalScale: {x: 0.00135306, y: 0.0013530598, z: 0.0013530598}
-  m_Children: []
-  m_Father: {fileID: 224450522428681968}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90.1, y: 183.3, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -539.0043, y: -183.0252}
-  m_SizeDelta: {x: 37.23, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224135969834063010
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1465069047406410}
-  m_LocalRotation: {x: -0.020378139, y: 0.7061966, z: -0.7074301, w: -0.020342605}
-  m_LocalPosition: {x: 0, y: 0, z: 102.3689}
-  m_LocalScale: {x: 0.00135306, y: 0.0013530598, z: 0.0013530598}
-  m_Children: []
-  m_Father: {fileID: 224450522428681968}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90.1, y: 183.3, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -539.0043, y: -183.0252}
-  m_SizeDelta: {x: 37.23, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224450522428681968
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1399847517589734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 224084014493104456}
-  - {fileID: 224135969834063010}
-  m_Father: {fileID: 4874883827061274}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
