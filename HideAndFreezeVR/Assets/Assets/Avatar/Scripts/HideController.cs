@@ -8,6 +8,8 @@ public class HideController : MonoBehaviour {
     private MultiVRSetup multiVRSetup;
     [SerializeField]
     private bool showControllers;
+    [SerializeField]
+    private bool enableButtonSelecting;
 
     void Awake()
     {
@@ -29,8 +31,6 @@ public class HideController : MonoBehaviour {
             case PlayAreaType.SIMULATED:
                 break;
             case PlayAreaType.STEAM:
-               
-                EnableButtonSelecting(controllerCloneParent, value);
                 if (!value)
                 {
                     SteamVR_RenderModel renderModel = controllerCloneParent.GetComponentInChildren<SteamVR_RenderModel>();
@@ -51,13 +51,14 @@ public class HideController : MonoBehaviour {
                 avatar.ShowFirstPerson = value;
                 Debug.Log(value);
                 avatar.ShowControllers(value);
-                EnableButtonSelecting(controllerCloneParent, value);
+                
                 break;
             case PlayAreaType.GEAR:
                 break;
             default:
                 break;
         }
+        EnableButtonSelecting(controllerCloneParent, enableButtonSelecting);
     }
 
     private void EnableButtonSelecting(GameObject controller, bool value)
@@ -79,9 +80,10 @@ public class HideController : MonoBehaviour {
         ShowVRController(showControllers);
     }
 
-    public void ToggleShowControllers(bool toggle)
+    public void ToggleShowControllers(bool toggleController, bool toggleButtonSelecting)
     {
-        showControllers = toggle;
+        showControllers = toggleController;
+        enableButtonSelecting = toggleButtonSelecting;
         Invoke("Delay", 2.0f);
     }
 }

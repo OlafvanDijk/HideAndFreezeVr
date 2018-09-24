@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e78b2cd9bad6241b6eb95b4bb8d15b, type: 3}
+  m_Name: Boy4
+  m_EditorClassIdentifier: 
+  avatar: {fileID: 114836451129297886, guid: 4671377e6e878aa469f7d319ecaab321, type: 2}
+  outfits:
+  - texture: {fileID: 2800000, guid: d7d001b2727123c469389cbfea6fece8, type: 3}
+    color: {r: 0.19852942, g: 0.19852942, b: 0.19852942, a: 1}
+  - texture: {fileID: 2800000, guid: 39ce18a276c99594d90d004bc7f6c38b, type: 3}
+    color: {r: 0.2595648, g: 0.44852942, b: 0.24405278, a: 1}
+  - texture: {fileID: 2800000, guid: f22b79c1294f2e849a341daffb166692, type: 3}
+    color: {r: 0.60899657, g: 0.620284, b: 0.64705884, a: 1}
