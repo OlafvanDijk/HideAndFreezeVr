@@ -1,0 +1,236 @@
+fileFormatVersion: 2
+guid: f76fbd8260e5ad04ab6ed27c82402724
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Boy3
+    100002: Boy3_head
+    100004: //RootNode
+    100006: glasses
+    100008: hair07
+    100010: Hips
+    100012: mixamorig:LeftEye
+    100014: ROOT
+    100016: TKids Eyebrows
+    100018: TKids Head
+    100020: TKids Jaw
+    100022: TKids L Calf
+    100024: TKids L Clavicle
+    100026: TKids L Finger0
+    100028: TKids L Finger01
+    100030: TKids L Finger02
+    100032: TKids L Finger1
+    100034: TKids L Finger11
+    100036: TKids L Finger12
+    100038: TKids L Finger2
+    100040: TKids L Finger21
+    100042: TKids L Finger22
+    100044: TKids L Finger3
+    100046: TKids L Finger31
+    100048: TKids L Finger32
+    100050: TKids L Finger4
+    100052: TKids L Finger41
+    100054: TKids L Finger42
+    100056: TKids L Foot
+    100058: TKids L Forearm
+    100060: TKids L Hand
+    100062: TKids L Thigh
+    100064: TKids L Toe0
+    100066: TKids L UpperArm
+    100068: TKids LidL
+    100070: TKids LidR
+    100072: TKids Neck
+    100074: TKids Pelvis
+    100076: TKids R Calf
+    100078: TKids R Clavicle
+    100080: TKids R Finger0
+    100082: TKids R Finger01
+    100084: TKids R Finger02
+    100086: TKids R Finger1
+    100088: TKids R Finger11
+    100090: TKids R Finger12
+    100092: TKids R Finger2
+    100094: TKids R Finger21
+    100096: TKids R Finger22
+    100098: TKids R Finger3
+    100100: TKids R Finger31
+    100102: TKids R Finger32
+    100104: TKids R Finger4
+    100106: TKids R Finger41
+    100108: TKids R Finger42
+    100110: TKids R Foot
+    100112: TKids R Forearm
+    100114: TKids R Hand
+    100116: TKids R Thigh
+    100118: TKids R Toe0
+    100120: TKids R UpperArm
+    100122: TKids Smile
+    100124: TKids Spine
+    100126: TKids Spine1
+    100128: TKids Spine2
+    100130: TKidseyeR
+    400000: Boy3
+    400002: Boy3_head
+    400004: //RootNode
+    400006: glasses
+    400008: hair07
+    400010: Hips
+    400012: mixamorig:LeftEye
+    400014: ROOT
+    400016: TKids Eyebrows
+    400018: TKids Head
+    400020: TKids Jaw
+    400022: TKids L Calf
+    400024: TKids L Clavicle
+    400026: TKids L Finger0
+    400028: TKids L Finger01
+    400030: TKids L Finger02
+    400032: TKids L Finger1
+    400034: TKids L Finger11
+    400036: TKids L Finger12
+    400038: TKids L Finger2
+    400040: TKids L Finger21
+    400042: TKids L Finger22
+    400044: TKids L Finger3
+    400046: TKids L Finger31
+    400048: TKids L Finger32
+    400050: TKids L Finger4
+    400052: TKids L Finger41
+    400054: TKids L Finger42
+    400056: TKids L Foot
+    400058: TKids L Forearm
+    400060: TKids L Hand
+    400062: TKids L Thigh
+    400064: TKids L Toe0
+    400066: TKids L UpperArm
+    400068: TKids LidL
+    400070: TKids LidR
+    400072: TKids Neck
+    400074: TKids Pelvis
+    400076: TKids R Calf
+    400078: TKids R Clavicle
+    400080: TKids R Finger0
+    400082: TKids R Finger01
+    400084: TKids R Finger02
+    400086: TKids R Finger1
+    400088: TKids R Finger11
+    400090: TKids R Finger12
+    400092: TKids R Finger2
+    400094: TKids R Finger21
+    400096: TKids R Finger22
+    400098: TKids R Finger3
+    400100: TKids R Finger31
+    400102: TKids R Finger32
+    400104: TKids R Finger4
+    400106: TKids R Finger41
+    400108: TKids R Finger42
+    400110: TKids R Foot
+    400112: TKids R Forearm
+    400114: TKids R Hand
+    400116: TKids R Thigh
+    400118: TKids R Toe0
+    400120: TKids R UpperArm
+    400122: TKids Smile
+    400124: TKids Spine
+    400126: TKids Spine1
+    400128: TKids Spine2
+    400130: TKidseyeR
+    2100000: glasses01
+    2100002: boy3
+    2100004: chestB
+    2100006: legs
+    2100008: feetA
+    2100010: eye3
+    2100012: hair07
+    2300000: glasses
+    2300002: hair07
+    3300000: glasses
+    3300002: hair07
+    4300000: glasses
+    4300002: Boy3
+    4300004: Boy3_head
+    4300006: hair07
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Boy3
+    13700002: Boy3_head
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
