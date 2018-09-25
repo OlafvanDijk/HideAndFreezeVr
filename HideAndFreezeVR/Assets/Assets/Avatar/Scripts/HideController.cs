@@ -20,7 +20,7 @@ public class HideController : MonoBehaviour {
     /// Turns the controllers (in)visible based on the SDK used.
     /// </summary>
     /// <param name="value"></param>
-    public void ShowVRController(bool value)
+    private void ShowVRController(bool value)
     {
         PlayAreaType playArea = multiVRSetup.playAreaAlias.playArea.type;
         Transform controller = this.transform.parent;
@@ -61,6 +61,11 @@ public class HideController : MonoBehaviour {
         EnableButtonSelecting(controllerCloneParent, enableButtonSelecting);
     }
 
+    /// <summary>
+    /// Enables/Disables the button selection for the given controller based on the value.
+    /// </summary>
+    /// <param name="controller"></param>
+    /// <param name="value"></param>
     private void EnableButtonSelecting(GameObject controller, bool value)
     {
         ButtonSelecting buttonSelecting = controller.GetComponent<ButtonSelecting>();
@@ -80,6 +85,11 @@ public class HideController : MonoBehaviour {
         ShowVRController(showControllers);
     }
 
+    /// <summary>
+    /// Disables/Enables the controllor and button selecting. This method is for outside calls.
+    /// </summary>
+    /// <param name="toggleController"></param>
+    /// <param name="toggleButtonSelecting"></param>
     public void ToggleShowControllers(bool toggleController, bool toggleButtonSelecting)
     {
         showControllers = toggleController;

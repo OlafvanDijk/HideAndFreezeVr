@@ -30,6 +30,10 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
         {
             ToggleControllers();
         });
+        selectToggle.onValueChanged.AddListener(delegate
+        {
+            ToggleButtonSelection();
+        });
         VRSetup.showControllers = false;
     }
 
