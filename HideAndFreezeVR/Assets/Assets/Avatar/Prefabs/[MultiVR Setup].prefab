@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 4454204047638394}
   - component: {fileID: 114054731294135336}
   - component: {fileID: 114961543819318380}
+  - component: {fileID: 114336937444952736}
   m_Layer: 0
   m_Name: '[Head]'
   m_TagString: Untagged
@@ -3212,6 +3213,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Control Hints
+--- !u!114 &114336937444952736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351113723895116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eda03c5d230097479149c180b6aa183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114341399174356980
 MonoBehaviour:
   m_ObjectHideFlags: 1

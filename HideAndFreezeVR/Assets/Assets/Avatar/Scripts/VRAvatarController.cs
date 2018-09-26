@@ -151,6 +151,11 @@ public class VRAvatarController : MonoBehaviour
 
         ownColliders = transform.root.GetComponentsInChildren<Collider>();
 
+        //leftController.GetComponentInParent<CreatePhotonView>().AddPhotonView(1);
+        //rightController.GetComponentInParent<CreatePhotonView>().AddPhotonView(2);
+
+        //multiVR.headAlias.gameObject.AddComponent<CreatePhotonView>().AddPhotonView(3);
+
         #region Avatar Setup
         if (avatarPrefab != null)
         {
