@@ -9,12 +9,14 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
     [SerializeField]
     VRAvatarController VRSetup;
     [SerializeField]
-    VRIK avatarPrefab;
+    List<VRIK> avatarPrefab;
 
     [SerializeField]
     Toggle avatarToggle;
     [SerializeField]
     Toggle controllerToggle;
+    [SerializeField]
+    Toggle selectToggle;
     [SerializeField]
     Camera canvasCamera;
 
@@ -27,6 +29,10 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
         controllerToggle.onValueChanged.AddListener(delegate
         {
             ToggleControllers();
+        });
+        selectToggle.onValueChanged.AddListener(delegate
+        {
+            ToggleButtonSelection();
         });
         VRSetup.showControllers = false;
     }
@@ -46,6 +52,11 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
     private void ToggleControllers()
     {
         VRSetup.showControllers = controllerToggle.isOn;
+    }
+
+    private void ToggleButtonSelection()
+    {
+        VRSetup.enableButtonSelecting = selectToggle.isOn;
     }
 
     public void SpawnPlayer()

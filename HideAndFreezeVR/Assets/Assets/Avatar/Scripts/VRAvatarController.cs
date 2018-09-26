@@ -8,14 +8,16 @@ using UnityEngine.Networking;
 public class VRAvatarController : MonoBehaviour
 {
     public bool showControllers;
-    public VRIK avatarPrefab;
+    public bool enableButtonSelecting;
+    public List<VRIK> avatarPrefab;
     [SerializeField]
     private GameObject VRControllerPrefab;
     [SerializeField]
     private GameObject VRRigPrefab;
 
+    public int indexActualAvatar;
+    public VRIK actualAvatarVRIK;
     private GameObject containerObject;
-    public VRIK actualAvatar;
     private Collider[] ownColliders;
     private GameObject VRRigObject;
     private MultiVRSetup multiVR;
@@ -48,7 +50,7 @@ public class VRAvatarController : MonoBehaviour
     {
         if (avatarPrefab != null)
         {
-            IKSolver solver = avatarPrefab.GetIKSolver();
+            IKSolver solver = actualAvatarVRIK.GetIKSolver();
             IKSolverVR solverVR = solver as IKSolverVR;
             solverVR.Reset();
         }
@@ -157,23 +159,29 @@ public class VRAvatarController : MonoBehaviour
         #region Avatar Setup
         if (avatarPrefab != null)
         {
-            actualAvatar = Instantiate(avatarPrefab, Vector3.zero, Quaternion.identity);
-            actualAvatar.solver.spine.headTarget = transform;
-            actualAvatar.transform.SetParent(containerObject.transform, false);
-            actualAvatar.transform.rotation = actualAvatar.transform.rotation * Quaternion.Inverse(rotation);
-            actualAvatar.solver.leftArm.target = leftController.transform;
-            actualAvatar.solver.rightArm.target = rightController.transform;
-            // Set actual avatar transforms.
-            actualAvatar.solver.spine.headTarget = multiVR.headAlias.avatarOffset.transform;
-            actualAvatar.solver.leftArm.target = multiVR.leftHandAlias.avatarOffset.transform;
-            actualAvatar.solver.rightArm.target = multiVR.rightHandAlias.avatarOffset.transform;
-            this.transform.SetParent(actualAvatar.solver.spine.headTarget, false);
+            ApplyAvatar(Random.Range(0, avatarPrefab.Capacity));
         }
         #endregion
 
         CapturePlayAreaTransform();
 
-        Debug.Log("Avatar: " + actualAvatar);
+        Debug.Log("Avatar: " + actualAvatarVRIK);
+    }
+
+    private void ApplyAvatar(int index)
+    {
+        this.indexActualAvatar = index;
+        actualAvatarVRIK = Instantiate(avatarPrefab[index], Vector3.zero, Quaternion.identity);
+        actualAvatarVRIK.solver.spine.headTarget = transform;
+        actualAvatarVRIK.transform.SetParent(containerObject.transform, false);
+        actualAvatarVRIK.transform.rotation = actualAvatarVRIK.transform.rotation * Quaternion.Inverse(containerObject.transform.rotation);
+        actualAvatarVRIK.solver.leftArm.target = sdkManager.scriptAliasLeftController.transform;
+        actualAvatarVRIK.solver.rightArm.target = sdkManager.scriptAliasRightController.transform;
+        // Set actual avatar transforms.
+        actualAvatarVRIK.solver.spine.headTarget = multiVR.headAlias.avatarOffset.transform;
+        actualAvatarVRIK.solver.leftArm.target = multiVR.leftHandAlias.avatarOffset.transform;
+        actualAvatarVRIK.solver.rightArm.target = multiVR.rightHandAlias.avatarOffset.transform;
+        this.transform.SetParent(actualAvatarVRIK.solver.spine.headTarget, false);
     }
 
     protected virtual void LateUpdate()
@@ -217,7 +225,14 @@ public class VRAvatarController : MonoBehaviour
         HideController hideController = alias.GetComponentInChildren<HideController>();
         if (hideController != null)
         {
-            hideController.ToggleShowControllers(showControllers);
+            Debug.Log("hide");
+            hideController.ToggleShowControllers(showControllers, enableButtonSelecting);
         }
+    }
+
+    public void ChangeAvatar(int indexNewAvatar)
+    {
+        Destroy(actualAvatarVRIK.gameObject);
+        ApplyAvatar(indexNewAvatar);
     }
 }

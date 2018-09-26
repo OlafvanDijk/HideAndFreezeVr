@@ -8,6 +8,8 @@ public class HideController : MonoBehaviour {
     private MultiVRSetup multiVRSetup;
     [SerializeField]
     private bool showControllers;
+    [SerializeField]
+    private bool enableButtonSelecting;
 
     void Awake()
     {
@@ -18,7 +20,7 @@ public class HideController : MonoBehaviour {
     /// Turns the controllers (in)visible based on the SDK used.
     /// </summary>
     /// <param name="value"></param>
-    public void ShowVRController(bool value)
+    private void ShowVRController(bool value)
     {
         PlayAreaType playArea = multiVRSetup.playAreaAlias.playArea.type;
         Transform controller = this.transform.parent;
@@ -29,8 +31,6 @@ public class HideController : MonoBehaviour {
             case PlayAreaType.SIMULATED:
                 break;
             case PlayAreaType.STEAM:
-               
-                EnableButtonSelecting(controllerCloneParent, value);
                 if (!value)
                 {
                     SteamVR_RenderModel renderModel = controllerCloneParent.GetComponentInChildren<SteamVR_RenderModel>();
@@ -51,15 +51,21 @@ public class HideController : MonoBehaviour {
                 avatar.ShowFirstPerson = value;
                 Debug.Log(value);
                 avatar.ShowControllers(value);
-                EnableButtonSelecting(controllerCloneParent, value);
+                
                 break;
             case PlayAreaType.GEAR:
                 break;
             default:
                 break;
         }
+        EnableButtonSelecting(controllerCloneParent, enableButtonSelecting);
     }
 
+    /// <summary>
+    /// Enables/Disables the button selection for the given controller based on the value.
+    /// </summary>
+    /// <param name="controller"></param>
+    /// <param name="value"></param>
     private void EnableButtonSelecting(GameObject controller, bool value)
     {
         ButtonSelecting buttonSelecting = controller.GetComponent<ButtonSelecting>();
@@ -79,9 +85,15 @@ public class HideController : MonoBehaviour {
         ShowVRController(showControllers);
     }
 
-    public void ToggleShowControllers(bool toggle)
+    /// <summary>
+    /// Disables/Enables the controllor and button selecting. This method is for outside calls.
+    /// </summary>
+    /// <param name="toggleController"></param>
+    /// <param name="toggleButtonSelecting"></param>
+    public void ToggleShowControllers(bool toggleController, bool toggleButtonSelecting)
     {
-        showControllers = toggle;
+        showControllers = toggleController;
+        enableButtonSelecting = toggleButtonSelecting;
         Invoke("Delay", 2.0f);
     }
 }

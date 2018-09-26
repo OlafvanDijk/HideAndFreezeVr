@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HideHead : MonoBehaviour {
+public class HideComponentsFromView : MonoBehaviour {
 
     [SerializeField]
     private int timesToLookIntoParent;

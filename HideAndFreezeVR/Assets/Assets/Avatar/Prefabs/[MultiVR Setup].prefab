@@ -3437,6 +3437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiVRSetup: {fileID: 114900388216023226}
   showControllers: 1
+  enableButtonSelecting: 0
 --- !u!114 &114456442234391126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3682,6 +3683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiVRSetup: {fileID: 114900388216023226}
   showControllers: 1
+  enableButtonSelecting: 0
 --- !u!114 &114577270477535596
 MonoBehaviour:
   m_ObjectHideFlags: 1
