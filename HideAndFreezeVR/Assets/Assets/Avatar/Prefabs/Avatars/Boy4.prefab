@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 54478297861914442}
   - component: {fileID: 82179812285746668}
   - component: {fileID: 65675148774744498}
-  - component: {fileID: 114761436953869188}
   - component: {fileID: 114090748831903106}
   m_Layer: 0
   m_Name: TKids R Hand
@@ -598,7 +597,6 @@ GameObject:
   - component: {fileID: 54525517893471688}
   - component: {fileID: 82452340895649978}
   - component: {fileID: 65381318455206238}
-  - component: {fileID: 114340566266081826}
   - component: {fileID: 114379201630406324}
   m_Layer: 0
   m_Name: TKids L Foot
@@ -633,7 +631,6 @@ GameObject:
   - component: {fileID: 54106337399066264}
   - component: {fileID: 82843874681734678}
   - component: {fileID: 65536737011574412}
-  - component: {fileID: 114651004938456318}
   - component: {fileID: 114123694609199010}
   m_Layer: 0
   m_Name: TKids R Foot
@@ -973,7 +970,6 @@ GameObject:
   - component: {fileID: 54863921348174814}
   - component: {fileID: 82899170950704786}
   - component: {fileID: 65072334253631526}
-  - component: {fileID: 114331549408970620}
   - component: {fileID: 114300363182636882}
   m_Layer: 0
   m_Name: TKids L Hand
@@ -2722,7 +2718,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1384063523474374}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: cdcbc2e1b0b43e9408f4a0f3e519410a, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 39aeccfd444b6dc458d4589f53b71d09, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -2810,28 +2806,6 @@ MonoBehaviour:
   occlusionEnabled: 0
   occlusionIntensity: 1
   quality: 2
---- !u!114 &114331549408970620
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1816499600226008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114340566266081826
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1561578018930664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114343286768887468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2866,28 +2840,6 @@ MonoBehaviour:
   occlusionEnabled: 0
   occlusionIntensity: 1
   quality: 2
---- !u!114 &114651004938456318
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1594634119213126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114761436953869188
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1015236676047856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114836451129297886
 MonoBehaviour:
   m_ObjectHideFlags: 1

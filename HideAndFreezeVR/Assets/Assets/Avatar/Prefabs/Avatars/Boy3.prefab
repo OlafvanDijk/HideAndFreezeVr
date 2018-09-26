@@ -69,7 +69,6 @@ GameObject:
   - component: {fileID: 54723205307583142}
   - component: {fileID: 82837621929861192}
   - component: {fileID: 114034301417815724}
-  - component: {fileID: 114349593176466836}
   m_Layer: 0
   m_Name: TKids R Hand
   m_TagString: Untagged
@@ -119,7 +118,6 @@ GameObject:
   - component: {fileID: 54844601019703214}
   - component: {fileID: 82527099895146586}
   - component: {fileID: 114145311133554862}
-  - component: {fileID: 114300726013928550}
   m_Layer: 0
   m_Name: TKids L Hand
   m_TagString: Untagged
@@ -606,7 +604,6 @@ GameObject:
   - component: {fileID: 54992638421671956}
   - component: {fileID: 82171940263028102}
   - component: {fileID: 114906953197242144}
-  - component: {fileID: 114851472329628734}
   m_Layer: 0
   m_Name: TKids L Foot
   m_TagString: Untagged
@@ -3015,45 +3012,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexMaterial: 1
   body: {fileID: 1759266601489008}
---- !u!114 &114300726013928550
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098704410000244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114349593176466836
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1044063599181810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114711383284350566
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1414781056492654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114851472329628734
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417128699881704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
