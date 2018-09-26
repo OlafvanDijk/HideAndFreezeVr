@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 54098691865546556}
   - component: {fileID: 82382711599313428}
   - component: {fileID: 114759221536194488}
-  - component: {fileID: 114904360915942828}
   m_Layer: 0
   m_Name: TKids R Hand
   m_TagString: Untagged
@@ -669,7 +668,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4185834185595978}
   - component: {fileID: 65804053383055936}
-  - component: {fileID: 114962928951574798}
   - component: {fileID: 54776464683370196}
   - component: {fileID: 82459317716651280}
   - component: {fileID: 114193131651948092}
@@ -722,7 +720,6 @@ GameObject:
   - component: {fileID: 54652016156985190}
   - component: {fileID: 82335697184938514}
   - component: {fileID: 114090975301700716}
-  - component: {fileID: 114122481450303852}
   m_Layer: 0
   m_Name: TKids L Hand
   m_TagString: Untagged
@@ -754,7 +751,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4201280751264004}
   - component: {fileID: 65065696022093224}
-  - component: {fileID: 114592713787988238}
   - component: {fileID: 54064692774041904}
   - component: {fileID: 82045230225909012}
   - component: {fileID: 114449403461906082}
@@ -2611,17 +2607,6 @@ MonoBehaviour:
   occlusionEnabled: 0
   occlusionIntensity: 1
   quality: 2
---- !u!114 &114122481450303852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1622128622827918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114193131651948092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2872,17 +2857,6 @@ MonoBehaviour:
           m_Calls: []
         m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
---- !u!114 &114592713787988238
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1673995956377586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114759221536194488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2917,28 +2891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _boneStructure: 1
---- !u!114 &114904360915942828
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1180135245889010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114962928951574798
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596968132730056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &136024418646690852
 CapsuleCollider:
   m_ObjectHideFlags: 1

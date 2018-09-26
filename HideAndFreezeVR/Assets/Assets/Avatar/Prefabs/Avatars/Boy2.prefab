@@ -194,7 +194,6 @@ GameObject:
   - component: {fileID: 54270874206340956}
   - component: {fileID: 82893382525225154}
   - component: {fileID: 65605420852366086}
-  - component: {fileID: 114269023532626280}
   - component: {fileID: 114088269370095782}
   m_Layer: 0
   m_Name: TKids R Foot
@@ -397,7 +396,6 @@ GameObject:
   - component: {fileID: 65451818915280722}
   - component: {fileID: 82044829346312150}
   - component: {fileID: 114178612931585062}
-  - component: {fileID: 114206551911471036}
   m_Layer: 0
   m_Name: TKids L Foot
   m_TagString: Untagged
@@ -772,7 +770,6 @@ GameObject:
   - component: {fileID: 82204152418914528}
   - component: {fileID: 65072075257405058}
   - component: {fileID: 114365562418079702}
-  - component: {fileID: 114248503919348934}
   m_Layer: 0
   m_Name: TKids R Hand
   m_TagString: Untagged
@@ -2630,39 +2627,6 @@ MonoBehaviour:
   occlusionEnabled: 0
   occlusionIntensity: 1
   quality: 2
---- !u!114 &114206551911471036
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1300027477788008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114248503919348934
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1723993721645486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114269023532626280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1150097558034606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114301990494577500
 MonoBehaviour:
   m_ObjectHideFlags: 1
