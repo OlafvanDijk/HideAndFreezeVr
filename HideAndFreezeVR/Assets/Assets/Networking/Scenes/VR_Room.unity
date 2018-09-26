@@ -662,6 +662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c65442eee711a43b890e64bf3fd8f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test: 4
+  playerNetworkPrefab: {fileID: 0}
   lobbyCanvas: {fileID: 0}
 --- !u!114 &1331032692
 MonoBehaviour:
