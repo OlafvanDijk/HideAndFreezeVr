@@ -2762,8 +2762,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d180d1bbfd60a4b9d117686952261d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexMaterial: 1
-  body: {fileID: 1406692892853028}
+  materialBodies:
+  - indexMaterial: 0
+    body: {fileID: 1923997106011048}
+  - indexMaterial: 1
+    body: {fileID: 1406692892853028}
+  - indexMaterial: 2
+    body: {fileID: 1406692892853028}
+  - indexMaterial: 3
+    body: {fileID: 1406692892853028}
 --- !u!114 &114341631958300864
 MonoBehaviour:
   m_ObjectHideFlags: 1

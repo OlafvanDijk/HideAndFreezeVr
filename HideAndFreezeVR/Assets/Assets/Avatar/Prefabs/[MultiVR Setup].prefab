@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
@@ -3318,7 +3318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 200
+  rayDistance: 5
   delayActive: 0
   selectionColors: []
 --- !u!114 &114372834389461942
@@ -3382,7 +3382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 200
+  rayDistance: 5
   delayActive: 0
   selectionColors: []
 --- !u!114 &114386481355403536
@@ -3653,7 +3653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 1
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
@@ -3886,7 +3886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 1
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}

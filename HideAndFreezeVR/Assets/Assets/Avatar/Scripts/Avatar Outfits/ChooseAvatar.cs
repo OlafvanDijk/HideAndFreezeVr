@@ -15,26 +15,38 @@ public class ChooseAvatar : MonoBehaviour {
     private RawImage color2;
     [SerializeField]
     private RawImage color3;
+    [SerializeField]
+    private List<Image> outlines;
 
     private List<Outfit> savedOutfits;
     private VRAvatarController avatarController;
-
+    private int currentAvatar = -1;
 
     // Use this for initialization
     void Start () {
         savedOutfits = new List<Outfit>();
         avatarController = GetComponent<VRAvatarController>();
-        Invoke("SetOutfits", 1f);
+        SetOutfits();
+        //Invoke("SetOutfits", 1f);
 	}
 	
     public void PickAvatar(int indexAvatar)
     {
-        avatarController.ChangeAvatar(indexAvatar);
-        Invoke("SetOutfits", 0.5f);
+        if (indexAvatar != currentAvatar)
+        {
+            avatarController.ChangeAvatar(indexAvatar);
+            SetOutfits();
+        }
     }
 
     private void SetOutfits()
     {
+        if (currentAvatar >= 0)
+        {
+            ToggleOutlineAvatar(currentAvatar);
+        }
+        currentAvatar = avatarController.indexActualAvatar;
+        ToggleOutlineAvatar(currentAvatar);
         Debug.Log("Setoutfits");
         savedOutfits.Clear();
         savedOutfits.AddRange(avatarOutfits[avatarController.indexActualAvatar].outfits);
@@ -62,5 +74,10 @@ public class ChooseAvatar : MonoBehaviour {
         color1.color = savedOutfits[0].color;
         color2.color = savedOutfits[1].color;
         color3.color = savedOutfits[2].color;
+    }
+
+    private void ToggleOutlineAvatar(int index)
+    {
+        outlines[index].enabled = !outlines[index].enabled;
     }
 }

@@ -16,7 +16,7 @@ public class ButtonSelecting : MonoBehaviour
     private HandSide side;
 
     [SerializeField]
-    private float rayDistance = 200; //200 is recommended, because of the current distance between the vr player and the ui 
+    private float rayDistance;
 
     private bool lineActive;
     [SerializeField]
@@ -25,6 +25,9 @@ public class ButtonSelecting : MonoBehaviour
     [SerializeField]
     [Tooltip("Position one for not selecting anything. Position two for when its selecting something")]
     private Material[] selectionColors;
+
+    private Ray rayCast;
+    private RaycastHit rayCastHit;
 
     private void Start()
     {
@@ -46,8 +49,25 @@ public class ButtonSelecting : MonoBehaviour
 
     private void Update()
     {
+        rayCast = new Ray(transform.position, transform.forward);
+
+        Debug.DrawRay(rayCast.origin, rayCast.direction * rayDistance);
+
+
+        if (Physics.Raycast(rayCast, out rayCastHit, rayDistance) && rayCastHit.collider.gameObject.layer == 5)
+        {
+            lineActive = true;
+        }
+        else
+        {
+            lineActive = false;
+        }
+
         //Disable/Enable's the line renderer depending on the state of the bool
-        if (lineRenderer.enabled != lineActive) lineRenderer.enabled = lineActive;
+        if (lineRenderer.enabled != lineActive)
+        {
+            lineRenderer.enabled = lineActive;
+        }
 
         switch (lineActive)
         {
@@ -58,14 +78,7 @@ public class ButtonSelecting : MonoBehaviour
                 break;
         }
 
-        //Change the state of the bool
-        if (inputManager.triggerClicked && !OVRManager.isHmdPresent && !delayActive && !selectedUIItem)
-        {
-            lineActive = !lineActive;
-
-            StartCoroutine(Delay(.1f));
-        }
-        else if(OVRManager.isHmdPresent && !delayActive && !selectedUIItem)
+        if(OVRManager.isHmdPresent && !delayActive && !selectedUIItem)
         {
             switch(side)
             {
@@ -97,66 +110,62 @@ public class ButtonSelecting : MonoBehaviour
 
     private void RayCast()
     {
-        Ray rayCast = new Ray(transform.position, transform.forward);
-        RaycastHit rayCastHit;
-
-        Debug.DrawRay(rayCast.origin, rayCast.direction * 200);
-
-        if(Physics.Raycast(rayCast, out rayCastHit, 200) && rayCastHit.collider.GetComponent<UnityEngine.UI.Button>() != null)
+        try
         {
-            //Change the state of the bool
-            if (inputManager.triggerClicked && !OVRManager.isHmdPresent && !delayActive)
+            if (Physics.Raycast(rayCast, out rayCastHit, 200) && rayCastHit.collider.GetComponent<UnityEngine.UI.Button>() != null)
             {
-                UnityEngine.UI.Button button = rayCastHit.collider.GetComponent<UnityEngine.UI.Button>();
-
-                button.onClick.Invoke();
-                //button.GetComponent<ButtonSibling>().InvokeSiblingAndOwnButton();
-
-                StartCoroutine(Delay(.1f));
-            }
-            else if (OVRManager.isHmdPresent && !delayActive)
-            {
-                switch (side)
+                //Change the state of the bool
+                if (inputManager.triggerClicked && !OVRManager.isHmdPresent && !delayActive)
                 {
-                    case HandSide.Left:
-                        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch))
-                        {
-                            UnityEngine.UI.Button button = rayCastHit.collider.GetComponent<UnityEngine.UI.Button>();
+                    UnityEngine.UI.Button button = rayCastHit.collider.GetComponent<UnityEngine.UI.Button>();
 
-                            button.onClick.Invoke();
-
-                            StartCoroutine(Delay(.1f));
-                        }
-                        break;
-                    case HandSide.Right:
-                        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
-                        {
-                            UnityEngine.UI.Button button = rayCastHit.collider.GetComponent<UnityEngine.UI.Button>();
-
-                            button.onClick.Invoke();
-
-                            StartCoroutine(Delay(.1f));
-                        }
-                        break;
-                    default:
-                        Debug.LogWarning("Please assign the handside");
-                        break;
+                    button.onClick.Invoke();
+                    StartCoroutine(Delay(.1f));
                 }
-            }
-
+                else if (OVRManager.isHmdPresent && !delayActive)
+                {
+                    switch (side)
+                    {
+                        case HandSide.Left:
+                            ButtonClick(OVRInput.Controller.LTouch);
+                            break;
+                        case HandSide.Right:
+                            ButtonClick(OVRInput.Controller.RTouch);
+                            break;
+                        default:
+                            Debug.Log("Assign a handside");
+                            break;
+                    }
+                }
                 selectedUIItem = true;
 
-            //Set the line color to green and snap the position of the line
-            lineRenderer.material = selectionColors[1];
-            lineRenderer.SetPosition(1, rayCastHit.collider.transform.position);
-        }
-        else
-        {
-            selectedUIItem = false;
+                //Set the line color to green and snap the position of the line
+                lineRenderer.material = selectionColors[1];
+            }
+            else
+            {
+                selectedUIItem = false;
 
-            //Set the line color to red and allow the line to follow the ray
-            lineRenderer.material = selectionColors[0];
-            lineRenderer.SetPosition(1, transform.position + (transform.forward * 200));
+                //Set the line color to red and allow the line to follow the ray
+                lineRenderer.material = selectionColors[0];
+            }
+            lineRenderer.SetPosition(1, transform.position + (transform.forward * rayCastHit.distance));
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log(e.Message);
+        }
+    }
+
+    private void ButtonClick(OVRInput.Controller controller)
+    {
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller))
+        {
+            UnityEngine.UI.Button button = rayCastHit.collider.GetComponent<UnityEngine.UI.Button>();
+
+            button.onClick.Invoke();
+
+            StartCoroutine(Delay(.1f));
         }
     }
 
