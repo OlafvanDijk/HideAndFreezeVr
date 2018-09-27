@@ -20,14 +20,14 @@ MonoBehaviour:
     - {fileID: 2800000, guid: ef3144a3346742f4d8f333c47819cf47, type: 3}
     color: {r: 0.54701835, g: 0.058282882, b: 0.7205882, a: 1}
   - texture:
-    - {fileID: 2800000, guid: 03fc5a323e3de044aa2ec7f8311e3ecd, type: 3}
+    - {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
     - {fileID: 2800000, guid: 5da5ee2b8c2bf5a40b78025b0e6126da, type: 3}
-    - {fileID: 2800000, guid: 03fc5a323e3de044aa2ec7f8311e3ecd, type: 3}
-    - {fileID: 2800000, guid: 0df3d47dd3bc45b42ab5e5673cd9ddcb, type: 3}
+    - {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 2800000, guid: 80f21877e1dcdaa48b9e7a34628f88d0, type: 3}
     color: {r: 0.19377162, g: 0.58899903, b: 0.8235294, a: 1}
   - texture:
-    - {fileID: 2800000, guid: 4f1937afce4ad764b94f1bfe7cf267fa, type: 3}
-    - {fileID: 2800000, guid: 8dc1c61535085f74585f7a549131af6e, type: 3}
-    - {fileID: 2800000, guid: 4f1937afce4ad764b94f1bfe7cf267fa, type: 3}
-    - {fileID: 2800000, guid: cd6b594c866d89548a40e47f066b2af3, type: 3}
-    color: {r: 0.28762975, g: 0.6985294, b: 0.30746633, a: 1}
+    - {fileID: 2800000, guid: 3006ead4fb645794a86f438fb7580a9d, type: 3}
+    - {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 2800000, guid: 3006ead4fb645794a86f438fb7580a9d, type: 3}
+    - {fileID: 2800000, guid: 83fe1dc22e1fbbf4f99f48869d24e37a, type: 3}
+    color: {r: 1, g: 0.8161765, b: 0.96450305, a: 1}
