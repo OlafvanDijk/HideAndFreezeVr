@@ -160,8 +160,6 @@ public class VRAvatarController : MonoBehaviour
         #endregion
 
         CapturePlayAreaTransform();
-
-        Debug.Log("Avatar: " + actualAvatarVRIK);
     }
 
     private void ApplyAvatar(int index)
@@ -221,7 +219,6 @@ public class VRAvatarController : MonoBehaviour
         HideController hideController = alias.GetComponentInChildren<HideController>();
         if (hideController != null)
         {
-            Debug.Log("hide");
             hideController.ToggleShowControllers(showControllers, enableButtonSelecting);
         }
     }
