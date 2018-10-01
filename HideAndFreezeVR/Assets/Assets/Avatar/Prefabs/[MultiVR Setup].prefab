@@ -502,7 +502,6 @@ GameObject:
   - component: {fileID: 120200242281210082}
   - component: {fileID: 114572156349739188}
   - component: {fileID: 54223631284519424}
-  - component: {fileID: 65185200615705218}
   m_Layer: 0
   m_Name: RightHandAnchor
   m_TagString: Untagged
@@ -2615,18 +2614,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &65185200615705218
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1525296998880242}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.05, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65528251584494946
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2634,7 +2621,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1604777102760958}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1292291, y: 0.08154382, z: 0.2825403}
@@ -2646,7 +2633,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1828564796553174}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1292291, y: 0.08154382, z: 0.2825403}
@@ -2720,7 +2707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerToggleButton: 10
   pointerSetButton: 10
-  grabToggleButton: 7
+  grabToggleButton: 3
   useToggleButton: 3
   uiClickButton: 3
   menuToggleButton: 14
@@ -3012,7 +2999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerToggleButton: 10
   pointerSetButton: 10
-  grabToggleButton: 7
+  grabToggleButton: 3
   useToggleButton: 3
   uiClickButton: 3
   menuToggleButton: 14
@@ -3334,7 +3321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerToggleButton: 10
   pointerSetButton: 10
-  grabToggleButton: 7
+  grabToggleButton: 3
   useToggleButton: 3
   uiClickButton: 3
   menuToggleButton: 14
@@ -3605,7 +3592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerToggleButton: 10
   pointerSetButton: 10
-  grabToggleButton: 7
+  grabToggleButton: 3
   useToggleButton: 3
   uiClickButton: 3
   menuToggleButton: 14
@@ -3827,7 +3814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerToggleButton: 10
   pointerSetButton: 10
-  grabToggleButton: 7
+  grabToggleButton: 3
   useToggleButton: 3
   uiClickButton: 3
   menuToggleButton: 14
@@ -3986,7 +3973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerToggleButton: 10
   pointerSetButton: 10
-  grabToggleButton: 7
+  grabToggleButton: 3
   useToggleButton: 3
   uiClickButton: 3
   menuToggleButton: 14
@@ -4287,6 +4274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timesToLookIntoParent: 2
+  layerToExclude: 9
 --- !u!114 &114962161524684620
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,11 +10,7 @@ public class ChooseAvatar : MonoBehaviour {
     [SerializeField]
     private List<Outfits> avatarOutfits;
     [SerializeField]
-    private RawImage color1;
-    [SerializeField]
-    private RawImage color2;
-    [SerializeField]
-    private RawImage color3;
+    private List<RawImage> colorButtons;
     [SerializeField]
     private List<Image> outlines;
 
@@ -71,9 +67,17 @@ public class ChooseAvatar : MonoBehaviour {
 
     private void ChangeColors()
     {
-        color1.color = savedOutfits[0].color;
-        color2.color = savedOutfits[1].color;
-        color3.color = savedOutfits[2].color;
+        try
+        {
+            for (int i = 0; i < colorButtons.Count; i++)
+            {
+                colorButtons[i].color = savedOutfits[i].color;
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log(e.Message);
+        }
     }
 
     private void ToggleOutlineAvatar(int index)

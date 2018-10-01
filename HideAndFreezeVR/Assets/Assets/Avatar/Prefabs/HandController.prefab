@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947b27445602ed640b885db7e667dfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabButton: 2
-  grabPrecognition: 0
+  grabButton: 3
+  grabPrecognition: 0.1
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
   controllerAttachPoint: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerToggleButton: 10
   pointerSetButton: 10
-  grabToggleButton: 7
+  grabToggleButton: 3
   useToggleButton: 3
   uiClickButton: 3
   menuToggleButton: 13
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153520610727894}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65eb64f0f2fd6d64faddbcf5d7d3bdbb, type: 3}
   m_Name: 

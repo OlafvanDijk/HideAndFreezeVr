@@ -271,6 +271,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114137799758962926, guid: ccd3e798db050554f90029512554a58a,
+        type: 2}
+      propertyPath: colorButtons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4134596933079696, guid: ccd3e798db050554f90029512554a58a, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -348,6 +353,21 @@ Prefab:
       propertyPath: outlines.Array.data[5]
       value: 
       objectReference: {fileID: 330305996}
+    - target: {fileID: 114137799758962926, guid: ccd3e798db050554f90029512554a58a,
+        type: 2}
+      propertyPath: colorButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 2059666756}
+    - target: {fileID: 114137799758962926, guid: ccd3e798db050554f90029512554a58a,
+        type: 2}
+      propertyPath: colorButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 449849387}
+    - target: {fileID: 114137799758962926, guid: ccd3e798db050554f90029512554a58a,
+        type: 2}
+      propertyPath: colorButtons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1993884720}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccd3e798db050554f90029512554a58a, type: 2}
   m_IsPrefabParent: 0
