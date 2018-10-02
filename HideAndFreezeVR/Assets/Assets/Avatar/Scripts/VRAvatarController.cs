@@ -34,6 +34,8 @@ public class VRAvatarController : MonoBehaviour
         VRSetup(this.transform.position, this.transform.rotation);
         UpdatePlayAreaTransform();
         haveIStarted = true;
+
+
     }
 
     /// <summary>
@@ -110,6 +112,8 @@ public class VRAvatarController : MonoBehaviour
         containerObject.transform.rotation = rotation;
 
         transform.SetParent(containerObject.transform, true);
+
+        DontDestroyOnLoad(containerObject);
         
         //Current client owns this player
         //create camera rig and attach player model to it

@@ -10,9 +10,6 @@ public class VR_MainCanvasManager : MonoBehaviour{
     public int test = 4;
 
     [SerializeField]
-    private VR_PlayerNetwork playerNetworkPrefab;
-
-    [SerializeField]
     private VR_LobbyCanvas lobbyCanvas;
     public VR_LobbyCanvas getLobbyCanvas()
     {
@@ -27,10 +24,6 @@ public class VR_MainCanvasManager : MonoBehaviour{
 
     private void Start()
     {
-        if(VR_PlayerNetwork.Instance == null)
-        {
-            Instantiate(playerNetworkPrefab);
-        }
     }
 
     /// <summary>
