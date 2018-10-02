@@ -152,9 +152,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1316140427364740, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 4937135741947330, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
+      propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125501235204524, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938976584885100, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725630648606190, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316140427364740, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
+      propertyPath: m_Name
+      value: '[MultiVR Setup]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}

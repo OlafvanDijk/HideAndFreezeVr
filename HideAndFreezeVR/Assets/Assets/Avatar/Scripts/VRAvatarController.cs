@@ -15,8 +15,9 @@ public class VRAvatarController : MonoBehaviour
     [SerializeField]
     private GameObject VRRigPrefab;
 
-    public int indexActualAvatar;
-    public VRIK actualAvatarVRIK;
+    public int indexActualAvatar { get; private set; }
+    public VRIK actualAvatarVRIK { get; private set; }
+
     private GameObject containerObject;
     private Collider[] ownColliders;
     private GameObject VRRigObject;
@@ -48,7 +49,7 @@ public class VRAvatarController : MonoBehaviour
     /// </summary>
     private void ResetIKSolver()
     {
-        if (avatarPrefab != null)
+        if (actualAvatarVRIK != null)
         {
             IKSolver solver = actualAvatarVRIK.GetIKSolver();
             IKSolverVR solverVR = solver as IKSolverVR;
@@ -164,8 +165,6 @@ public class VRAvatarController : MonoBehaviour
         #endregion
 
         CapturePlayAreaTransform();
-
-        Debug.Log("Avatar: " + actualAvatarVRIK);
     }
 
     private void ApplyAvatar(int index)
@@ -225,7 +224,6 @@ public class VRAvatarController : MonoBehaviour
         HideController hideController = alias.GetComponentInChildren<HideController>();
         if (hideController != null)
         {
-            Debug.Log("hide");
             hideController.ToggleShowControllers(showControllers, enableButtonSelecting);
         }
     }

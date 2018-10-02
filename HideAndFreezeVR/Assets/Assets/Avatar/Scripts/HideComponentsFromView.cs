@@ -6,6 +6,8 @@ public class HideComponentsFromView : MonoBehaviour {
 
     [SerializeField]
     private int timesToLookIntoParent;
+    [SerializeField]
+    private int layerToExclude;
 
     private GameObject child;
 
@@ -34,7 +36,7 @@ public class HideComponentsFromView : MonoBehaviour {
         Camera cam = parent.GetComponent<Camera>();
         if (cam != null)
         {
-            cam.cullingMask = cam.cullingMask & ~(1 << 9);
+            cam.cullingMask = cam.cullingMask & ~(1 << layerToExclude);
         }
         else if(timesToLookIntoParent > 0)
         {

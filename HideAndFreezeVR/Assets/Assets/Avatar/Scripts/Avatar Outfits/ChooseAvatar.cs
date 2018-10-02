@@ -10,7 +10,7 @@ public class ChooseAvatar : MonoBehaviour {
     [SerializeField]
     private List<Outfits> avatarOutfits;
     [SerializeField]
-    private List<RawImage> colors;
+    private List<RawImage> colorButtons;
     [SerializeField]
     private List<Image> outlines;
 
@@ -67,9 +67,16 @@ public class ChooseAvatar : MonoBehaviour {
 
     private void ChangeColors()
     {
-        for (int i = 0; i < savedOutfits.Count; i++)
+        try
         {
-            colors[i].color = savedOutfits[i].color;
+            for (int i = 0; i < colorButtons.Count; i++)
+            {
+                colorButtons[i].color = savedOutfits[i].color;
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log(e.Message);
         }
     }
 
