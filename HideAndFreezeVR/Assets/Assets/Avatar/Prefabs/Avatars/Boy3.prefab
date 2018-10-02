@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 114276425017282638}
   - component: {fileID: 114027949495262566}
   - component: {fileID: 114080578418327814}
+  - component: {fileID: 114231154192235668}
   m_Layer: 0
   m_Name: Boy3
   m_TagString: Player
@@ -2999,6 +3000,24 @@ MonoBehaviour:
   occlusionEnabled: 0
   occlusionIntensity: 1
   quality: 2
+--- !u!114 &114231154192235668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186600147009482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c792448345a2544bcd875c90d90862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 4181230068308028}
+  leftHand: {fileID: 4216409707757012}
+  rightHand: {fileID: 4547429634949300}
+  partsToHide:
+  - {fileID: 1026459333639712}
+  - {fileID: 1547862692447596}
+  layerToHideNumber: 9
 --- !u!114 &114276425017282638
 MonoBehaviour:
   m_ObjectHideFlags: 1
