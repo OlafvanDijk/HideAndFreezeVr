@@ -13,9 +13,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatar: {fileID: 114773731561506124, guid: 79eedc82417b6804687f6a7e3a077732, type: 2}
   outfits:
-  - texture: {fileID: 2800000, guid: f6620ed899693a540b154e399ed7e2c4, type: 3}
+  - texture:
+    - {fileID: 2800000, guid: f6620ed899693a540b154e399ed7e2c4, type: 3}
+    - {fileID: 2800000, guid: a20b1ea9a4c9cd044bafb4f820cc1454, type: 3}
+    - {fileID: 2800000, guid: a1d5650f09f0c17468711b0a060be89c, type: 3}
     color: {r: 0.6838235, g: 0.15587153, b: 0.15587153, a: 1}
-  - texture: {fileID: 2800000, guid: 77ba27b84926266489b33cd66f75caeb, type: 3}
+  - texture:
+    - {fileID: 2800000, guid: 77ba27b84926266489b33cd66f75caeb, type: 3}
+    - {fileID: 2800000, guid: a20b1ea9a4c9cd044bafb4f820cc1454, type: 3}
+    - {fileID: 2800000, guid: 8d254688d6992a947ac01dfb6b1d7ffb, type: 3}
     color: {r: 0.081531115, g: 0.18261234, b: 0.85294116, a: 1}
-  - texture: {fileID: 2800000, guid: 7573a4523938e28408584ccda4b97c50, type: 3}
+  - texture:
+    - {fileID: 2800000, guid: 7573a4523938e28408584ccda4b97c50, type: 3}
+    - {fileID: 2800000, guid: bb7654e54d2adcb40b22818b3239aeb9, type: 3}
+    - {fileID: 2800000, guid: 150f3ff681fda7f4d88f95efe9122b2d, type: 3}
     color: {r: 0.8544804, g: 0.89705884, b: 0.12532441, a: 1}

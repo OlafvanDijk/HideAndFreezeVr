@@ -113,23 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &468289121 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114901919427573616, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
-  m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}
---- !u!1 &551137182 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1894400323884010, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
---- !u!114 &551137186 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114993056799928798, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
-  m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}
 --- !u!1001 &624590887
 Prefab:
   m_ObjectHideFlags: 0
@@ -137,11 +120,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114341399174356980, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: setups.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4790955586865372, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -174,104 +152,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedSystemSDKInfo.typeName
-      value: VRTK.SDK_OculusSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedBoundariesSDKInfo.typeName
-      value: VRTK.SDK_OculusBoundaries
-      objectReference: {fileID: 0}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedHeadsetSDKInfo.typeName
-      value: VRTK.SDK_OculusHeadset
-      objectReference: {fileID: 0}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedControllerSDKInfo.typeName
-      value: VRTK.SDK_OculusController
-      objectReference: {fileID: 0}
-    - target: {fileID: 114993056799928798, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: actualBoundaries
-      value: 
-      objectReference: {fileID: 551137182}
-    - target: {fileID: 114993056799928798, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: actualHeadset
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114993056799928798, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: actualLeftController
-      value: 
-      objectReference: {fileID: 1904475457}
-    - target: {fileID: 114993056799928798, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: actualRightController
-      value: 
-      objectReference: {fileID: 1315562638}
-    - target: {fileID: 114993056799928798, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: modelAliasLeftController
-      value: 
-      objectReference: {fileID: 1820484304}
-    - target: {fileID: 114993056799928798, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: modelAliasRightController
-      value: 
-      objectReference: {fileID: 861968283}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedSystemSDKInfo.descriptionIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedBoundariesSDKInfo.descriptionIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedHeadsetSDKInfo.descriptionIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: cachedControllerSDKInfo.descriptionIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114341399174356980, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: setups.Array.data[0]
-      value: 
-      objectReference: {fileID: 468289121}
-    - target: {fileID: 114341399174356980, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: setups.Array.data[1]
-      value: 
-      objectReference: {fileID: 1985082275}
-    - target: {fileID: 114341399174356980, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: setups.Array.data[2]
-      value: 
-      objectReference: {fileID: 551137186}
-    - target: {fileID: 114341399174356980, guid: 407513443d6472a45bd9b822e6e4826d,
-        type: 2}
-      propertyPath: setups.Array.data[3]
-      value: 
-      objectReference: {fileID: 1985082275}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 407513443d6472a45bd9b822e6e4826d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &861968283 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1701708094097874, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
 --- !u!1 &1193582946
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,24 +220,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1315562638 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1604777102760958, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
---- !u!1 &1820484304 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1738054866813824, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
---- !u!1 &1904475457 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1828564796553174, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
---- !u!114 &1985082275 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114763172765024816, guid: 407513443d6472a45bd9b822e6e4826d,
-    type: 2}
-  m_PrefabInternal: {fileID: 624590887}
-  m_Script: {fileID: 11500000, guid: eeda6d41317f444b900e374895f14e95, type: 3}

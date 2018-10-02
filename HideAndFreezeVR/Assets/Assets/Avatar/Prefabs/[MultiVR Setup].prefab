@@ -651,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1644530598183920
 GameObject:
   m_ObjectHideFlags: 1
@@ -2001,7 +2001,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 96.01604
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2109,7 +2109,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 96.01604
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2172,7 +2172,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2181,7 +2181,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 90
+  field of view: 96.01604
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2809,7 +2809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
@@ -3126,7 +3126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
@@ -3330,7 +3330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 200
+  rayDistance: 5
   delayActive: 0
   selectionColors: []
 --- !u!114 &114372834389461942
@@ -3394,7 +3394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 0
-  rayDistance: 200
+  rayDistance: 5
   delayActive: 0
   selectionColors: []
 --- !u!114 &114386481355403536
@@ -3665,7 +3665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 1
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
@@ -3898,7 +3898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
   side: 1
-  rayDistance: 2000
+  rayDistance: 5
   delayActive: 0
   selectionColors:
   - {fileID: 2100000, guid: c27eb0e77b410f143978101a77f02035, type: 2}
