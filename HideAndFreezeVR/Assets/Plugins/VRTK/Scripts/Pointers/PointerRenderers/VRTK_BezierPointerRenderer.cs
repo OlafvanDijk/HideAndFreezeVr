@@ -126,6 +126,7 @@ namespace VRTK
         protected override void CreatePointerObjects()
         {
             actualContainer = new GameObject(VRTK_SharedMethods.GenerateVRTKObjectName(true, gameObject.name, "BezierPointerRenderer_Container"));
+            DontDestroyOnLoad(actualContainer);
             VRTK_PlayerObject.SetPlayerObject(actualContainer, VRTK_PlayerObject.ObjectTypes.Pointer);
             actualContainer.SetActive(false);
 
@@ -219,6 +220,7 @@ namespace VRTK
             actualCursor = (customCursor ? Instantiate(customCursor) : CreateCursorObject());
             CreateCursorLocations();
             actualCursor.name = VRTK_SharedMethods.GenerateVRTKObjectName(true, gameObject.name, "BezierPointerRenderer_Cursor");
+            DontDestroyOnLoad(actualCursor);
             VRTK_PlayerObject.SetPlayerObject(actualCursor, VRTK_PlayerObject.ObjectTypes.Pointer);
             actualCursor.layer = LayerMask.NameToLayer("Ignore Raycast");
             actualCursor.SetActive(false);
