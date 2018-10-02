@@ -15,8 +15,9 @@ public class VRAvatarController : MonoBehaviour
     [SerializeField]
     private GameObject VRRigPrefab;
 
-    public int indexActualAvatar;
-    public VRIK actualAvatarVRIK;
+    public int indexActualAvatar { get; private set; }
+    public VRIK actualAvatarVRIK { get; private set; }
+
     private GameObject containerObject;
     private Collider[] ownColliders;
     private GameObject VRRigObject;
@@ -48,7 +49,7 @@ public class VRAvatarController : MonoBehaviour
     /// </summary>
     private void ResetIKSolver()
     {
-        if (avatarPrefab != null)
+        if (actualAvatarVRIK != null)
         {
             IKSolver solver = actualAvatarVRIK.GetIKSolver();
             IKSolverVR solverVR = solver as IKSolverVR;
@@ -120,30 +121,7 @@ public class VRAvatarController : MonoBehaviour
         sdkManager = VRRigObject.GetComponentInChildren<VRTK.VRTK_SDKManager>();
         multiVR = VRRigObject.GetComponentInChildren<MultiVRSetup>();
 
-        GameObject leftController = Instantiate(VRControllerPrefab, containerObject.transform);
-        
-        GameObject rightController = Instantiate(VRControllerPrefab, containerObject.transform);
-        
-        leftController.name = "LeftController (Clone)";
-        rightController.name = "RightController (Clone)";
-
-        // Attach left hand
-        MultiVRUtil.MakeReferral(multiVR.leftHandAlias.gameObject);
-        multiVR.leftHandAlias.transform.SetParent(leftController.transform);
-
-        // Attach right hand
-        MultiVRUtil.MakeReferral(multiVR.rightHandAlias.gameObject);
-        multiVR.rightHandAlias.transform.SetParent(rightController.transform);
-
-        ToggleController(multiVR.leftHandAlias.gameObject);
-        ToggleController(multiVR.rightHandAlias.gameObject);
-
-        sdkManager.scriptAliasLeftController = leftController;
-        sdkManager.scriptAliasRightController = rightController;
-
-        //Get Teleport
-        rightControllerTeleport = rightController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
-        leftControllerTeleport = leftController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
+        VRTKSetup();
 
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
@@ -164,8 +142,34 @@ public class VRAvatarController : MonoBehaviour
         #endregion
 
         CapturePlayAreaTransform();
+    }
 
-        Debug.Log("Avatar: " + actualAvatarVRIK);
+    public void VRTKSetup()
+    {
+        GameObject leftController = Instantiate(VRControllerPrefab, containerObject.transform);
+
+        GameObject rightController = Instantiate(VRControllerPrefab, containerObject.transform);
+
+        leftController.name = "LeftController (Clone)";
+        rightController.name = "RightController (Clone)";
+
+        // Attach left hand
+        MultiVRUtil.MakeReferral(multiVR.leftHandAlias.gameObject);
+        multiVR.leftHandAlias.transform.SetParent(leftController.transform);
+
+        // Attach right hand
+        MultiVRUtil.MakeReferral(multiVR.rightHandAlias.gameObject);
+        multiVR.rightHandAlias.transform.SetParent(rightController.transform);
+
+        ToggleController(multiVR.leftHandAlias.gameObject);
+        ToggleController(multiVR.rightHandAlias.gameObject);
+
+        sdkManager.scriptAliasLeftController = leftController;
+        sdkManager.scriptAliasRightController = rightController;
+
+        //Get Teleport
+        rightControllerTeleport = rightController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
+        leftControllerTeleport = leftController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
     }
 
     private void ApplyAvatar(int index)
@@ -225,7 +229,6 @@ public class VRAvatarController : MonoBehaviour
         HideController hideController = alias.GetComponentInChildren<HideController>();
         if (hideController != null)
         {
-            Debug.Log("hide");
             hideController.ToggleShowControllers(showControllers, enableButtonSelecting);
         }
     }

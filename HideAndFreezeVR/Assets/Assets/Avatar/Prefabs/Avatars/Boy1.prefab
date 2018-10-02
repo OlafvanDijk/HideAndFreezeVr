@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4613635599389288}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4998307430066726}
   - component: {fileID: 137802147791078038}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Boy1_head (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4966842913447442}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 4644821808810226}
   - component: {fileID: 33433458203598546}
   - component: {fileID: 23428645478948688}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: hat01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,6 +1001,7 @@ GameObject:
   - component: {fileID: 114268852235443758}
   - component: {fileID: 114465513934663966}
   - component: {fileID: 114849799962586824}
+  - component: {fileID: 114015440765164830}
   m_Layer: 0
   m_Name: Boy1
   m_TagString: Player
@@ -1939,7 +1940,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1911203907404436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.912}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4613635599389288}
@@ -2585,6 +2586,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114015440765164830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1911203907404436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c792448345a2544bcd875c90d90862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 4990528365891130}
+  leftHand: {fileID: 4967961407776544}
+  rightHand: {fileID: 4119229302939226}
+  partsToHide:
+  - {fileID: 1012736031076272}
+  - {fileID: 1397487283512144}
+  layerToHideNumber: 9
 --- !u!114 &114090975301700716
 MonoBehaviour:
   m_ObjectHideFlags: 1

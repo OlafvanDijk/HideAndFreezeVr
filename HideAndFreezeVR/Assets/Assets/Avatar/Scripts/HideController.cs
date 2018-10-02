@@ -49,7 +49,6 @@ public class HideController : MonoBehaviour {
             case PlayAreaType.OCULUS:
                 OvrAvatar avatar = multiVRSetup.playAreaAlias.GetComponentInChildren<OvrAvatar>(true);
                 avatar.ShowFirstPerson = value;
-                Debug.Log(value);
                 avatar.ShowControllers(value);
                 
                 break;
