@@ -121,30 +121,7 @@ public class VRAvatarController : MonoBehaviour
         sdkManager = VRRigObject.GetComponentInChildren<VRTK.VRTK_SDKManager>();
         multiVR = VRRigObject.GetComponentInChildren<MultiVRSetup>();
 
-        GameObject leftController = Instantiate(VRControllerPrefab, containerObject.transform);
-        
-        GameObject rightController = Instantiate(VRControllerPrefab, containerObject.transform);
-        
-        leftController.name = "LeftController (Clone)";
-        rightController.name = "RightController (Clone)";
-
-        // Attach left hand
-        MultiVRUtil.MakeReferral(multiVR.leftHandAlias.gameObject);
-        multiVR.leftHandAlias.transform.SetParent(leftController.transform);
-
-        // Attach right hand
-        MultiVRUtil.MakeReferral(multiVR.rightHandAlias.gameObject);
-        multiVR.rightHandAlias.transform.SetParent(rightController.transform);
-
-        ToggleController(multiVR.leftHandAlias.gameObject);
-        ToggleController(multiVR.rightHandAlias.gameObject);
-
-        sdkManager.scriptAliasLeftController = leftController;
-        sdkManager.scriptAliasRightController = rightController;
-
-        //Get Teleport
-        rightControllerTeleport = rightController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
-        leftControllerTeleport = leftController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
+        VRTKSetup();
 
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
@@ -165,6 +142,34 @@ public class VRAvatarController : MonoBehaviour
         #endregion
 
         CapturePlayAreaTransform();
+    }
+
+    public void VRTKSetup()
+    {
+        GameObject leftController = Instantiate(VRControllerPrefab, containerObject.transform);
+
+        GameObject rightController = Instantiate(VRControllerPrefab, containerObject.transform);
+
+        leftController.name = "LeftController (Clone)";
+        rightController.name = "RightController (Clone)";
+
+        // Attach left hand
+        MultiVRUtil.MakeReferral(multiVR.leftHandAlias.gameObject);
+        multiVR.leftHandAlias.transform.SetParent(leftController.transform);
+
+        // Attach right hand
+        MultiVRUtil.MakeReferral(multiVR.rightHandAlias.gameObject);
+        multiVR.rightHandAlias.transform.SetParent(rightController.transform);
+
+        ToggleController(multiVR.leftHandAlias.gameObject);
+        ToggleController(multiVR.rightHandAlias.gameObject);
+
+        sdkManager.scriptAliasLeftController = leftController;
+        sdkManager.scriptAliasRightController = rightController;
+
+        //Get Teleport
+        rightControllerTeleport = rightController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
+        leftControllerTeleport = leftController.GetComponent<VRTK.VRTK_BezierPointerRenderer>();
     }
 
     private void ApplyAvatar(int index)
