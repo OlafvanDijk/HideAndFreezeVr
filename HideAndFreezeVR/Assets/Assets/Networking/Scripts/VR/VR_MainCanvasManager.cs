@@ -7,7 +7,8 @@ public class VR_MainCanvasManager : MonoBehaviour{
 
     public static VR_MainCanvasManager Instance;
 
-    public int test = 4;
+    [SerializeField]
+    private VR_PlayerNetwork vr_PlayerNetwork;
 
     [SerializeField]
     private VR_LobbyCanvas lobbyCanvas;
@@ -19,7 +20,11 @@ public class VR_MainCanvasManager : MonoBehaviour{
     private void Awake()
     {
         Instance = this;
-        test = 4;
+        if(VR_PlayerNetwork.Instance == null)
+        {
+            Instantiate(vr_PlayerNetwork);
+        }
+
     }
 
     private void Start()
@@ -39,6 +44,12 @@ public class VR_MainCanvasManager : MonoBehaviour{
     /// </summary>
     public void ShowRoom()
     {
+        StartCoroutine(WaitForJoinRoom());
+    }
+
+    private IEnumerator WaitForJoinRoom()
+    {
+        yield return new WaitUntil(() => PhotonNetwork.inRoom == true);
         PhotonNetwork.LoadLevel(1);
     }
 }

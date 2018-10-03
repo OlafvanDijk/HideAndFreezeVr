@@ -78,4 +78,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d9107c192914b4c82150387fec9e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefabString: Player
+  PlayerPrefabString: OtherPlayer

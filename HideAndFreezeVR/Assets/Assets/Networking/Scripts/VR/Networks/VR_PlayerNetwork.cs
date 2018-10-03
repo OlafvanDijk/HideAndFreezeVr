@@ -35,14 +35,26 @@ public class VR_PlayerNetwork : MonoBehaviour {
 
     private void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Game")
+        StartCoroutine(waitForPlayer(scene));
+
+
+        
+    }
+
+    private IEnumerator waitForPlayer(Scene scene)
+    {
+        this.player = null;
+        yield return new WaitUntil(() => this.player != null);
+        if (scene.name == "VR_Room")
         {
             if (PhotonNetwork.isMasterClient)
                 MasterLoadedGame();
             else
                 NonMasterLoadedGame();
         }
+
     }
+    
 
     private void MasterLoadedGame()
     {
@@ -53,6 +65,7 @@ public class VR_PlayerNetwork : MonoBehaviour {
 
     private void NonMasterLoadedGame()
     {
+        Debug.Log(PhotonNetwork.inRoom);
         //photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
         GameObject obj = PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0, 0, 0), Quaternion.identity, 0);
         obj.GetComponent<LocationDataHolder>().SetPlayer(this.player);

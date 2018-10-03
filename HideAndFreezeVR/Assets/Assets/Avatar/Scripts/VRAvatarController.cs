@@ -113,7 +113,7 @@ public class VRAvatarController : MonoBehaviour
 
         transform.SetParent(containerObject.transform, true);
 
-        DontDestroyOnLoad(containerObject);
+        //DontDestroyOnLoad(containerObject);
         
         //Current client owns this player
         //create camera rig and attach player model to it

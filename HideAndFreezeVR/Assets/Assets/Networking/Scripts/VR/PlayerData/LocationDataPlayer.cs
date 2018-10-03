@@ -10,11 +10,12 @@ public class LocationDataPlayer : MonoBehaviour {
 
     private void Awake()
     {
+        Debug.Log("player");
+        VR_PlayerNetwork.Instance.player = this;
         //DontDestroyOnLoad(this.transform.parent.gameObject);
     }
 
     private void Start()
     {
-        VR_PlayerNetwork.Instance.player = this;
     }
 }
