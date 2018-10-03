@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RootMotion.FinalIK;
 
 public class LocationDataHolder : Photon.MonoBehaviour {
 
@@ -11,12 +12,29 @@ public class LocationDataHolder : Photon.MonoBehaviour {
     [SerializeField]
     private LocationData head;
 
+    private GameObject Avatar;
+
     private LocationDataPlayer player;
 
     private void Awake()
     {
         DontDestroyOnLoad(this);
-        //this.GetComponent<PhotonView>().ObservedComponents.Clear();
+
+        if (!GetComponentInParent<PhotonView>().isMine)
+        {
+            GameObject avatar = Instantiate(AvatarManager.Instance.GetRandomAvatar());
+            avatar.transform.SetParent(this.gameObject.transform);
+            SetAvatar(avatar);
+        }
+
+    }
+
+    public void SetAvatar(GameObject Avatar)
+    {
+        this.Avatar = Avatar;
+        this.Avatar.GetComponent<VRIK>().solver.spine.headTarget = head.transform;
+        this.Avatar.GetComponent<VRIK>().solver.leftArm.target = leftHand.transform;
+        this.Avatar.GetComponent<VRIK>().solver.rightArm.target = rightHand.transform;
     }
 
     public void SetPlayer(LocationDataPlayer player)
