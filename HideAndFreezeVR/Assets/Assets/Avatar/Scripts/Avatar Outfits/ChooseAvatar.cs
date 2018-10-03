@@ -10,11 +10,7 @@ public class ChooseAvatar : MonoBehaviour {
     [SerializeField]
     private List<Outfits> avatarOutfits;
     [SerializeField]
-    private RawImage color1;
-    [SerializeField]
-    private RawImage color2;
-    [SerializeField]
-    private RawImage color3;
+    private List<RawImage> colors;
     [SerializeField]
     private List<Image> outlines;
 
@@ -47,10 +43,8 @@ public class ChooseAvatar : MonoBehaviour {
         }
         currentAvatar = avatarController.indexActualAvatar;
         ToggleOutlineAvatar(currentAvatar);
-        Debug.Log("Setoutfits");
         savedOutfits.Clear();
         savedOutfits.AddRange(avatarOutfits[avatarController.indexActualAvatar].outfits);
-        Debug.Log(savedOutfits[1]);
         ChangeColors();
     }
 
@@ -60,7 +54,6 @@ public class ChooseAvatar : MonoBehaviour {
         {
             GameObject avatarObject = avatarController.actualAvatarVRIK.gameObject;
             ChangeOutfit changeOutfit = avatarObject.GetComponent<ChangeOutfit>();
-            Debug.Log(changeOutfit);
             changeOutfit.ChangeClothes(savedOutfits[indexColor].texture);
         }
         catch (System.Exception)
@@ -71,9 +64,10 @@ public class ChooseAvatar : MonoBehaviour {
 
     private void ChangeColors()
     {
-        color1.color = savedOutfits[0].color;
-        color2.color = savedOutfits[1].color;
-        color3.color = savedOutfits[2].color;
+        for (int i = 0; i < savedOutfits.Count; i++)
+        {
+            colors[i].color = savedOutfits[i].color;
+        }
     }
 
     private void ToggleOutlineAvatar(int index)

@@ -987,6 +987,7 @@ namespace VRTK
                 {
                     setGrabMechanic = gameObject.AddComponent<VRTK_FixedJointGrabAttach>();
                 }
+                setGrabMechanic.precisionGrab = true;
                 grabAttachMechanicScript = setGrabMechanic;
             }
         }

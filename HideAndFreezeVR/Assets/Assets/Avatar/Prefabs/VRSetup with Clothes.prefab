@@ -59,9 +59,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7d9948b27d5fbe14d9002fbf2f9fef39, type: 2}
   - {fileID: 11400000, guid: 382c27ceca444d6468b11ec6815c47c0, type: 2}
   - {fileID: 11400000, guid: 950344be0e45d954881259e0345361a5, type: 2}
-  color1: {fileID: 0}
-  color2: {fileID: 0}
-  color3: {fileID: 0}
+  colors:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   outlines:
   - {fileID: 0}
   - {fileID: 0}
