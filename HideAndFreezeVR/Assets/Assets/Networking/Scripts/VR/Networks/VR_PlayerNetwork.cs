@@ -65,7 +65,6 @@ public class VR_PlayerNetwork : MonoBehaviour {
 
     private void NonMasterLoadedGame()
     {
-        Debug.Log(PhotonNetwork.inRoom);
         //photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
         GameObject obj = PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0, 0, 0), Quaternion.identity, 0);
         obj.GetComponent<LocationDataHolder>().SetPlayer(this.player);
