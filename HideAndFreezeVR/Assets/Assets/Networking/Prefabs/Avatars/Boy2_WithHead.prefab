@@ -2676,8 +2676,10 @@ MonoBehaviour:
   head: {fileID: 4400787370014194}
   leftHand: {fileID: 4840095048146934}
   rightHand: {fileID: 4879922222551980}
-  partsToHide: []
-  layerToHideNumber: 0
+  partsToHide:
+  - {fileID: 1084235116304956}
+  - {fileID: 1639108309249236}
+  layerToHideNumber: 9
 --- !u!114 &114557156306554596
 MonoBehaviour:
   m_ObjectHideFlags: 1

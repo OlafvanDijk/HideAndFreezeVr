@@ -33,39 +33,35 @@ public class VR_PlayerNetwork : MonoBehaviour {
         SceneManager.sceneLoaded += OnSceneFinishedLoading;
     }
 
+    /// <summary>
+    /// Called when the scene has finished loading.
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <param name="mode"></param>
     private void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
         StartCoroutine(waitForPlayer(scene));
-
-
-        
     }
 
+    /// <summary>
+    /// Waits for the player to have correctly joined the room before doing anything.
+    /// </summary>
+    /// <param name="scene">The scene that is being loaded.</param>
     private IEnumerator waitForPlayer(Scene scene)
     {
         this.player = null;
         yield return new WaitUntil(() => this.player != null);
         if (scene.name == "VR_Room")
         {
-            if (PhotonNetwork.isMasterClient)
-                MasterLoadedGame();
-            else
-                NonMasterLoadedGame();
+            SpawnPlayer();
         }
-
     }
     
-
-    private void MasterLoadedGame()
+    /// <summary>
+    /// Spawns the player object and sets the player to the LocationHolder.
+    /// </summary>
+    private void SpawnPlayer()
     {
-        //photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
-        //photonView.RPC("RPC_LoadGameOthers", PhotonTargets.OthersBuffered);
-        NonMasterLoadedGame();
-    }
-
-    private void NonMasterLoadedGame()
-    {
-        //photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
         GameObject obj = PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0, 0, 0), Quaternion.identity, 0);
         obj.GetComponent<LocationDataHolder>().SetPlayer(this.player);
     }

@@ -18,6 +18,11 @@ public class VRReferences : MonoBehaviour {
 
     private void Start()
     {
+       
+    }
+
+    public void HideHead()
+    {
         foreach (GameObject partToHide in partsToHide)
         {
             HidePartsInChildren(partToHide);

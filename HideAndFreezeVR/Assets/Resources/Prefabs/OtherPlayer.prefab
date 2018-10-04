@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef262b1423139804aba7232fb30ae5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  avatarSet: {fileID: 11400000, guid: a42bd9d2c525f044382c44b63bf7ba74, type: 2}
   leftHand: {fileID: 114647410109773530}
   rightHand: {fileID: 114894544394584284}
   head: {fileID: 114993313812865032}
