@@ -18,7 +18,6 @@ public class VRReferences : MonoBehaviour {
 
     private void Start()
     {
-        Debug.Log(partsToHide.Count);
         foreach (GameObject partToHide in partsToHide)
         {
             HidePartsInChildren(partToHide);
@@ -28,10 +27,24 @@ public class VRReferences : MonoBehaviour {
 
     private void HidePartsInChildren(GameObject parent)
     {
-            parent.layer = layerToHideNumber;
-            foreach (Transform child in parent.transform)
+        parent.layer = layerToHideNumber;
+        foreach (Transform child in parent.transform)
         {
             HidePartsInChildren(child.gameObject);
         }
     }
 }
+
+    private void Start()
+    {
+        foreach (GameObject partToHide in partsToHide)
+        {
+            HidePartsInChildren(partToHide);
+        }
+    private void HidePartsInChildren(GameObject parent)
+    {
+        parent.layer = layerToHideNumber;
+        foreach (Transform child in parent.transform)
+        {
+            HidePartsInChildren(child.gameObject);
+        }

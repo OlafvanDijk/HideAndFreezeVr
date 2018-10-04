@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Made by Aras Pranckevicius
+/// CC Attribution Share Alike 3.0
+/// http://wiki.unity3d.com/index.php/MirrorReflection4
+/// </summary>
+
 // This is in fact just the Water script from Pro Standard Assets,
 // just with refraction stuff removed.
 
