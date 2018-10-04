@@ -18,7 +18,6 @@ public class VRReferences : MonoBehaviour {
 
     private void Start()
     {
-        Debug.Log(partsToHide.Count);
         foreach (GameObject partToHide in partsToHide)
         {
             HidePartsInChildren(partToHide);

@@ -700,6 +700,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 223661546821663184, guid: d1fb1d29f683dfa4ebcec51fe6377ee4,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804550785797394, guid: d1fb1d29f683dfa4ebcec51fe6377ee4, type: 2}
+      propertyPath: m_Name
+      value: TV_Lobby
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1fb1d29f683dfa4ebcec51fe6377ee4, type: 2}
   m_IsPrefabParent: 0

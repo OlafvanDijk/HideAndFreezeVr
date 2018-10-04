@@ -4,6 +4,7 @@ using UnityEngine;
 using RootMotion.FinalIK;
 
 public class LocationDataHolder : Photon.MonoBehaviour {
+   
 
     [SerializeField]
     private LocationData leftHand;
@@ -26,6 +27,7 @@ public class LocationDataHolder : Photon.MonoBehaviour {
             avatar.transform.SetParent(this.gameObject.transform);
             SetAvatar(avatar);
         }
+        this.gameObject.transform.position += new Vector3(0, 0.2f, 0);
 
     }
 

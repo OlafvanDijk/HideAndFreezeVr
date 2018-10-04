@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 114945265974214798}
   - component: {fileID: 114131247742891706}
   - component: {fileID: 114777187485755514}
+  - component: {fileID: 65721542710070326}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -168,7 +169,7 @@ GameObject:
   - component: {fileID: 65054438485470174}
   - component: {fileID: 23085562923331576}
   m_Layer: 0
-  m_Name: TV
+  m_Name: TV_Lobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,6 +318,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1346.5413, y: 72.9842, z: 2}
   m_Center: {x: -1.4338446, y: 0.91328126, z: 0}
+--- !u!65 &65721542710070326
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674919041144136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2750, y: 1066, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65827828898825696
 BoxCollider:
   m_ObjectHideFlags: 1
