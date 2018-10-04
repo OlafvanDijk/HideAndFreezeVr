@@ -135,6 +135,7 @@ public class VRAvatarController : MonoBehaviour
         //multiVR.headAlias.gameObject.AddComponent<CreatePhotonView>().AddPhotonView(3);
 
         #region Avatar Setup
+        //TODO Avatar met hoofd.
         if (avatarPrefab != null)
         {
             ApplyAvatar(Random.Range(0, avatarPrefab.Capacity));
@@ -175,6 +176,7 @@ public class VRAvatarController : MonoBehaviour
     private void ApplyAvatar(int index)
     {
         this.indexActualAvatar = index;
+        //TODO gebruik hier de lijst met models voor je zelf.
         actualAvatarVRIK = Instantiate(avatarPrefab[index], Vector3.zero, Quaternion.identity);
         actualAvatarVRIK.solver.spine.headTarget = transform;
         actualAvatarVRIK.transform.SetParent(containerObject.transform, false);

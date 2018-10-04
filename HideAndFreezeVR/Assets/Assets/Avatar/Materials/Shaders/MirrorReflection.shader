@@ -1,5 +1,11 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
+/// <summary>
+/// Made by Aras Pranckevicius
+/// CC Attribution Share Alike 3.0
+/// http://wiki.unity3d.com/index.php/MirrorReflection4
+/// </summary>
+
 Shader "FX/MirrorReflection"
 {
 	Properties
