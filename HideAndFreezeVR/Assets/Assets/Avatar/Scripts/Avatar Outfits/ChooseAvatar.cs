@@ -126,6 +126,7 @@ public class ChooseAvatar : MonoBehaviour {
 
     private IEnumerator WaitForVRSetup()
     {
+        yield return new WaitUntil(() => avatarController != null);
         yield return new WaitUntil(() => avatarController.indexActualAvatar > -1);
         if (avatarController != null)
         {

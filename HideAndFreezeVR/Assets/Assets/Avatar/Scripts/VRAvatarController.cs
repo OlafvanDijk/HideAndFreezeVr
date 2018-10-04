@@ -27,10 +27,16 @@ public class VRAvatarController : MonoBehaviour
     private VRTK.VRTK_BezierPointerRenderer leftControllerTeleport;
     private Vector3 lastPosition;
     private Quaternion lastRotation;
-    private bool haveIStarted = false;
+    public bool haveIStarted = false;
+
+    private void Awake()
+    {
+        //indexActualAvatar = -1;
+    }
 
     private void Start()
     {
+        indexActualAvatar = -1;
         VRSetup(this.transform.position, this.transform.rotation);
         UpdatePlayAreaTransform();
         haveIStarted = true;
@@ -135,7 +141,7 @@ public class VRAvatarController : MonoBehaviour
         //multiVR.headAlias.gameObject.AddComponent<CreatePhotonView>().AddPhotonView(3);
 
         #region Avatar Setup
-        //TODO Avatar met hoofd.
+        //TODO Avatar zonder hoofd.
         if (avatarPrefab != null)
         {
             ApplyAvatar(Random.Range(0, avatarPrefab.Capacity));
