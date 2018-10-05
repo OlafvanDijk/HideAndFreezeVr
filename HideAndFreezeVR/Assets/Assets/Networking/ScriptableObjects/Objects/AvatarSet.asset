@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Name: AvatarSet
   m_EditorClassIdentifier: 
   listOfAvatars:
-  - {fileID: 1911203907404436, guid: 58001b74ad39c0140aa8ec880cfffd64, type: 2}
-  - {fileID: 1135390582983748, guid: 05f061c03bfc24544a316c33b8362cc3, type: 2}
-  - {fileID: 1186600147009482, guid: dbf21f2064490474bbf38832bc2ec7cc, type: 2}
-  - {fileID: 1384063523474374, guid: ea2c7f62370cb1a42addc590b4a1ee90, type: 2}
-  - {fileID: 1518561863727884, guid: 3ddd4f8b97cecc2488fca9304f170bd3, type: 2}
-  - {fileID: 1941072945793866, guid: 217e3e3398bfed04a89876513136c0a4, type: 2}
+  - {fileID: 114465513934663966, guid: 58001b74ad39c0140aa8ec880cfffd64, type: 2}
+  - {fileID: 114773731561506124, guid: 05f061c03bfc24544a316c33b8362cc3, type: 2}
+  - {fileID: 114027949495262566, guid: dbf21f2064490474bbf38832bc2ec7cc, type: 2}
+  - {fileID: 114836451129297886, guid: ea2c7f62370cb1a42addc590b4a1ee90, type: 2}
+  - {fileID: 114151301722771788, guid: 3ddd4f8b97cecc2488fca9304f170bd3, type: 2}
+  - {fileID: 114341631958300864, guid: 217e3e3398bfed04a89876513136c0a4, type: 2}
+  listOfOutfits:
+  - {fileID: 11400000, guid: 39fe4c9c751a51440a40449c23f24fc9, type: 2}
+  - {fileID: 11400000, guid: 2ea624e20c6f2064c8dccae05874bfbc, type: 2}
+  - {fileID: 11400000, guid: 382c27ceca444d6468b11ec6815c47c0, type: 2}
+  - {fileID: 11400000, guid: 950344be0e45d954881259e0345361a5, type: 2}
+  - {fileID: 11400000, guid: d65eec37bbcb57e42828c94832b94e40, type: 2}
+  - {fileID: 11400000, guid: 7d9948b27d5fbe14d9002fbf2f9fef39, type: 2}

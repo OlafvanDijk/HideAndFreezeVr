@@ -40,4 +40,7 @@ MonoBehaviour:
   - RPC_LoadedGameScene
   - RPC_LoadGameOthers
   - RPC_NewHealth
+  - PunRPC_OutfitChanged
+  - PUNRPC_IExist
+  - PUNRPC_OutfitChanged
   DisableAutoOpenWizard: 1

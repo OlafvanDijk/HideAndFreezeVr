@@ -1,20 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RootMotion.FinalIK;
 
 [CreateAssetMenu(fileName = "AvatarSet", menuName = "AvatarData", order = 1)]
 public class Avatars : ScriptableObject {
 
+    public List<VRIK> listOfAvatars;
     [SerializeField]
-    private List<GameObject> listOfAvatars;
+    private List<Outfits> listOfOutfits;
 
-    public GameObject getAvatarWithHead(int number)
+    private VRIK GetAvatar(int number)
     {
         if (number > listOfAvatars.Count)
         {
             number = 0;
         }
-        if(number < 0)
+        if (number < 0)
         {
             number = listOfAvatars.Count;
         }
@@ -22,11 +24,23 @@ public class Avatars : ScriptableObject {
         return listOfAvatars[number];
     }
 
-    public GameObject getAvatarWithoutHead(int number)
+    public VRIK getAvatarWithHead(int number)
     {
-        GameObject avatar = getAvatarWithHead(number);
+        VRIK avatar = GetAvatar(number);
+        avatar.GetComponent<VRReferences>().ShowHead();
+        return avatar;
+    }
+
+    public VRIK getAvatarWithoutHead(int number)
+    {
+        VRIK avatar = getAvatarWithHead(number);
         avatar.GetComponent<VRReferences>().HideHead();
         return avatar;
+    }
+
+    public Outfits getOutfits(int index)
+    {
+        return listOfOutfits[index];
     }
     
 }

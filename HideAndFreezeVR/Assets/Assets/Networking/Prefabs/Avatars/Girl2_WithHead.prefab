@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4088588755066924}
   - component: {fileID: 137331231280546668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Girl2_head (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4258322112300718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 4009528392400100}
   - component: {fileID: 33975711141846580}
   - component: {fileID: 23907954553131548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4120227544303056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 4766114701927764}
   - component: {fileID: 33154973320938180}
   - component: {fileID: 23374333003539874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hat04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2351,7 +2351,7 @@ BoxCollider:
   m_GameObject: {fileID: 1197551106342594}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 26, z: 11}
   m_Center: {x: -5, y: 7, z: 0}
@@ -2363,7 +2363,7 @@ BoxCollider:
   m_GameObject: {fileID: 1790961747870956}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 22, y: 3, z: 14}
   m_Center: {x: -7, y: 0, z: -2}
@@ -2375,7 +2375,7 @@ BoxCollider:
   m_GameObject: {fileID: 1835443623152810}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 22, y: 3, z: 14}
   m_Center: {x: -7, y: 0, z: -2}
@@ -2387,7 +2387,7 @@ BoxCollider:
   m_GameObject: {fileID: 1181773275816726}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 26, z: 11}
   m_Center: {x: -5, y: 7, z: 0}
@@ -3069,7 +3069,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1014508264513872}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 15
   m_Height: 55
   m_Direction: 0
@@ -3082,7 +3082,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1521000214805960}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7.5
   m_Height: 30
   m_Direction: 0
@@ -3095,7 +3095,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1999462027603302}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.4
   m_Height: 26.2
   m_Direction: 0
@@ -3108,7 +3108,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1164914897563688}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7.5
   m_Height: 30
   m_Direction: 0
@@ -3121,7 +3121,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1155814492663528}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.2
   m_Height: 21
   m_Direction: 0
@@ -3134,7 +3134,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1261224228404436}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.2
   m_Height: 21
   m_Direction: 0
@@ -3147,7 +3147,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1108252993423950}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 25
   m_Height: 55
   m_Direction: 0
@@ -3160,7 +3160,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1341717489152332}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7
   m_Height: 30
   m_Direction: 0
@@ -3173,7 +3173,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1055512680807232}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.4
   m_Height: 26.2
   m_Direction: 0
@@ -3186,7 +3186,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1103715962293182}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7
   m_Height: 30
   m_Direction: 0

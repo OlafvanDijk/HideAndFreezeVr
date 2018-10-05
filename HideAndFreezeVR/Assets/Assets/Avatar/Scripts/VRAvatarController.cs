@@ -9,7 +9,6 @@ public class VRAvatarController : MonoBehaviour
 {
     public bool showControllers;
     public bool enableButtonSelecting;
-    public List<VRIK> avatarPrefab;
     [SerializeField]
     private GameObject VRControllerPrefab;
     [SerializeField]
@@ -31,7 +30,6 @@ public class VRAvatarController : MonoBehaviour
 
     private void Awake()
     {
-        //indexActualAvatar = -1;
     }
 
     private void Start()
@@ -82,7 +80,6 @@ public class VRAvatarController : MonoBehaviour
         }
 
         // Otherwise we initialize our play area.
-        //VRSetup(position, rotation);
     }
 
     /// <summary>
@@ -118,8 +115,6 @@ public class VRAvatarController : MonoBehaviour
         containerObject.transform.rotation = rotation;
 
         transform.SetParent(containerObject.transform, true);
-
-        //DontDestroyOnLoad(containerObject);
         
         //Current client owns this player
         //create camera rig and attach player model to it
@@ -139,17 +134,8 @@ public class VRAvatarController : MonoBehaviour
 
         ownColliders = transform.root.GetComponentsInChildren<Collider>();
 
-        //leftController.GetComponentInParent<CreatePhotonView>().AddPhotonView(1);
-        //rightController.GetComponentInParent<CreatePhotonView>().AddPhotonView(2);
-
-        //multiVR.headAlias.gameObject.AddComponent<CreatePhotonView>().AddPhotonView(3);
-
         #region Avatar Setup
-        //TODO Avatar zonder hoofd.
-        if (avatarPrefab != null)
-        {
-            ApplyAvatar(Random.Range(0, avatarPrefab.Capacity));
-        }
+        ApplyAvatar(0);
         #endregion
 
         CapturePlayAreaTransform();
@@ -186,8 +172,7 @@ public class VRAvatarController : MonoBehaviour
     private void ApplyAvatar(int index)
     {
         this.indexActualAvatar = index;
-        //TODO gebruik hier de lijst met models voor je zelf.
-        actualAvatarVRIK = Instantiate(avatarPrefab[index], Vector3.zero, Quaternion.identity);
+        actualAvatarVRIK = Instantiate(AvatarManager.Instance.getAvatarWithoutHead(index), Vector3.zero, Quaternion.identity);
         actualAvatarVRIK.solver.spine.headTarget = transform;
         actualAvatarVRIK.transform.SetParent(containerObject.transform, false);
         actualAvatarVRIK.transform.rotation = actualAvatarVRIK.transform.rotation * Quaternion.Inverse(containerObject.transform.rotation);
@@ -249,5 +234,7 @@ public class VRAvatarController : MonoBehaviour
     {
         Destroy(actualAvatarVRIK.gameObject);
         ApplyAvatar(indexNewAvatar);
+        
+        AvatarManager.Instance.AvatarChanged(indexNewAvatar);
     }
 }

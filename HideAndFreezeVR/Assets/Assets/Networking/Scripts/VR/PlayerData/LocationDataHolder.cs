@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
 
-public class LocationDataHolder : Photon.MonoBehaviour {
 
-    public Avatars avatarSet;
+public class LocationDataHolder : Photon.MonoBehaviour  {
 
     [SerializeField]
     private LocationData leftHand;
@@ -14,7 +13,7 @@ public class LocationDataHolder : Photon.MonoBehaviour {
     [SerializeField]
     private LocationData head;
 
-    private GameObject Avatar;
+    private VRIK Avatar;
 
     private LocationDataPlayer player;
 
@@ -24,11 +23,17 @@ public class LocationDataHolder : Photon.MonoBehaviour {
 
         if (!GetComponentInParent<PhotonView>().isMine)
         {
-            GameObject avatar = Instantiate(avatarSet.getAvatarWithHead(0));
+            VRIK avatar = Instantiate(AvatarManager.Instance.getAvatarWithHead(0));
             avatar.transform.SetParent(this.gameObject.transform);
             SetAvatar(avatar);
         }
         this.gameObject.transform.position += new Vector3(0, 0.2f, 0);
+        VR_PlayerNetwork.Instance.AddOtherPlayer(this);
+
+    }
+
+    private void Start()
+    {
 
     }
 
@@ -36,12 +41,14 @@ public class LocationDataHolder : Photon.MonoBehaviour {
     /// Sets the avatar and connects the avatar to the scripts' head and hands.
     /// </summary>
     /// <param name="Avatar">The avatar to bind</param>
-    public void SetAvatar(GameObject Avatar)
+    public void SetAvatar(VRIK Avatar)
     {
+        //TODONIELS  hier verder gaan. Nieuwe avatar niet zichtbaar.
+        Destroy(this.Avatar);
         this.Avatar = Avatar;
-        this.Avatar.GetComponent<VRIK>().solver.spine.headTarget = head.transform;
-        this.Avatar.GetComponent<VRIK>().solver.leftArm.target = leftHand.transform;
-        this.Avatar.GetComponent<VRIK>().solver.rightArm.target = rightHand.transform;
+        this.Avatar.solver.spine.headTarget = head.transform;
+        this.Avatar.solver.leftArm.target = leftHand.transform;
+        this.Avatar.solver.rightArm.target = rightHand.transform;
     }
 
     /// <summary>

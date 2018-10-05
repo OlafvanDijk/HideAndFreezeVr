@@ -43,7 +43,7 @@ public class ChangeAvatarButton : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    { 
         if (onEnterDelay == 0)
         {
             Vector3 scale = button.transform.localScale;

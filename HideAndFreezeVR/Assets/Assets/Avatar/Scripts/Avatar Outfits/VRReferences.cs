@@ -16,26 +16,36 @@ public class VRReferences : MonoBehaviour {
     private int layerToHideNumber;
     
 
-    private void Start()
-    {
-       
-    }
-
     public void HideHead()
     {
         foreach (GameObject partToHide in partsToHide)
         {
-            HidePartsInChildren(partToHide);
+            HidePartsInChildren(partToHide, true);
+        }
+    }
+
+    public void ShowHead()
+    {
+        foreach (GameObject partToHide in partsToHide)
+        {
+            HidePartsInChildren(partToHide, false);
         }
     }
     
 
-    private void HidePartsInChildren(GameObject parent)
+    private void HidePartsInChildren(GameObject parent, bool hideOrShow)
     {
-            parent.layer = layerToHideNumber;
-            foreach (Transform child in parent.transform)
+        if (hideOrShow)
         {
-            HidePartsInChildren(child.gameObject);
+            parent.layer = layerToHideNumber;
+        }
+        else
+        {
+            parent.layer = 0;
+        }
+        foreach (Transform child in parent.transform)
+        {
+            HidePartsInChildren(child.gameObject, hideOrShow);
         }
     }
 }

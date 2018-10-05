@@ -5,9 +5,7 @@ using UnityEngine.UI;
 using RootMotion.FinalIK;
 
 public class ChooseAvatar : MonoBehaviour {
-
-    [SerializeField]
-    private List<Outfits> avatarOutfits;
+    
     [SerializeField]
     private List<RawImage> colors;
     [SerializeField]
@@ -20,14 +18,12 @@ public class ChooseAvatar : MonoBehaviour {
     public bool avatarOrOutfit;
 
     private List<Outfit> savedOutfits;
-    private List<VRIK> avatarPrefabs;
     private int currentAvatar = -1;
     private int currentOutfit = 0;
     private VRIK avatar;
 
     void Start () {
         avatarOrOutfit = true;
-        avatarPrefabs = new List<VRIK>();
         savedOutfits = new List<Outfit>();
         StartCoroutine(WaitForVRSetup());
     }
@@ -36,8 +32,10 @@ public class ChooseAvatar : MonoBehaviour {
     {
         try
         {
+            Debug.Log(avatarController);
             if (avatarController.indexActualAvatar != currentAvatar)
             {
+                Debug.Log("oh");
                 avatarController.ChangeAvatar(currentAvatar);
             }
             PickColor();
@@ -51,10 +49,9 @@ public class ChooseAvatar : MonoBehaviour {
 
     private void SetPlaceholder()
     {
-        //TODO Deze gebruikt de models voor de andere spelers (Met hoofd).
-        avatar = Instantiate(avatarPrefabs[currentAvatar], placeHolder.transform);
+        avatar = Instantiate(AvatarManager.Instance.getAvatarWithHead(currentAvatar), placeHolder.transform); 
         savedOutfits.Clear();
-        savedOutfits.AddRange(avatarOutfits[currentAvatar].outfits);
+        savedOutfits.AddRange(AvatarManager.Instance.getOutfits(currentAvatar).outfits);
         //ChangeColors();
     }
 
@@ -99,7 +96,7 @@ public class ChooseAvatar : MonoBehaviour {
             case true:
                 currentAvatar = currentAvatar + value;
                 currentOutfit = 0;
-                SetTrackers(ref currentAvatar, avatarPrefabs.Count);
+                SetTrackers(ref currentAvatar, AvatarManager.Instance.avatarset.listOfAvatars.Count);
                 Destroy(avatar.gameObject);
                 SetPlaceholder();
                 break;
@@ -130,11 +127,8 @@ public class ChooseAvatar : MonoBehaviour {
         yield return new WaitUntil(() => avatarController.indexActualAvatar > -1);
         if (avatarController != null)
         {
-            //TODO verwijs hier naar avatars zonder hoofd.
-            avatarPrefabs.AddRange(avatarController.avatarPrefab);
             currentAvatar = avatarController.indexActualAvatar;
         }
-        //SetOutfits();
         Invoke("SetPlaceholder", 0.5f);
     }
 }

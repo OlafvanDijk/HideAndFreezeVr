@@ -1180,13 +1180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266b75ad75e763643b096a518d074dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarOutfits:
-  - {fileID: 11400000, guid: 39fe4c9c751a51440a40449c23f24fc9, type: 2}
-  - {fileID: 11400000, guid: 2ea624e20c6f2064c8dccae05874bfbc, type: 2}
-  - {fileID: 11400000, guid: d65eec37bbcb57e42828c94832b94e40, type: 2}
-  - {fileID: 11400000, guid: 7d9948b27d5fbe14d9002fbf2f9fef39, type: 2}
-  - {fileID: 11400000, guid: 382c27ceca444d6468b11ec6815c47c0, type: 2}
-  - {fileID: 11400000, guid: 950344be0e45d954881259e0345361a5, type: 2}
   colors: []
   outlines: []
   avatarController: {fileID: 0}
