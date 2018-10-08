@@ -1,140 +1,118 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScaleAvatar : MonoBehaviour {
 
     [SerializeField]
+    [Tooltip("Avatar Controller that is stored on the player.")]
     private VRAvatarController avatarController;
     [SerializeField]
+    [Tooltip("Amount of times to calculate the medians.")]
     private int timesToScale;
 
     private GameObject eye;
     private List<float> scales;
     private GameObject avatar;
+    private bool scaling;
 
     private int t;
     private int countScale = 0;
 
+    [Tooltip("Is invoked each time a height is done calculating.")]
+    public UnityEvent heightCalcDone = new UnityEvent();
+    [Tooltip("Is invoked when the scaling has been applied.")]
+    public UnityEvent scalingDone = new UnityEvent();
+
+    /// <summary>
+    /// Scales when the "S" key has been pressed.
+    /// </summary>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            Test();
+            Setup();
         }
     }
 
+    /// <summary>
+    /// Begin scaling when a collider has entered the trigger.
+    /// </summary>
+    /// <param name="other">Collider of the object that touched this.</param>
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.GetInstanceID());
-        Test();
+        Setup();
     }
 
-    private void Test()
+    /// <summary>
+    /// Setup variables that are needed for the calculation.
+    /// After the setup has been done start the calculation.
+    /// </summary>
+    private void Setup()
     {
-        scales = new List<float>();
-        if (avatarController != null)
+        try
         {
-            avatar = avatarController.actualAvatarVRIK.gameObject;
-            VRReferences references = avatar.GetComponent<VRReferences>();
-
-            eye = references.eyeObject;
-            if (eye != null)
+            if (!scaling)
             {
-                //int time = timesToScale;
-                //t = timesToScale;
-                //while (time > 0)
-                //{
-                //    Debug.Log("inwhile");
-                //    if (time != 0 && t == time)
-                //    {
-                //        Debug.Log("inwhileif");
-                //        time--;
-                //        Invoke("Test2", 1f);
-                //    }
-                //}
-                //ApplyScale(CalculateMedian(avatar.transform.localScale.x));
-                StartCoroutine(StartCalculation());
+                scales = new List<float>();
+                if (avatarController != null)
+                {
+                    scaling = true;
+                    avatar = avatarController.actualAvatarVRIK.gameObject;
+                    VRReferences references = avatar.GetComponent<VRReferences>();
+                    StartCoroutine(StartCalculation());
+                }
             }
         }
+        catch (System.Exception)
+        {
+            scaling = false;
+        }
+       
     }
 
-    private void Test2()
-    {
-        scales.Add(Calculate(avatarController.gameObject, eye));
-        t--;
-        Debug.Log("hoi" + t);
-    }
-
+    /// <summary>
+    /// Calls the Calculate function for the amount of times that has been given to the variable "timesToScale".
+    /// </summary>
+    /// <returns>Delay of 0.3 seconds.</returns>
     private IEnumerator StartCalculation()
     {
         int time = timesToScale;
-        Debug.Log("Time: " + time);
         for (int x = 0; x<time; x++)
         {
-            scales.Add(Calculate(avatarController.gameObject, eye));
-            //time--;
-            Debug.Log("1a");
-            yield return new WaitForSeconds(0.2f);
-            Debug.Log("2a");
+            scales.Add(Calculate(avatarController.gameObject));
+            heightCalcDone.Invoke();
+            yield return new WaitForSeconds(0.3f);
         }
-        Debug.Log("3a");
         ApplyScale(CalculateMedian());
     }
 
-    private float Calculate(GameObject firstObject, GameObject secondObject)
+    /// <summary>
+    /// Calculates the player's height.
+    /// </summary>
+    /// <param name="heightObject"></param>
+    /// <returns>Calculated height.</returns>
+    private float Calculate(GameObject heightObject)
     {
-        Ray firstRay = new Ray(firstObject.transform.position, Vector3.down);
-        //Debug.Log(firstObject.transform.position);
-        //Debug.DrawRay(firstObject.transform.position, Vector3.down * 1000, Color.red,2);
-        Ray secondRay = new Ray(secondObject.transform.position, Vector3.down);
-        //Debug.DrawRay(secondObject.transform.position, Vector3.down * 1000, Color.blue, 2);
-        RaycastHit firstRayHit, secondRayHit;
-        float heightFirst = -1, heightSecond = -1;
-        if (Physics.Raycast(firstRay, out firstRayHit, 5))//, LayerMask.NameToLayer("Player")))
-        {
-            //Debug.Log("Hello");
-            if (firstRayHit.collider.gameObject.layer != LayerMask.NameToLayer("IgnoreRaycast"))
-            {
-                Debug.Log(firstRayHit.collider.gameObject);
-                //Debug.Log(firstRayHit.collider.gameObject.layer);
-                //Debug.Log(firstRayHit.collider.gameObject);
+        Ray ray = new Ray(heightObject.transform.position, Vector3.down);
+        RaycastHit hit;
+        float height = -1;
 
-                heightFirst = firstRayHit.distance;
-                //Debug.Log("world!");
+        if (Physics.Raycast(ray, out hit, 5))
+        {
+            if (hit.collider.gameObject.layer != LayerMask.NameToLayer("IgnoreRaycast"))
+            {
+                height = hit.distance;
             }
         }
-
-        if (Physics.Raycast(secondRay, out secondRayHit, 5, LayerMask.NameToLayer("Player"), QueryTriggerInteraction.Ignore)) //&& secondRayHit.collider.gameObject.layer != LayerMask.NameToLayer("IgnoreRaycast"))
-        {
-            //Debug.Log(secondRayHit.collider.gameObject.layer);
-            //Debug.Log(secondRayHit.collider.gameObject);
-            heightSecond = secondRayHit.distance;
-        }
-
-        //heightFirst = GetHeight(firstRay, firstRayHit, "Player", "IgnoreRaycast");
-        //heightSecond = GetHeight(secondRay, secondRayHit, "Player", "IgnoreRaycast");
-
-        //Debug.Log("First heigt: " + heightFirst);
-        //Debug.Log("Second heigt: " + heightSecond);
-
-        //float ratio = heightFirst / heightSecond;
-        //Debug.Log(ratio);
-        //return (heightFirst == -1 || heightSecond == -1) ? 1 : ratio;
-        return heightFirst;
+        return height;
     }
 
-    private float GetHeight(Ray ray, RaycastHit hit, string layerName, string layerToExclude)
-    {
-        if (Physics.Raycast(ray, out hit, 5, LayerMask.NameToLayer(layerName)) && hit.collider.gameObject.layer != LayerMask.NameToLayer(layerToExclude))
-        {
-            //Debug.Log(hit.collider.gameObject.layer);
-            //Debug.Log(hit.collider.gameObject);
-            return hit.distance;
-        }
-        return 0;
-    }
-
+    /// <summary>
+    /// Calculates the median in the scales list.
+    /// </summary>
+    /// <returns>The median height.</returns>
     private float CalculateMedian()
     {
         float median;
@@ -154,19 +132,19 @@ public class ScaleAvatar : MonoBehaviour {
         {
             median = scales[(scalesCount + 1) / 2 - 1];
         }
-        Debug.Log(median + " * " + 1);
-        return median * 1;
+        return median;
     }
 
+    /// <summary>
+    /// Applies the new scale to the player.
+    /// Also invokes the scalingDone event.
+    /// </summary>
+    /// <param name="scale">Median height.</param>
     private void ApplyScale(float scale)
     {
-        //Debug.Log(scale);
+        scalingDone.Invoke();
         scale *= 0.8f;
         avatar.transform.localScale = new Vector3(scale, scale, scale);
-        countScale++;
-        if (countScale < 2)
-        {
-            Test();
-        }
+        scaling = false;
     }
 }
