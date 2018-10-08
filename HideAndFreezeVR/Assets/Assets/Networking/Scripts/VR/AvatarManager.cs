@@ -13,6 +13,9 @@ public class AvatarManager : Photon.MonoBehaviour {
     public Avatars avatarset;
     private PhotonView photonView;
 
+    public Outfits test;
+    public Outfit test2;
+
     private void Awake()
     {
         Instance = this;
@@ -34,6 +37,11 @@ public class AvatarManager : Photon.MonoBehaviour {
         return avatarset.getOutfits(index);
     }
 
+    public Outfit getOutfit(int[] indexes)
+    {
+        return avatarset.getOutfits(indexes[0]).outfits[indexes[1]];
+    }
+
     private int getAvatarNumber(VRIK avatar)
     {
         int number = 0;
@@ -50,14 +58,27 @@ public class AvatarManager : Photon.MonoBehaviour {
 
     public void AvatarChanged(int number)
     {
-        this.photonView.RPC("PUNRPC_OutfitChanged", PhotonTargets.All, new object[] { number, PhotonNetwork.player });
+        this.photonView.RPC("PUNRPC_AvatarChanged", PhotonTargets.OthersBuffered, new object[] { number, PhotonNetwork.player });
+    }
+
+    public void OutfitChanged(Outfit outfit)
+    {
+        int[] number = avatarset.getOutfitIndex(outfit);
+        this.photonView.RPC("PUNRPC_OutfitChanged", PhotonTargets.OthersBuffered, new object[] { number, PhotonNetwork.player });
     }
 
 
     [PunRPC]
-    public void PUNRPC_OutfitChanged(int number, PhotonPlayer player)
+    public void PUNRPC_AvatarChanged(int number, PhotonPlayer player)
     {
-        VR_PlayerNetwork.Instance.getPlayer(player).SetAvatar(getAvatarWithoutHead(number));
+        VRIK avatar = Instantiate(getAvatarWithHead(number));
+        VR_PlayerNetwork.Instance.getPlayer(player).SetAvatar(avatar);
+    }
+
+    [PunRPC]
+    public void PUNRPC_OutfitChanged(int[] number, PhotonPlayer player)
+    {
+        VR_PlayerNetwork.Instance.getPlayer(player).SetOutfit(number);
     }
 
 }

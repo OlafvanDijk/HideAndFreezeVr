@@ -229,12 +229,11 @@ public class VRAvatarController : MonoBehaviour
             hideController.ToggleShowControllers(showControllers, enableButtonSelecting);
         }
     }
-
+    
     public void ChangeAvatar(int indexNewAvatar)
     {
         Destroy(actualAvatarVRIK.gameObject);
         ApplyAvatar(indexNewAvatar);
-        
         AvatarManager.Instance.AvatarChanged(indexNewAvatar);
     }
 }

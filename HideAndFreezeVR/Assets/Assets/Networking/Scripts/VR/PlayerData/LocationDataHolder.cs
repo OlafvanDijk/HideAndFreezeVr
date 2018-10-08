@@ -6,14 +6,16 @@ using RootMotion.FinalIK;
 
 public class LocationDataHolder : Photon.MonoBehaviour  {
 
-    [SerializeField]
-    private LocationData leftHand;
-    [SerializeField]
-    private LocationData rightHand;
-    [SerializeField]
-    private LocationData head;
+    [SerializeField] private LocationData leftHand;
+    [SerializeField] private Transform leftHandOffset;
+    [SerializeField] private LocationData rightHand;
+    [SerializeField] private Transform rightHandOffset;
+    [SerializeField] private LocationData head;
+    [SerializeField] private Transform headOffset;
 
     private VRIK Avatar;
+
+    public Outfit outfit;
 
     private LocationDataPlayer player;
 
@@ -24,7 +26,6 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
         if (!GetComponentInParent<PhotonView>().isMine)
         {
             VRIK avatar = Instantiate(AvatarManager.Instance.getAvatarWithHead(0));
-            avatar.transform.SetParent(this.gameObject.transform);
             SetAvatar(avatar);
         }
         this.gameObject.transform.position += new Vector3(0, 0.2f, 0);
@@ -43,12 +44,22 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
     /// <param name="Avatar">The avatar to bind</param>
     public void SetAvatar(VRIK Avatar)
     {
-        //TODONIELS  hier verder gaan. Nieuwe avatar niet zichtbaar.
-        Destroy(this.Avatar);
+        if (this.Avatar != null)
+        {
+            Destroy(this.Avatar.gameObject);
+        }
         this.Avatar = Avatar;
-        this.Avatar.solver.spine.headTarget = head.transform;
-        this.Avatar.solver.leftArm.target = leftHand.transform;
-        this.Avatar.solver.rightArm.target = rightHand.transform;
+        this.Avatar.transform.SetParent(this.gameObject.transform);
+        this.Avatar.solver.spine.headTarget = headOffset;
+        this.Avatar.solver.leftArm.target = leftHandOffset;
+        this.Avatar.solver.rightArm.target = rightHandOffset;
+    }
+
+    public void SetOutfit(int[] number)
+    {
+        Outfit _outfit = AvatarManager.Instance.getOutfit(number);
+        this.outfit = _outfit;
+        this.Avatar.GetComponent<ChangeOutfit>().ChangeClothes(_outfit.texture);
     }
 
     /// <summary>

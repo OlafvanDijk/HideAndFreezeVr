@@ -44,6 +44,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1358249574834468
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4595363062197136}
+  m_Layer: 0
+  m_Name: OffSet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1363252048380626
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4526931077117514}
+  m_Layer: 0
+  m_Name: OffSet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1547618455535440
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,6 +85,21 @@ GameObject:
   - component: {fileID: 114647410109773530}
   m_Layer: 0
   m_Name: LeftHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1593056356079884
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4740187470825394}
+  m_Layer: 0
+  m_Name: OffSet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,6 +137,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4526931077117514
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363252048380626}
+  m_LocalRotation: {x: 0.7204539, y: 0.009049286, z: -0.6933902, w: 0.008622275}
+  m_LocalPosition: {x: 0.0056, y: -0.0113, z: -0.1138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4875679320804908}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 178.569, y: 87.80599, z: -0.0620117}
+--- !u!4 &4595363062197136
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358249574834468}
+  m_LocalRotation: {x: 0.51604325, y: -0.5188859, z: -0.46296304, w: 0.5001221}
+  m_LocalPosition: {x: 0, y: 0, z: -0.225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4889528547565174}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 2.047, y: -94.079, z: -87.77901}
+--- !u!4 &4740187470825394
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593056356079884}
+  m_LocalRotation: {x: 0.7491525, y: -0.16570172, z: -0.64130926, w: -0.0059950054}
+  m_LocalPosition: {x: -0.009, y: -0.0113, z: -0.037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4901421275546090}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -12.798, y: -460.48, z: 194.283}
 --- !u!4 &4875679320804908
 Transform:
   m_ObjectHideFlags: 1
@@ -101,7 +185,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4526931077117514}
   m_Father: {fileID: 4430950929692510}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -114,7 +199,8 @@ Transform:
   m_LocalRotation: {x: 0.25727367, y: -0.5517252, z: -0.33528563, w: 0.7190224}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4595363062197136}
   m_Father: {fileID: 4430950929692510}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -75, z: -50}
@@ -127,7 +213,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4740187470825394}
   m_Father: {fileID: 4430950929692510}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -168,10 +255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef262b1423139804aba7232fb30ae5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarSet: {fileID: 11400000, guid: a42bd9d2c525f044382c44b63bf7ba74, type: 2}
   leftHand: {fileID: 114647410109773530}
+  leftHandOffset: {fileID: 4740187470825394}
   rightHand: {fileID: 114894544394584284}
+  rightHandOffset: {fileID: 4526931077117514}
   head: {fileID: 114993313812865032}
+  headOffset: {fileID: 4595363062197136}
 --- !u!114 &114647410109773530
 MonoBehaviour:
   m_ObjectHideFlags: 1

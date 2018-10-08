@@ -32,12 +32,11 @@ public class ChooseAvatar : MonoBehaviour {
     {
         try
         {
-            Debug.Log(avatarController);
             if (avatarController.indexActualAvatar != currentAvatar)
             {
-                Debug.Log("oh");
                 avatarController.ChangeAvatar(currentAvatar);
             }
+
             PickColor();
         }
         catch (System.Exception e)
@@ -61,7 +60,9 @@ public class ChooseAvatar : MonoBehaviour {
         {
             GameObject avatarObject = avatarController.actualAvatarVRIK.gameObject;
             ChangeOutfit changeOutfit = avatarObject.GetComponent<ChangeOutfit>();
-            changeOutfit.ChangeClothes(savedOutfits[currentOutfit].texture);
+            Outfit chosenOutfit = savedOutfits[currentOutfit];
+            changeOutfit.ChangeClothes(chosenOutfit.texture);
+            AvatarManager.Instance.OutfitChanged(chosenOutfit);
         }
         catch (System.Exception)
         {

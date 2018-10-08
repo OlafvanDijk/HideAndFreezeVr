@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class VR_PlayerNetwork : MonoBehaviour {
+public class VR_PlayerNetwork : Photon.PunBehaviour {
     
     public static VR_PlayerNetwork Instance;
 
@@ -44,6 +44,20 @@ public class VR_PlayerNetwork : MonoBehaviour {
         StartCoroutine(waitForPlayer(scene));
     }
 
+    private void OnPhotonPlayerDisconnected(PhotonPlayer photonPlayer)
+    {
+        RemoveOtherPlayer(photonPlayer);
+    }
+
+    /// <summary>
+    /// Called when the player leaves a room. Redirects the player back to the lobby.
+    /// </summary>
+    public override void OnLeftRoom()
+    {
+        otherPlayers.Clear();
+        SceneManager.LoadScene(0);
+    }
+
     /// <summary>
     /// Waits for the player to have correctly joined the room before doing anything.
     /// </summary>
@@ -74,13 +88,16 @@ public class VR_PlayerNetwork : MonoBehaviour {
 
     public void RemoveOtherPlayer(PhotonPlayer player)
     {
-        foreach(LocationDataHolder holder in otherPlayers)
+        for(int i = otherPlayers.Count-1; i > -1; i--)
         {
-            if(holder.GetComponent<PhotonView>().owner == player)
+            Debug.Log("Other players: " + otherPlayers[i]);
+            if (otherPlayers[i].gameObject.GetComponent<PhotonView>().owner == player || otherPlayers[i].gameObject.GetComponent<PhotonView>().owner == null)
             {
-                otherPlayers.Remove(holder);
+                Debug.Log(player.NickName + " has left.");
+                otherPlayers.RemoveAt(i);
             }
         }
+
     }
 
     public LocationDataHolder getPlayer(PhotonPlayer player)

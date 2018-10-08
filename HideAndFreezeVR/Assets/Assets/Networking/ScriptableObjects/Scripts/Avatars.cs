@@ -43,4 +43,22 @@ public class Avatars : ScriptableObject {
         return listOfOutfits[index];
     }
     
+    public int[] getOutfitIndex(Outfit outfit)
+    {
+        int[] location = new int[2] { 0, 0 };
+        foreach(Outfits outfitslist in listOfOutfits)
+        {
+            foreach(Outfit singleOutfit in outfitslist.outfits)
+            {
+                if(singleOutfit == outfit)
+                {
+                    return location;
+                }
+                location[1]++;
+            }
+            location[1] = 0;
+            location[0]++;
+        }
+        return null;
+    }
 }

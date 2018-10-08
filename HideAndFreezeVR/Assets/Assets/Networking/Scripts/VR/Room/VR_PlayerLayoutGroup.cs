@@ -96,13 +96,8 @@ public class VR_PlayerLayoutGroup : Photon.PunBehaviour {
         playerListings.Add(playerListing);
     }
 
-    /// <summary>
-    /// Called when the player leaves a room. Redirects the player back to the lobby.
-    /// </summary>
-    public override void OnLeftRoom()
-    {
-        SceneManager.LoadScene(0);
-    }
+   
+    
 
     /// <summary>
     /// Handles what should happen when an other player leaves the room.

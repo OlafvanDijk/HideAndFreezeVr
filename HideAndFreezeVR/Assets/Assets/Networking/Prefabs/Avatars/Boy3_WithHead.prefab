@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4997365108468940}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4961919317329200}
   - component: {fileID: 137408629492762778}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Boy3_head (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 4550088195665282}
   - component: {fileID: 33547642635393522}
   - component: {fileID: 23766484628944222}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: glasses (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4670645554194010}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 4793909025139524}
   - component: {fileID: 33361352729597744}
   - component: {fileID: 23210653088849900}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: hair07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
