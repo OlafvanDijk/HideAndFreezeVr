@@ -10,6 +10,11 @@ public class Avatars : ScriptableObject {
     [SerializeField]
     private List<Outfits> listOfOutfits;
 
+    /// <summary>
+    /// Get the avatar belonging to a specific number.
+    /// </summary>
+    /// <param name="number"> The number an avatar should belong to. </param>
+    /// <returns> An gameobject with the VRIK script. </returns>
     private VRIK GetAvatar(int number)
     {
         if (number > listOfAvatars.Count)
@@ -24,6 +29,11 @@ public class Avatars : ScriptableObject {
         return listOfAvatars[number];
     }
 
+    /// <summary>
+    /// Get the avatar belonging to a specific number with their head visible.
+    /// </summary>
+    /// <param name="number"> The number an avatar should belong to. </param>
+    /// <returns> An gameobject with the VRIK script. </returns>
     public VRIK getAvatarWithHead(int number)
     {
         VRIK avatar = GetAvatar(number);
@@ -31,6 +41,11 @@ public class Avatars : ScriptableObject {
         return avatar;
     }
 
+    /// <summary>
+    /// Get the avatar belonging to a specific number with their head invisible.
+    /// </summary>
+    /// <param name="number"> The number an avatar should belong to. </param>
+    /// <returns> An gameobject with the VRIK script. </returns>
     public VRIK getAvatarWithoutHead(int number)
     {
         VRIK avatar = getAvatarWithHead(number);
@@ -38,11 +53,21 @@ public class Avatars : ScriptableObject {
         return avatar;
     }
 
+    /// <summary>
+    /// Get an Outfits scriptable object belonging to an index.
+    /// </summary>
+    /// <param name="index"> The index belonging to a specific Outfits scriptable object. </param>
+    /// <returns> Am scriptable object. </returns>
     public Outfits getOutfits(int index)
     {
         return listOfOutfits[index];
     }
-    
+
+    /// <summary>
+    /// Get the indexes belongin to a specific outfit.
+    /// </summary>
+    /// <param name="outfit"> An outfit class holding textures and colors. </param>
+    /// <returns> The indexes belonging to an outfit's location. </returns>
     public int[] getOutfitIndex(Outfit outfit)
     {
         int[] location = new int[2] { 0, 0 };

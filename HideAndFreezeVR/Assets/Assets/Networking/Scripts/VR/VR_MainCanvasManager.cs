@@ -27,10 +27,6 @@ public class VR_MainCanvasManager : MonoBehaviour{
 
     }
 
-    private void Start()
-    {
-    }
-
     /// <summary>
     /// Loads the lobby UI.
     /// </summary>
@@ -47,6 +43,10 @@ public class VR_MainCanvasManager : MonoBehaviour{
         StartCoroutine(WaitForJoinRoom());
     }
 
+    /// <summary>
+    /// Wait untill you have succesfully joined the room before loading the level.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator WaitForJoinRoom()
     {
         yield return new WaitUntil(() => PhotonNetwork.inRoom == true);

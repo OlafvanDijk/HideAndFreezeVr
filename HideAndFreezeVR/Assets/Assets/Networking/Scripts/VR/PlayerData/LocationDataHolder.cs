@@ -15,8 +15,6 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
 
     private VRIK Avatar;
 
-    public Outfit outfit;
-
     private LocationDataPlayer player;
 
     private void Awake()
@@ -30,11 +28,6 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
         }
         this.gameObject.transform.position += new Vector3(0, 0.2f, 0);
         VR_PlayerNetwork.Instance.AddOtherPlayer(this);
-
-    }
-
-    private void Start()
-    {
 
     }
 
@@ -55,11 +48,14 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
         this.Avatar.solver.rightArm.target = rightHandOffset;
     }
 
+    /// <summary>
+    /// Sets the outfit to the avatar this LocationDataHolder belongs to.
+    /// </summary>
+    /// <param name="number"> The 2 integers to find the correct outfit. </param>
     public void SetOutfit(int[] number)
     {
-        Outfit _outfit = AvatarManager.Instance.getOutfit(number);
-        this.outfit = _outfit;
-        this.Avatar.GetComponent<ChangeOutfit>().ChangeClothes(_outfit.texture);
+        Outfit outfit = AvatarManager.Instance.getOutfit(number);
+        this.Avatar.GetComponent<ChangeOutfit>().ChangeClothes(outfit.texture);
     }
 
     /// <summary>

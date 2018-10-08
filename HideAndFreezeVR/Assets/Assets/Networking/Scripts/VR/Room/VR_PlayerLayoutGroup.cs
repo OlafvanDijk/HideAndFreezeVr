@@ -48,8 +48,6 @@ public class VR_PlayerLayoutGroup : Photon.PunBehaviour {
         }
         playerListings.Clear();
 
-        //VR_MainCanvasManager.Instance.ShowRoom();
-
         PhotonPlayer[] photonPlayers = PhotonNetwork.playerList;
         for(int i = 0; i < photonPlayers.Length; i++)
         {

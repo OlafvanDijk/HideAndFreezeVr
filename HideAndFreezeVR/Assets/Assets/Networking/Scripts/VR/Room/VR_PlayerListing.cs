@@ -10,7 +10,7 @@ public class VR_PlayerListing : MonoBehaviour {
 
     [SerializeField]
     private Text playerName;
-
+    
     public Text getPlayerName()
     {
         return playerName;

@@ -44,6 +44,10 @@ public class VR_PlayerNetwork : Photon.PunBehaviour {
         StartCoroutine(waitForPlayer(scene));
     }
 
+    /// <summary>
+    /// Gets called when a player disconnects from the room.
+    /// </summary>
+    /// <param name="photonPlayer"></param>
     private void OnPhotonPlayerDisconnected(PhotonPlayer photonPlayer)
     {
         RemoveOtherPlayer(photonPlayer);
@@ -81,11 +85,19 @@ public class VR_PlayerNetwork : Photon.PunBehaviour {
         obj.GetComponent<LocationDataHolder>().SetPlayer(this.player);
     }
 
+    /// <summary>
+    /// Adds a new player to the list of players.
+    /// </summary>
+    /// <param name="holder"> The new player. </param>
     public void AddOtherPlayer(LocationDataHolder holder)
     {
         otherPlayers.Add(holder);
     }
 
+    /// <summary>
+    /// Removes a player from the list of players.
+    /// </summary>
+    /// <param name="player"></param>
     public void RemoveOtherPlayer(PhotonPlayer player)
     {
         for(int i = otherPlayers.Count-1; i > -1; i--)
@@ -100,6 +112,11 @@ public class VR_PlayerNetwork : Photon.PunBehaviour {
 
     }
 
+    /// <summary>
+    /// Gets the LocationDataHolder that belongs to the given player.
+    /// </summary>
+    /// <param name="player"> The player you want an object from. </param>
+    /// <returns> A LocationDataHolder object. </returns>
     public LocationDataHolder getPlayer(PhotonPlayer player)
     {
         foreach (LocationDataHolder holder in otherPlayers)
