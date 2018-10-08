@@ -16,6 +16,8 @@ public class VRReferences : MonoBehaviour
     [SerializeField]
     private int layerToHideNumber;
 
+    public GameObject eyeObject;
+
 
     private void Start()
     {
