@@ -16,24 +16,36 @@ public class VRReferences : MonoBehaviour
     [SerializeField]
     private int layerToHideNumber;
 
-    public GameObject eyeObject;
 
-
-    private void Start()
+    private void HidePartsInChildren(GameObject parent, bool hideOrShow)
     {
-        foreach (GameObject partToHide in partsToHide)
+        if (hideOrShow)
         {
-            HidePartsInChildren(partToHide);
+            parent.layer = layerToHideNumber;
+        }
+        else
+        {
+            parent.layer = 0;
+        }
+        foreach (Transform child in parent.transform)
+        {
+            HidePartsInChildren(child.gameObject, hideOrShow);
         }
     }
 
 
-    private void HidePartsInChildren(GameObject parent)
+    public void HideHead()
     {
-        parent.layer = layerToHideNumber;
-        foreach (Transform child in parent.transform)
+        foreach (GameObject partToHide in partsToHide)
         {
-            HidePartsInChildren(child.gameObject);
+            HidePartsInChildren(partToHide, true);
+        }
+    }
+    public void ShowHead()
+    {
+        foreach (GameObject partToHide in partsToHide)
+        {
+            HidePartsInChildren(partToHide, false);
         }
     }
 }

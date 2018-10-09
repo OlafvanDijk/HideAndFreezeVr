@@ -48,8 +48,6 @@ public class VR_PlayerLayoutGroup : Photon.PunBehaviour {
         }
         playerListings.Clear();
 
-        //VR_MainCanvasManager.Instance.ShowRoom();
-
         PhotonPlayer[] photonPlayers = PhotonNetwork.playerList;
         for(int i = 0; i < photonPlayers.Length; i++)
         {
@@ -96,10 +94,8 @@ public class VR_PlayerLayoutGroup : Photon.PunBehaviour {
         playerListings.Add(playerListing);
     }
 
-    public override void OnLeftRoom()
-    {
-        SceneManager.LoadScene(0);
-    }
+   
+    
 
     /// <summary>
     /// Handles what should happen when an other player leaves the room.

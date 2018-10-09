@@ -41,11 +41,11 @@ public class SpawnAvatarInSceneTest : MonoBehaviour {
     {
         if (avatarToggle.isOn)
         {
-            VRSetup.avatarPrefab = avatarPrefab;
+            AvatarManager.Instance.avatarset.listOfAvatars = avatarPrefab;
         }
         else
         {
-            VRSetup.avatarPrefab = null;
+            AvatarManager.Instance.avatarset.listOfAvatars = null;
         }
     }
 
