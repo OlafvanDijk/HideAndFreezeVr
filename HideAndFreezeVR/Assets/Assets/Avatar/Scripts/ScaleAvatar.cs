@@ -20,9 +20,7 @@ public class ScaleAvatar : MonoBehaviour {
     private int t;
     private int countScale = 0;
 
-    [Tooltip("Is invoked each time a height is done calculating.")]
     public UnityEvent heightCalcDone = new UnityEvent();
-    [Tooltip("Is invoked when the scaling has been applied.")]
     public UnityEvent scalingDone = new UnityEvent();
 
     /// <summary>

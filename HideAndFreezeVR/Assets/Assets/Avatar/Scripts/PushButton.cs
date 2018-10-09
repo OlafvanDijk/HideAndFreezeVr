@@ -16,7 +16,6 @@ public class PushButton : MonoBehaviour
     [Tooltip("Two materials to change between.")]
     List<Material> materials;
 
-    [Tooltip("Invokes when pressed.")]
     public UnityEvent buttonPressEvent;
 
     private float delay;
