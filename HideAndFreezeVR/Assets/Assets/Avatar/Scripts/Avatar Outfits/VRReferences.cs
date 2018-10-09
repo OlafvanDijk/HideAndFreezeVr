@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VRReferences : MonoBehaviour {
+public class VRReferences : MonoBehaviour
+{
 
     [SerializeField]
     private Transform head;
@@ -14,24 +15,7 @@ public class VRReferences : MonoBehaviour {
     private List<GameObject> partsToHide = new List<GameObject>();
     [SerializeField]
     private int layerToHideNumber;
-    
 
-    public void HideHead()
-    {
-        foreach (GameObject partToHide in partsToHide)
-        {
-            HidePartsInChildren(partToHide, true);
-        }
-    }
-
-    public void ShowHead()
-    {
-        foreach (GameObject partToHide in partsToHide)
-        {
-            HidePartsInChildren(partToHide, false);
-        }
-    }
-    
 
     private void HidePartsInChildren(GameObject parent, bool hideOrShow)
     {
@@ -46,6 +30,22 @@ public class VRReferences : MonoBehaviour {
         foreach (Transform child in parent.transform)
         {
             HidePartsInChildren(child.gameObject, hideOrShow);
+        }
+    }
+
+
+    public void HideHead()
+    {
+        foreach (GameObject partToHide in partsToHide)
+        {
+            HidePartsInChildren(partToHide, true);
+        }
+    }
+    public void ShowHead()
+    {
+        foreach (GameObject partToHide in partsToHide)
+        {
+            HidePartsInChildren(partToHide, false);
         }
     }
 }
