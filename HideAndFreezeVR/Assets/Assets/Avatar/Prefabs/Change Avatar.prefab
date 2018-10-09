@@ -1155,6 +1155,7 @@ MonoBehaviour:
   button: {fileID: 1372188654579208}
   chooseAvatar: {fileID: 114062035759020622}
   touchDelay: 0.75
+  avatarOrOutfit: 0
 --- !u!114 &114274775375182766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1170,6 +1171,7 @@ MonoBehaviour:
   button: {fileID: 1355216932843218}
   chooseAvatar: {fileID: 114062035759020622}
   touchDelay: 0.75
+  avatarOrOutfit: 0
 --- !u!114 &114531502641755448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1308,6 +1310,7 @@ MonoBehaviour:
   button: {fileID: 1433269830727160}
   chooseAvatar: {fileID: 114062035759020622}
   touchDelay: 1
+  avatarOrOutfit: 0
 --- !u!114 &114870374912972272
 MonoBehaviour:
   m_ObjectHideFlags: 1

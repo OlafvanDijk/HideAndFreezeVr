@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Holds the data of the player's hands and head, easily accesible for other scripts.
+/// </summary>
 public class LocationDataPlayer : MonoBehaviour {
 
     public Transform leftHand;
@@ -11,9 +14,5 @@ public class LocationDataPlayer : MonoBehaviour {
     private void Awake()
     {
         VR_PlayerNetwork.Instance.player = this;
-    }
-
-    private void Start()
-    {
     }
 }

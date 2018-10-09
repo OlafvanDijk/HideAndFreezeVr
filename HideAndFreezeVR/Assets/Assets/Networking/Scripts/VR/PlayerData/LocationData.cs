@@ -14,14 +14,12 @@ public class LocationData : Photon.MonoBehaviour {
     private void Awake()
     {
         photonView = GetComponentInParent<PhotonView>();
-        //photonView.ObservedComponents.Add(this);
         DontDestroyOnLoad(this);
-
     }
 
     void Update()
     {
-        if (photonView.isMine)
+        if (photonView.isMine) //Check if this belongs to the player or one of the other players.
         {
             GetLocation();
         }
@@ -32,6 +30,11 @@ public class LocationData : Photon.MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// Sends and receives data to and from other players.
+    /// </summary>
+    /// <param name="stream"></param>
+    /// <param name="info"></param>
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
@@ -46,22 +49,24 @@ public class LocationData : Photon.MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Move the transform this script is connected to to the targetposition and rotation.
+    /// </summary>
     private void SmoothMove()
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, 0.25f);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 500 * Time.deltaTime);
     }
 
+    /// <summary>
+    /// Move the transform this script is connected to to the object it is told to follow.
+    /// </summary>
     private void GetLocation()
     {
         if (objectToFollow != null)
         {
             transform.position = Vector3.Lerp(transform.position, objectToFollow.position, 0.25f);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, objectToFollow.rotation, 500 * Time.deltaTime);
-        }
-        else
-        {
-            //Debug.Log("ObjectToFollow is null");
         }
     }
 }
