@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4087873545663368}
   - component: {fileID: 136951760289381960}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4613635599389288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4592299793442358}
   - component: {fileID: 136786359959572362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4576358434158942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002858114899086}
   - component: {fileID: 136671653361058972}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4895305631672044}
   - component: {fileID: 136139284569255582}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4452815417909480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4267281365778206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4266256628332504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 54098691865546556}
   - component: {fileID: 82382711599313428}
   - component: {fileID: 114759221536194488}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4280932305111728}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4150917374471664}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4027803571099838}
   - component: {fileID: 136750097381560586}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810925554614432}
   - component: {fileID: 136724398137210054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4736417648424542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4679351423973568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4990528365891130}
   - component: {fileID: 136671683038021334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4787695423532134}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4639569461132810}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4282372282525998}
   - component: {fileID: 136995983525113540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4714891980267482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4679867744615546}
   - component: {fileID: 136024418646690852}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4537959383258832}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKidseyeR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4619658506809996}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4998307430066726}
   - component: {fileID: 137802147791078038}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boy1_head (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4966842913447442}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4593455569078498}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4111163477527796}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids LidR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 4772236668576694}
   - component: {fileID: 33653084132106738}
   - component: {fileID: 23346053076540846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hat01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4299933684863574}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4663248611550982}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4511959654665176}
   - component: {fileID: 137523338907700234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4618040731433418}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4610651433451998}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +546,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4800062609121482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4823654490988198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4667715627732420}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +591,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4265614567854566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: mixamorig:LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4567344032842804}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4711223119249862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ROOT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4520024301563424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4331064359058794}
   - component: {fileID: 136169974515761050}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 54776464683370196}
   - component: {fileID: 82459317716651280}
   - component: {fileID: 114193131651948092}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +686,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4835417321582116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4912836616571480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 54652016156985190}
   - component: {fileID: 82335697184938514}
   - component: {fileID: 114090975301700716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4465999079093034}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 54064692774041904}
   - component: {fileID: 82045230225909012}
   - component: {fileID: 114449403461906082}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4192195926656166}
   - component: {fileID: 137419364641710012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boy1_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4600690387897828}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +800,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4901188490044786}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4472468783829574}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 4644821808810226}
   - component: {fileID: 33433458203598546}
   - component: {fileID: 23428645478948688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hat01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4110241629292586}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4645640148396088}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids LidL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4556650014849288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4943922234805220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +907,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4484135382456638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +922,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4850688726229436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +937,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4550151284289198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Eyebrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,7 +952,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007953180125478}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4171748401393922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4285591345413198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 114465513934663966}
   - component: {fileID: 114849799962586824}
   - component: {fileID: 114015440765164830}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boy1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4145805943756544}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,7 +1032,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4937366742131500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1047,7 +1047,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4485501628784354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids L UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +1062,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4310780343108178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids Smile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1077,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4387095307733006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TKids R Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,7 +2207,7 @@ BoxCollider:
   m_GameObject: {fileID: 1673995956377586}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 26, z: 11}
   m_Center: {x: -5, y: 7, z: 0}
@@ -2219,7 +2219,7 @@ BoxCollider:
   m_GameObject: {fileID: 1180135245889010}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 22, y: 3, z: 14}
   m_Center: {x: -7, y: 0, z: 2}
@@ -2231,7 +2231,7 @@ BoxCollider:
   m_GameObject: {fileID: 1596968132730056}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 26, z: 11}
   m_Center: {x: -5, y: 7, z: 0}
@@ -2243,7 +2243,7 @@ BoxCollider:
   m_GameObject: {fileID: 1622128622827918}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 22, y: 3, z: 14}
   m_Center: {x: -7, y: 0, z: -2}
@@ -2604,6 +2604,7 @@ MonoBehaviour:
   - {fileID: 1012736031076272}
   - {fileID: 1397487283512144}
   layerToHideNumber: 9
+  eyeObject: {fileID: 1542852702853230}
 --- !u!114 &114090975301700716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2925,7 +2926,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1334605953669326}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.4
   m_Height: 26.2
   m_Direction: 0
@@ -2938,7 +2939,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1067402209459930}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.4
   m_Height: 26.2
   m_Direction: 0
@@ -2951,7 +2952,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1593766086700068}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 15
   m_Height: 55
   m_Direction: 0
@@ -2964,7 +2965,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1061491600506062}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.2
   m_Height: 21
   m_Direction: 0
@@ -2977,7 +2978,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1289373099372558}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 25
   m_Height: 55
   m_Direction: 0
@@ -2990,7 +2991,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1219911165163248}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7
   m_Height: 30
   m_Direction: 0
@@ -3003,7 +3004,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1216518234427640}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7.5
   m_Height: 30
   m_Direction: 0
@@ -3016,7 +3017,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1041235613334146}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 4.2
   m_Height: 21
   m_Direction: 0
@@ -3029,7 +3030,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1002314052117516}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7
   m_Height: 30
   m_Direction: 0
@@ -3042,7 +3043,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1314329180604086}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 7.5
   m_Height: 30
   m_Direction: 0

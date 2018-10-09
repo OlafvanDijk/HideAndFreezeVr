@@ -2,92 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeAvatarButton : MonoBehaviour {
+public class ChangeAvatarButton : MonoBehaviour
+{
 
     [SerializeField]
+    [Tooltip("Specifies what kind of button this is.")]
     AvatarButton avatarButton;
     [SerializeField]
-    private GameObject button;
-    [SerializeField]
+    [Tooltip("References the chooseAvatar script.")]
     private ChooseAvatar chooseAvatar;
     [SerializeField]
-    private float touchDelay;
-    [SerializeField]
+    [Tooltip("True if this button changes avatar. False if this button changes clothes.")]
     private bool avatarOrOutfit;
-    private float onEnterDelay;
-    private float delay;
-    private Vector3 oldScale;
 
-    private void Start()
+    /// <summary>
+    /// Calls the corresponding method in the ChooseAvatar script depending on the avatarrButton type.
+    /// </summary>
+    public void PressButton()
     {
-        oldScale = new Vector3(button.transform.localScale.x, button.transform.localScale.y, button.transform.localScale.z);
-    }
-
-    private void Update()
-    {
-        UpdateDelay(ref delay);
-        UpdateDelay(ref onEnterDelay);
-    }
-
-    private void UpdateDelay(ref float refDelay)
-    {
-        if (refDelay > 0)
+        try
         {
-            refDelay -= Time.deltaTime;
-        }
-
-        if (refDelay < 0)
-        {
-            refDelay = 0;
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (onEnterDelay == 0)
-        {
-            Vector3 scale = button.transform.localScale;
-            scale.y = scale.y / 1.5f;
-            button.transform.localScale = scale;
-
-            try
+            switch (avatarButton)
             {
-                switch (avatarButton)
-                {
-                    case AvatarButton.Previous:
-                        chooseAvatar.NextOrPrevious(false, avatarOrOutfit);
-                        break;
-                    case AvatarButton.Next:
-                        chooseAvatar.NextOrPrevious(true, avatarOrOutfit);
-                        break;
-                    case AvatarButton.Select:
-                        Debug.Log(other.gameObject);
-                        chooseAvatar.PickAvatar();
-                        break;
-                    default:
-                        break;
-                }
+                case AvatarButton.Previous:
+                    chooseAvatar.NextOrPrevious(false, avatarOrOutfit);
+                    break;
+                case AvatarButton.Next:
+                    chooseAvatar.NextOrPrevious(true, avatarOrOutfit);
+                    break;
+                case AvatarButton.Select:
+                    chooseAvatar.PickAvatar();
+                    break;
+                default:
+                    break;
             }
-            catch (System.Exception e)
-            {
-                Debug.Log(e.Message);
-            }
-            onEnterDelay = touchDelay;
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (delay == 0)
+        catch (System.Exception e)
         {
-            //Vector3 scale = button.transform.localScale;
-            //scale.y = scale.y * 1.5f;
-            //button.transform.localScale = scale;
-            button.transform.localScale = oldScale;
-            delay = touchDelay;
+            Debug.Log(e.Message);
         }
     }
-
 }
 
 public enum AvatarButton

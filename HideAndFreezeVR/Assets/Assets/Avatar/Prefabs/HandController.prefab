@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114219598322638390}
   - component: {fileID: 114197774996090628}
   - component: {fileID: 114995783714218726}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HandController
   m_TagString: HandController
   m_Icon: {fileID: 0}

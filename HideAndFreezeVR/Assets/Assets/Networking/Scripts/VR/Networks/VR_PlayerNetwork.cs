@@ -10,50 +10,63 @@ public class VR_PlayerNetwork : MonoBehaviour {
 
     private PhotonView photonView;
 
+    public LocationDataPlayer player { get; set; }
+
     public string PlayerName { get; private set; }
 
     private int PlayersInGame = 0;
 
     [SerializeField]
     private string PlayerPrefabString;
-    
+
     private void Awake()
     {
-            Instance = this;
-
-        DontDestroyOnLoad(this.gameObject);
-
+        DontDestroyOnLoad(this);
+        Instance = this;
         photonView = GetComponent<PhotonView>();
-        photonView.viewID = 999;
 
-            PlayerName = "User#" + Random.Range(1000, 9999);
+        PlayerName = "User#" + Random.Range(1000, 9999);
 
-            PhotonNetwork.sendRate = 60;
-            PhotonNetwork.sendRateOnSerialize = 30;
+        PhotonNetwork.sendRate = 60;
+        PhotonNetwork.sendRateOnSerialize = 30;
 
-            SceneManager.sceneLoaded += OnSceneFinishedLoading;
-
+        SceneManager.sceneLoaded += OnSceneFinishedLoading;
     }
 
     private void OnSceneFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex == 1)
+        StartCoroutine(waitForPlayer(scene));
+
+
+        
+    }
+
+    private IEnumerator waitForPlayer(Scene scene)
+    {
+        this.player = null;
+        yield return new WaitUntil(() => this.player != null);
+        if (scene.name == "VR_Room")
         {
-            photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
+            if (PhotonNetwork.isMasterClient)
+                MasterLoadedGame();
+            else
+                NonMasterLoadedGame();
         }
+
+    }
+    
+
+    private void MasterLoadedGame()
+    {
+        //photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
+        //photonView.RPC("RPC_LoadGameOthers", PhotonTargets.OthersBuffered);
+        NonMasterLoadedGame();
     }
 
-    [PunRPC]
-    private void RPC_LoadedGameScene(PhotonPlayer photonPlayer)
+    private void NonMasterLoadedGame()
     {
-        photonView.RPC("RPC_CreatePlayer", PhotonTargets.All);
-    }
-
-
-    [PunRPC]
-    private void RPC_CreatePlayer()
-    {
-        Debug.Log("Create Player");
-        PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0, 0, 0), Quaternion.identity, 0);
+        //photonView.RPC("RPC_LoadedGameScene", PhotonTargets.MasterClient, PhotonNetwork.player);
+        GameObject obj = PhotonNetwork.Instantiate(Path.Combine("Prefabs", PlayerPrefabString), new Vector3(0, 0, 0), Quaternion.identity, 0);
+        obj.GetComponent<LocationDataHolder>().SetPlayer(this.player);
     }
 }
