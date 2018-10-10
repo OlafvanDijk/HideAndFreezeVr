@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114219598322638390}
   - component: {fileID: 114197774996090628}
   - component: {fileID: 114995783714218726}
+  - component: {fileID: 65485717043972622}
   m_Layer: 10
   m_Name: HandController
   m_TagString: HandController
@@ -48,6 +49,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65485717043972622
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1153520610727894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114027076913383378
 MonoBehaviour:
   m_ObjectHideFlags: 1

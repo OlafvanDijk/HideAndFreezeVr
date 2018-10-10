@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
+using VRTK;
 
 public class VRAvatarController : MonoBehaviour
 {
@@ -16,14 +17,14 @@ public class VRAvatarController : MonoBehaviour
 
     public int indexActualAvatar { get; private set; }
     public VRIK actualAvatarVRIK { get; private set; }
+    public VRTK_SDKManager sdkManager { get; private set; }
 
     private GameObject containerObject;
     private Collider[] ownColliders;
     private GameObject VRRigObject;
     private MultiVRSetup multiVR;
-    private VRTK.VRTK_SDKManager sdkManager;
-    private VRTK.VRTK_BezierPointerRenderer rightControllerTeleport;
-    private VRTK.VRTK_BezierPointerRenderer leftControllerTeleport;
+    private VRTK_BezierPointerRenderer rightControllerTeleport;
+    private VRTK_BezierPointerRenderer leftControllerTeleport;
     private Vector3 lastPosition;
     private Quaternion lastRotation;
     public bool haveIStarted = false;
@@ -39,7 +40,7 @@ public class VRAvatarController : MonoBehaviour
         UpdatePlayAreaTransform();
         haveIStarted = true;
 
-
+        
     }
 
     /// <summary>

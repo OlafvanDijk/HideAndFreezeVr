@@ -3018,7 +3018,6 @@ MonoBehaviour:
   - {fileID: 1026459333639712}
   - {fileID: 1547862692447596}
   layerToHideNumber: 9
-  eyeObject: {fileID: 1901610356050050}
 --- !u!114 &114276425017282638
 MonoBehaviour:
   m_ObjectHideFlags: 1
