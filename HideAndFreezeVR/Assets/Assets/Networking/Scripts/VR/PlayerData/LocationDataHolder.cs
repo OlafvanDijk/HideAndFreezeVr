@@ -13,15 +13,19 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
     [SerializeField] private LocationData head;
     [SerializeField] private Transform headOffset;
 
+    private float scale;
+
     private VRIK Avatar;
 
     private LocationDataPlayer player;
 
+    private PhotonView photonView;
+
     private void Awake()
     {
         DontDestroyOnLoad(this);
-
-        if (!GetComponentInParent<PhotonView>().isMine)
+        photonView = GetComponentInParent<PhotonView>();
+        if (!this.photonView.isMine)
         {
             VRIK avatar = Instantiate(AvatarManager.Instance.getAvatarWithHead(0));
             SetAvatar(avatar);
@@ -81,5 +85,11 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
         leftHand.OnPhotonSerializeView(stream, info);
         rightHand.OnPhotonSerializeView(stream, info);
         head.OnPhotonSerializeView(stream, info);
+    }
+
+    public void SetScale(float scale)
+    {
+        this.scale = scale;
+        //TODOOLAF do scale on avatar stuff here.
     }
  }
