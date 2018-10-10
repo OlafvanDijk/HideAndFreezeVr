@@ -18,8 +18,8 @@ public class VRAvatarController : MonoBehaviour
     public int indexActualAvatar { get; private set; }
     public VRIK actualAvatarVRIK { get; private set; }
     public VRTK_SDKManager sdkManager { get; private set; }
+    public GameObject containerObject { get; private set; }
 
-    private GameObject containerObject;
     private Collider[] ownColliders;
     private GameObject VRRigObject;
     private MultiVRSetup multiVR;
@@ -29,18 +29,12 @@ public class VRAvatarController : MonoBehaviour
     private Quaternion lastRotation;
     public bool haveIStarted = false;
 
-    private void Awake()
-    {
-    }
-
     private void Start()
     {
         indexActualAvatar = -1;
         VRSetup(this.transform.position, this.transform.rotation);
         UpdatePlayAreaTransform();
         haveIStarted = true;
-
-        
     }
 
     /// <summary>
