@@ -8,6 +8,8 @@ public class VR_PlayerNetwork : Photon.PunBehaviour {
     
     public static VR_PlayerNetwork Instance;
 
+    public PlayerData playerData;
+
     private PhotonView photonView;
     public LocationDataPlayer player { get; set; }
     public string PlayerName { get; private set; }
@@ -128,5 +130,4 @@ public class VR_PlayerNetwork : Photon.PunBehaviour {
         }
         return null;
     }
-    
 }

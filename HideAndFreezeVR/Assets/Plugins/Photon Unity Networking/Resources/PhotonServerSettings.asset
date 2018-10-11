@@ -45,4 +45,5 @@ MonoBehaviour:
   - PUNRPC_OutfitChanged
   - PUNRPC_AvatarOutfitChanged
   - PUNRPC_AvatarChanged
+  - PUNRPC_ScaleChanged
   DisableAutoOpenWizard: 1

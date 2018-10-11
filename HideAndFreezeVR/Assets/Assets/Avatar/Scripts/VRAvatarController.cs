@@ -168,6 +168,8 @@ public class VRAvatarController : MonoBehaviour
     {
         this.indexActualAvatar = index;
         actualAvatarVRIK = Instantiate(AvatarManager.Instance.getAvatarWithoutHead(index), Vector3.zero, Quaternion.identity);
+        float scale = VR_PlayerNetwork.Instance.playerData.scale;
+        actualAvatarVRIK.gameObject.transform.localScale = new Vector3(scale, scale, scale);
         actualAvatarVRIK.solver.spine.headTarget = transform;
         actualAvatarVRIK.transform.SetParent(containerObject.transform, false);
         actualAvatarVRIK.transform.rotation = actualAvatarVRIK.transform.rotation * Quaternion.Inverse(containerObject.transform.rotation);

@@ -9,6 +9,7 @@ public class AvatarRotation : MonoBehaviour {
 
     private GameObject player;
     private Transform transformPlayer;
+
     private bool Oculus = true;
 
 	// Use this for initialization
@@ -18,7 +19,7 @@ public class AvatarRotation : MonoBehaviour {
 
     private IEnumerator WaitForContainer()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         player = GetComponent<VRAvatarController>().containerObject;
         yield return new WaitUntil(() => player != null);
         this.transformPlayer = player.transform;
