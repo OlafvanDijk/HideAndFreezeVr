@@ -14,7 +14,6 @@ public class LocationData : Photon.MonoBehaviour {
     private void Awake()
     {
         photonView = GetComponentInParent<PhotonView>();
-        DontDestroyOnLoad(this);
     }
 
     void Update()
