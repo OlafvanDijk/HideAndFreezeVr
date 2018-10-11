@@ -65,7 +65,7 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
     public void SetPlayer(LocationDataPlayer player)
     {
         this.player = player;
-
+        
         leftHand.objectToFollow = player.leftHand;
         rightHand.objectToFollow = player.rightHand;
         head.objectToFollow = player.head;
