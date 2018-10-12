@@ -141,8 +141,10 @@ public class ScaleAvatar : MonoBehaviour {
     private void ApplyScale(float scale)
     {
         scalingDone.Invoke();
-        scale *= 0.8f;
+        scale *= 0.7f;
         avatar.transform.localScale = new Vector3(scale, scale, scale);
+        AvatarManager.Instance.ScaleChanged(scale);
+        VR_PlayerNetwork.Instance.playerData.scale = scale;
         scaling = false;
     }
 }

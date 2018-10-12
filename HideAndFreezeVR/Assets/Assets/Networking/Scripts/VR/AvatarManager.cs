@@ -81,6 +81,17 @@ public class AvatarManager : Photon.MonoBehaviour {
     }
 
     /// <summary>
+    /// Called when the player changed their scale.
+    /// Tells all other players your scale has changed.
+    /// </summary>
+    /// <param name="newScale"> The value needed to set your scale. </param>
+    public void ScaleChanged(float newScale)
+    {
+        //TODOOLAF call this (AvatarManager.Instance.ScaleChanged(<value>); to send the new scale data to other players.
+        this.photonView.RPC("PUNRPC_ScaleChanged", PhotonTargets.OthersBuffered, new object[] { newScale, PhotonNetwork.player });
+    }
+
+    /// <summary>
     /// Called when someone has changed their avatar.
     /// Creates a new avatar and gives this to the user it belongs to.
     /// </summary>
@@ -89,9 +100,7 @@ public class AvatarManager : Photon.MonoBehaviour {
     [PunRPC]
     public void PUNRPC_AvatarChanged(int number, PhotonPlayer player)
     {
-        VRIK avatar = Instantiate(getAvatarWithHead(number));
-        avatar.gameObject.transform.position += new Vector3(0, .2f, 0);
-        VR_PlayerNetwork.Instance.getPlayer(player).SetAvatar(avatar);
+        VR_PlayerNetwork.Instance.getPlayer(player).SetAvatar(getAvatarWithHead(number));
     }
 
     /// <summary>
@@ -104,6 +113,18 @@ public class AvatarManager : Photon.MonoBehaviour {
     public void PUNRPC_OutfitChanged(int[] number, PhotonPlayer player)
     {
         VR_PlayerNetwork.Instance.getPlayer(player).SetOutfit(number);
+    }
+
+    /// <summary>
+    /// Called when someone has changed their scale.
+    /// Alters the scale of the avatar this belongs to.
+    /// </summary>
+    /// <param name="newScale"> The new scale value. </param>
+    /// <param name="player"> The player that has changed their scale. </param>
+    [PunRPC]
+    public void PUNRPC_ScaleChanged(float newScale, PhotonPlayer player)
+    {
+        VR_PlayerNetwork.Instance.getPlayer(player).GetComponent<LocationDataHolder>().SetScale(newScale);
     }
 
 }

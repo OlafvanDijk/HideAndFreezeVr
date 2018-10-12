@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
+using VRTK;
 
 public class VRAvatarController : MonoBehaviour
 {
@@ -16,21 +17,17 @@ public class VRAvatarController : MonoBehaviour
 
     public int indexActualAvatar { get; private set; }
     public VRIK actualAvatarVRIK { get; private set; }
+    public VRTK_SDKManager sdkManager { get; private set; }
+    public GameObject containerObject { get; private set; }
 
-    private GameObject containerObject;
     private Collider[] ownColliders;
     private GameObject VRRigObject;
     private MultiVRSetup multiVR;
-    private VRTK.VRTK_SDKManager sdkManager;
-    private VRTK.VRTK_BezierPointerRenderer rightControllerTeleport;
-    private VRTK.VRTK_BezierPointerRenderer leftControllerTeleport;
+    private VRTK_BezierPointerRenderer rightControllerTeleport;
+    private VRTK_BezierPointerRenderer leftControllerTeleport;
     private Vector3 lastPosition;
     private Quaternion lastRotation;
     public bool haveIStarted = false;
-
-    private void Awake()
-    {
-    }
 
     private void Start()
     {
@@ -38,8 +35,6 @@ public class VRAvatarController : MonoBehaviour
         VRSetup(this.transform.position, this.transform.rotation);
         UpdatePlayAreaTransform();
         haveIStarted = true;
-
-
     }
 
     /// <summary>
@@ -173,6 +168,8 @@ public class VRAvatarController : MonoBehaviour
     {
         this.indexActualAvatar = index;
         actualAvatarVRIK = Instantiate(AvatarManager.Instance.getAvatarWithoutHead(index), Vector3.zero, Quaternion.identity);
+        float scale = VR_PlayerNetwork.Instance.playerData.scale;
+        actualAvatarVRIK.gameObject.transform.localScale = new Vector3(scale, scale, scale);
         actualAvatarVRIK.solver.spine.headTarget = transform;
         actualAvatarVRIK.transform.SetParent(containerObject.transform, false);
         actualAvatarVRIK.transform.rotation = actualAvatarVRIK.transform.rotation * Quaternion.Inverse(containerObject.transform.rotation);

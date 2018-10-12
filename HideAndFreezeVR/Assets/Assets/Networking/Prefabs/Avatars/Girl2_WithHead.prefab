@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4088588755066924}
   - component: {fileID: 137331231280546668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Girl2_head (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4258322112300718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 4009528392400100}
   - component: {fileID: 33975711141846580}
   - component: {fileID: 23907954553131548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4120227544303056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 4766114701927764}
   - component: {fileID: 33154973320938180}
   - component: {fileID: 23374333003539874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hat04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

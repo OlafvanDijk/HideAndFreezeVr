@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: MyPlayer
   m_EditorClassIdentifier: 
   Avatar: {fileID: 0}
+  scale: 0.67357004
