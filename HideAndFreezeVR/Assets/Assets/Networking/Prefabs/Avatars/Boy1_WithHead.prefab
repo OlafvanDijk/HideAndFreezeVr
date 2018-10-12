@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4613635599389288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4998307430066726}
   - component: {fileID: 137802147791078038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boy1_head (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4966842913447442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 4644821808810226}
   - component: {fileID: 33433458203598546}
   - component: {fileID: 23428645478948688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hat01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

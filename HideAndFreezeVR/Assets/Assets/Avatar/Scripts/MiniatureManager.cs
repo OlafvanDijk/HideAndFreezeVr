@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using System.Linq;
 
 //TODONIELS Make this callable from the network
@@ -119,11 +120,13 @@ public class MiniatureManager : MonoBehaviour {
     }
 }
 
+[Serializable]
 public struct PositionAndMiniature
 {
     public GameObject position;
     public GameObject miniature;
 }
+
 
 public struct PlayerIDandAvatarIndex
 {
