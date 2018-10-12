@@ -5,14 +5,12 @@ using UnityEngine;
 public class VoteLevelAndSeeker : MonoBehaviour {
     
     [SerializeField]
-    private VoteManager levelAndSeekerSelect;
-    [SerializeField]
-    private int seekerID;
+    private VoteManager voteManager;
     [SerializeField]
     private string levelName;
 
-    public void SendVote(int playerID)
+    public void SendVote(int playerID, int seekerID)
     {
-        levelAndSeekerSelect.VoteForLevel(playerID, levelName, seekerID);
+        voteManager.VoteForLevel(playerID, levelName, seekerID);
     }
 }

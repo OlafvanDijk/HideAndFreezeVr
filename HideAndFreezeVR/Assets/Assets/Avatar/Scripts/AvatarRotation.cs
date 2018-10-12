@@ -8,6 +8,7 @@ public class AvatarRotation : MonoBehaviour {
     private float rotationSpeed;
 
     private GameObject player;
+    private VRAvatarController avatarController;
     private Transform transformPlayer;
 
     private bool Oculus = true;
@@ -20,7 +21,9 @@ public class AvatarRotation : MonoBehaviour {
     private IEnumerator WaitForContainer()
     {
         yield return new WaitForSeconds(1f);
-        player = GetComponent<VRAvatarController>().containerObject;
+        avatarController = GetComponent<VRAvatarController>();
+        player = avatarController.containerObject;
+        
         yield return new WaitUntil(() => player != null);
         this.transformPlayer = player.transform;
     }
@@ -36,8 +39,7 @@ public class AvatarRotation : MonoBehaviour {
                     float newXRotation = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x;
                     if (newXRotation != 0)
                     {
-                        Vector3 oldRotation = transformPlayer.rotation.eulerAngles;
-                        transformPlayer.eulerAngles = new Vector3(oldRotation.x, oldRotation.y + (rotationSpeed * newXRotation), oldRotation.z);
+                        transformPlayer.RotateAround(avatarController.transform.position, new Vector3(0, 1, 0), newXRotation * rotationSpeed);
                     }
                 }
             }
