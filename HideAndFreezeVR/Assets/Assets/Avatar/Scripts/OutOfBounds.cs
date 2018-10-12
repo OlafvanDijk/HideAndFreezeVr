@@ -14,7 +14,6 @@ public class OutOfBounds : MonoBehaviour {
     void Start () {
         originalPosition = transform.position;
         originalRotation = transform.rotation;
-
 	}
 
     private void OnTriggerExit(Collider other)

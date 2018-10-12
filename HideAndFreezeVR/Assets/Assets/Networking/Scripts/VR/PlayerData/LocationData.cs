@@ -68,17 +68,4 @@ public class LocationData : Photon.MonoBehaviour {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, objectToFollow.rotation, 500 * Time.deltaTime);
         }
     }
-
-    /// <summary>
-    /// TODONIELS TODOOLAF Delete when not needed anymore
-    /// </summary>
-    public void test(bool owner)
-    {
-        targetPosition = this.transform.position;
-        targetRotation = this.transform.rotation;
-        if (owner)
-        {
-            //photonView.TransferOwnership(PhotonNetwork.player);
-        }
-    }
 }

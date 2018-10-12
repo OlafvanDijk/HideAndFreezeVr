@@ -11,6 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5519af22b2de81e4897cb0a16a02e8a4, type: 3}
   m_Name: AvatarSet
   m_EditorClassIdentifier: 
+  listOfMiniatures:
+  - {fileID: 1366116468494482, guid: e12e50d075ce7e64d807b11cae46505e, type: 2}
+  - {fileID: 1023920874043368, guid: 1878a3f0ca4a82549995f5c4b6b17173, type: 2}
+  - {fileID: 1561546799440854, guid: a3737cea45889fc42b20ef531a836a4c, type: 2}
+  - {fileID: 1286920892814726, guid: 7a1d20bf7b73eed4191e72d874cd5d17, type: 2}
+  - {fileID: 1145660891344740, guid: 4abb66771a417b047b59c1bd2d904535, type: 2}
+  - {fileID: 1226273415987488, guid: 16f018bab54df6a4c825ca7640af799d, type: 2}
   listOfAvatars:
   - {fileID: 114465513934663966, guid: 58001b74ad39c0140aa8ec880cfffd64, type: 2}
   - {fileID: 114773731561506124, guid: 05f061c03bfc24544a316c33b8362cc3, type: 2}

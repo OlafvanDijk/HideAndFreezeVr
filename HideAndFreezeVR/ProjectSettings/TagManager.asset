@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HandController
   - Table
+  - Level
   layers:
   - Default
   - TransparentFX

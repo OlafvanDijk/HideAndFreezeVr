@@ -5,15 +5,15 @@ using VRTK;
 
 public class Miniature : MonoBehaviour {
 
+    [SerializeField]
+    private int seekerID;
     private PhotonView photonView;
-    public bool owner;
     private Collider voteCollider;
     private VRTK_InteractableObject interactable;
     private bool voted;
 
     private void Awake()
     {
-        this.GetComponent<LocationData>().test(owner);
         this.photonView = GetComponent<PhotonView>();
         photonView.ownerId = PhotonNetwork.player.ID;
     }
@@ -23,7 +23,6 @@ public class Miniature : MonoBehaviour {
         {
             interactable = GetComponent<VRTK_InteractableObject>();
             interactable.isGrabbable = true;
-            //this.isGrabbable = true;
         }
 	}
 
@@ -34,8 +33,10 @@ public class Miniature : MonoBehaviour {
             VoteLevelAndSeeker vote = voteCollider.GetComponent<VoteLevelAndSeeker>();
             if (vote != null && !voted)
             {
-                vote.SendVote(photonView.owner.ID);
+                vote.SendVote(photonView.owner.ID, seekerID);
                 voted = true;
+                interactable.isGrabbable = false;
+                Destroy(interactable.GetComponent<Rigidbody>());
             }
         }
     }
