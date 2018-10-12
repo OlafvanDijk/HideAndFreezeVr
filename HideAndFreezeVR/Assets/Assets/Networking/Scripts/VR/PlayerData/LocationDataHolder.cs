@@ -27,26 +27,33 @@ public class LocationDataHolder : Photon.MonoBehaviour  {
         photonView = GetComponentInParent<PhotonView>();
         if (!this.photonView.isMine)
         {
-            VRIK avatar = Instantiate(AvatarManager.Instance.getAvatarWithHead(0));
-            SetAvatar(avatar);
+            SetAvatar(AvatarManager.Instance.getAvatarWithHead(0));
         }
         this.gameObject.transform.position += new Vector3(0, 0.2f, 0);
         VR_PlayerNetwork.Instance.AddOtherPlayer(this);
 
     }
 
+    private void Update()
+    {
+        Vector3 position = (head.transform.position - new Vector3(0, head.transform.position.y, 0));
+        this.transform.position = position;
+    }
+
     /// <summary>
     /// Sets the avatar and connects the avatar to the scripts' head and hands.
     /// </summary>
     /// <param name="Avatar">The avatar to bind</param>
-    public void SetAvatar(VRIK Avatar)
+    public void SetAvatar(VRIK NewAvatar)
     {
+        VRIK avatar = Instantiate(NewAvatar, this.transform.position, this.transform.rotation, this.gameObject.transform);
+        avatar.gameObject.transform.position += new Vector3(0, .2f, 0);
+
         if (this.Avatar != null)
         {
             Destroy(this.Avatar.gameObject);
         }
-        this.Avatar = Avatar;
-        this.Avatar.transform.SetParent(this.gameObject.transform);
+        this.Avatar = avatar;
         this.Avatar.solver.spine.headTarget = headOffset;
         this.Avatar.solver.leftArm.target = leftHandOffset;
         this.Avatar.solver.rightArm.target = rightHandOffset;

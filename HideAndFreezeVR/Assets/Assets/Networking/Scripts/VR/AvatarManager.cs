@@ -100,9 +100,7 @@ public class AvatarManager : Photon.MonoBehaviour {
     [PunRPC]
     public void PUNRPC_AvatarChanged(int number, PhotonPlayer player)
     {
-        VRIK avatar = Instantiate(getAvatarWithHead(number));
-        avatar.gameObject.transform.position += new Vector3(0, .2f, 0);
-        VR_PlayerNetwork.Instance.getPlayer(player).SetAvatar(avatar);
+        VR_PlayerNetwork.Instance.getPlayer(player).SetAvatar(getAvatarWithHead(number));
     }
 
     /// <summary>
