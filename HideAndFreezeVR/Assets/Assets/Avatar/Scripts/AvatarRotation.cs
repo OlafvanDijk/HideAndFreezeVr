@@ -39,7 +39,7 @@ public class AvatarRotation : MonoBehaviour {
                     float newXRotation = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x;
                     if (newXRotation != 0)
                     {
-                        transformPlayer.RotateAround(avatarController.transform.position, new Vector3(0, 1, 0), newXRotation * rotationSpeed);
+                        transformPlayer.RotateAround(avatarController.transform.position, Vector3.up, newXRotation * rotationSpeed);
                     }
                 }
             }

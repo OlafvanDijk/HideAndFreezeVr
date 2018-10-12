@@ -20,7 +20,7 @@ public class ChooseAvatar : MonoBehaviour {
     private List<Outfit> savedOutfits;
     private int currentAvatar = -1;
     private int currentOutfit = 0;
-    private VRIK avatar;
+    private GameObject avatar;
 
     void Start () {
         avatarOrOutfit = true;
@@ -48,7 +48,12 @@ public class ChooseAvatar : MonoBehaviour {
 
     private void SetPlaceholder()
     {
-        avatar = Instantiate(AvatarManager.Instance.getAvatarWithHead(currentAvatar), placeHolder.transform); 
+        //
+        //
+        //
+        //
+        avatar = Instantiate(AvatarManager.Instance.GetMiniature(currentAvatar), placeHolder.transform);
+        avatar.transform.localScale = new Vector3(1, 1, 1);
         savedOutfits.Clear();
         savedOutfits.AddRange(AvatarManager.Instance.getOutfits(currentAvatar).outfits);
         //ChangeColors();

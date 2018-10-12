@@ -6,6 +6,7 @@ using RootMotion.FinalIK;
 [CreateAssetMenu(fileName = "AvatarSet", menuName = "AvatarData", order = 1)]
 public class Avatars : ScriptableObject {
 
+    public List<GameObject> listOfMiniatures;
     public List<VRIK> listOfAvatars;
     [SerializeField]
     private List<Outfits> listOfOutfits;

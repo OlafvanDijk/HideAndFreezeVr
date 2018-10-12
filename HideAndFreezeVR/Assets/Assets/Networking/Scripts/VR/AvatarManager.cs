@@ -19,6 +19,11 @@ public class AvatarManager : Photon.MonoBehaviour {
         this.photonView = GetComponent<PhotonView>();
     }
 
+    public GameObject GetMiniature(int number)
+    {
+        return avatarset.listOfMiniatures[number];
+    }
+
     /// <summary>
     /// Get the avatar corresponding to the given number with the layers for the head set to visible.
     /// </summary>
@@ -87,7 +92,6 @@ public class AvatarManager : Photon.MonoBehaviour {
     /// <param name="newScale"> The value needed to set your scale. </param>
     public void ScaleChanged(float newScale)
     {
-        //TODOOLAF call this (AvatarManager.Instance.ScaleChanged(<value>); to send the new scale data to other players.
         this.photonView.RPC("PUNRPC_ScaleChanged", PhotonTargets.OthersBuffered, new object[] { newScale, PhotonNetwork.player });
     }
 
