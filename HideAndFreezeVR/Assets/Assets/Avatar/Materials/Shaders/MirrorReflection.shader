@@ -10,14 +10,14 @@ Shader "FX/MirrorReflection"
 {
 	Properties
 	{
-		_MainTex("Base (RGB)", 2D) = "white" {}
-		[HideInInspector] _ReflectionTex("", 2D) = "white" {}
+		_MainTex("_MainTex", 2D) = "white" {}
+		_ReflectionTexLeft("_ReflectionTexLeft", 2D) = "white" {}
+		_ReflectionTexRight("_ReflectionTexRight", 2D) = "white" {}
 	}
 		SubShader
 	{
 		Tags { "RenderType" = "Opaque" }
 		LOD 100
-
 		Pass {
 			CGPROGRAM
 			#pragma vertex vert
@@ -39,11 +39,14 @@ Shader "FX/MirrorReflection"
 				return o;
 			}
 			sampler2D _MainTex;
-			sampler2D _ReflectionTex;
+			sampler2D _ReflectionTexLeft;
+			sampler2D _ReflectionTexRight;
 			fixed4 frag(v2f i) : SV_Target
 			{
 				fixed4 tex = tex2D(_MainTex, i.uv);
-				fixed4 refl = tex2Dproj(_ReflectionTex, UNITY_PROJ_COORD(i.refl));
+				fixed4 refl;
+				if (unity_StereoEyeIndex == 0) refl = tex2Dproj(_ReflectionTexLeft, UNITY_PROJ_COORD(i.refl));
+				else refl = tex2Dproj(_ReflectionTexRight, UNITY_PROJ_COORD(i.refl));
 				return tex * refl;
 			}
 			ENDCG
