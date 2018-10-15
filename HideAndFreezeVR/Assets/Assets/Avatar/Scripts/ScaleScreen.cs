@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class ScaleScreen : MonoBehaviour {
 
     [SerializeField]
@@ -23,9 +24,17 @@ public class ScaleScreen : MonoBehaviour {
     [SerializeField]
     [Tooltip("Colors of the background.")]
     private List<Color> buttonBackgroundColors;
+    [SerializeField]
+    [Tooltip("Sound used for each scaling step.")]
+    private AudioClip scaleStep;
+    [SerializeField]
+    [Tooltip("Sound used when the scaling is done.")]
+    private AudioClip scaled;
+
 
     private bool reset;
     private float delay;
+    private AudioSource audio;
 
 	/// <summary>
     /// Add listeners and set the delay.
@@ -34,6 +43,7 @@ public class ScaleScreen : MonoBehaviour {
         scaleAvatar.heightCalcDone.AddListener(ChangeLoadingBar);
         scaleAvatar.scalingDone.AddListener(DoneScaling);
         delay = waitUntilReset;
+        this.audio = GetComponent<AudioSource>();
 	}
 	
 	/// <summary>
@@ -59,7 +69,8 @@ public class ScaleScreen : MonoBehaviour {
     /// Updates the loading bar when the event heightCalcDone is getting invoked.
     /// </summary>
     private void ChangeLoadingBar()
-    {        
+    {
+        PlayClip(scaleStep);
         if (loadingBar.value == loadingBar.minValue)
         {
             ChangeBackground();
@@ -76,6 +87,7 @@ public class ScaleScreen : MonoBehaviour {
     /// </summary>
     private void DoneScaling()
     {
+        PlayClip(scaled);
         loadingBar.gameObject.SetActive(false);
         panelText.text = "Look in the mirror --------->";
         mirror.SetActive(true);
@@ -99,5 +111,15 @@ public class ScaleScreen : MonoBehaviour {
             emission = buttonBackgroundColors[1];
         }
         backgroundMaterial.SetColor("_EmissionColor", emission);
+    }
+
+    /// <summary>
+    /// Plays the audio clip.
+    /// </summary>
+    /// <param name="audioClip"></param>
+    private void PlayClip(AudioClip audioClip)
+    {
+        audio.clip = audioClip;
+        audio.Play();
     }
 }

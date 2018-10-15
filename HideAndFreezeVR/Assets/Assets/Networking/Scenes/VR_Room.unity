@@ -651,16 +651,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114191346843037006, guid: ce45d776cae75224a8ecd5db9f3e660e,
-        type: 2}
-      propertyPath: avatarController
-      value: 
-      objectReference: {fileID: 356314500}
     - target: {fileID: 114775745345496778, guid: ce45d776cae75224a8ecd5db9f3e660e,
         type: 2}
       propertyPath: mirror
       value: 
       objectReference: {fileID: 776224740}
+    - target: {fileID: 114191346843037006, guid: ce45d776cae75224a8ecd5db9f3e660e,
+        type: 2}
+      propertyPath: avatarController
+      value: 
+      objectReference: {fileID: 356314500}
+    - target: {fileID: 82836893865818274, guid: ce45d776cae75224a8ecd5db9f3e660e,
+        type: 2}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce45d776cae75224a8ecd5db9f3e660e, type: 2}
   m_IsPrefabParent: 0

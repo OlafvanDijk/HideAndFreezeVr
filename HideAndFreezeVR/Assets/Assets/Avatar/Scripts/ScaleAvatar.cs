@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AudioSource))]
 public class ScaleAvatar : MonoBehaviour {
 
     [SerializeField]
@@ -11,7 +12,11 @@ public class ScaleAvatar : MonoBehaviour {
     [SerializeField]
     [Tooltip("Amount of times to calculate the medians.")]
     private int timesToScale;
+    [SerializeField]
+    [Tooltip("Button press sound.")]
+    private AudioClip buttonPress;
 
+    private AudioSource audio;
     private GameObject eye;
     private List<float> scales;
     private GameObject avatar;
@@ -22,6 +27,11 @@ public class ScaleAvatar : MonoBehaviour {
 
     public UnityEvent heightCalcDone = new UnityEvent();
     public UnityEvent scalingDone = new UnityEvent();
+
+    private void Start()
+    {
+        this.audio = GetComponent<AudioSource>();
+    }
 
     /// <summary>
     /// Scales when the "S" key has been pressed.
@@ -53,6 +63,8 @@ public class ScaleAvatar : MonoBehaviour {
         {
             if (!scaling)
             {
+                audio.clip = buttonPress;
+                audio.Play();
                 scales = new List<float>();
                 if (avatarController != null)
                 {
@@ -76,6 +88,7 @@ public class ScaleAvatar : MonoBehaviour {
     /// <returns>Delay of 0.3 seconds.</returns>
     private IEnumerator StartCalculation()
     {
+        yield return new WaitForSeconds(0.4f);
         int time = timesToScale;
         for (int x = 0; x<time; x++)
         {

@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4577279825023618}
   - component: {fileID: 33844699477345780}
   - component: {fileID: 23628147177076956}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: hair04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4410983185689540}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4221749837144728}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: PartsToHide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4424418579233178}
   - component: {fileID: 137691356751339920}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Boy2_head (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
